@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "description": "Comprehensive information about horse coat colors, patterns, and markings",
+    "category": "Equine Information",
+    "version": "1.0"
+  },
+  "base_colors": [
+    {
+      "name": "Bay",
+      "description": "Brown body with black points (mane, tail, lower legs, ear edges)",
+      "genetics": "Genetically a black horse with the agouti gene that restricts black pigment",
+      "variants": ["Light bay", "Blood bay", "Dark bay", "Mahogany bay"],
+      "common_breeds": ["Thoroughbred", "Quarter Horse", "Arabian", "Morgan"],
+      "image_reference": "bay_horse.png"
+    },
+    {
+      "name": "Black",
+      "description": "True black coat with no brown areas",
+      "genetics": "Caused by the recessive black gene",
+      "variants": ["Faded black", "True black", "Coal black"],
+      "common_breeds": ["Friesian", "Percheron", "Morgan", "Andalusian"],
+      "image_reference": "black_horse.png"
+    },
+    {
+      "name": "Chestnut",
+      "description": "Reddish-brown coat with no black points, mane and tail same color as body or flaxen",
+      "genetics": "Absence of the black factor, recessive to black",
+      "variants": ["Sorrel", "Liver chestnut", "Light chestnut", "Flaxen chestnut"],
+      "common_breeds": ["Suffolk Punch", "Haflinger", "Belgian Draft", "Thoroughbred"],
+      "image_reference": "chestnut_horse.png"
+    },
+    {
+      "name": "Gray",
+      "description": "Born dark and progressively lightens with age",
+      "genetics": "Dominant gene that causes progressive depigmentation",
+      "variants": ["Steel gray", "Dapple gray", "Fleabitten gray", "White gray"],
+      "common_breeds": ["Lipizzaner", "Andalusian", "Percheron", "Arabian"],
+      "image_reference": "gray_horse.png"
+    },
+    {
+      "name": "Palomino",
+      "description": "Golden coat with white or flaxen mane and tail",
+      "genetics": "Chestnut base with one cream dilution gene",
+      "variants": ["Golden palomino", "Chocolate palomino", "Pearl palomino"],
+      "common_breeds": ["Quarter Horse", "Tennessee Walking Horse", "Morgan"],
+      "image_reference": "palomino_horse.png"
+    },
+    {
+      "name": "Buckskin",
+      "description": "Tan or gold body with black points",
+      "genetics": "Bay base with one cream dilution gene",
+      "variants": ["Golden buckskin", "Sooty buckskin", "Silvery buckskin"],
+      "common_breeds": ["Quarter Horse", "Mustang", "Morgan"],
+      "image_reference": "buckskin_horse.png"
+    },
+    {
+      "name": "Dun",
+      "description": "Tan body with primitive markings (dorsal stripe, leg barring, shoulder stripe)",
+      "genetics": "Caused by the dun dilution gene",
+      "variants": ["Red dun", "Yellow dun", "Grullo (blue dun)"],
+      "common_breeds": ["Norwegian Fjord", "Mustang", "Quarter Horse"],
+      "image_reference": "dun_horse.png"
+    },
+    {
+      "name": "Roan",
+      "description": "Mixture of white hairs with base color, head and legs typically remain solid",
+      "genetics": "Caused by the roan gene",
+      "variants": ["Blue roan (black base)", "Red roan (chestnut base)", "Bay roan (bay base)"],
+      "common_breeds": ["Belgian Draft", "Quarter Horse", "Welsh Pony"],
+      "image_reference": "roan_horse.png"
+    },
+    {
+      "name": "Cream",
+      "description": "Creamy coat with pink skin and blue eyes",
+      "genetics": "Double cream dilution gene on any base color",
+      "variants": ["Cremello", "Perlino", "Smoky cream"],
+      "common_breeds": ["Quarter Horse", "Icelandic", "Akhal-Teke"],
+      "image_reference": "cream_horse.png"
+    }
+  ],
+  "patterns": [
+    {
+      "name": "Tobiano",
+      "description": "White crossing the topline, legs usually white, head usually solid",
+      "genetics": "Dominant pattern gene",
+      "characteristics": [
+        "Regular, oval-shaped markings",
+        "White crossing the back between withers and tail",
+        "Sharp, distinct edges"
+      ],
+      "image_reference": "tobiano_pattern.png"
+    },
+    {
+      "name": "Overo",
+      "description": "White does not usually cross the topline, jagged edges to markings",
+      "genetics": "Several different genetic patterns including frame, splash, and sabino",
+      "characteristics": [
+        "Irregular, splashy or jagged markings",
+        "White usually does not cross the back",
+        "Often has white face markings"
+      ],
+      "image_reference": "overo_pattern.png"
+    },
+    {
+      "name": "Appaloosa",
+      "description": "Spotted pattern with several variable characteristics",
+      "genetics": "Complex pattern involving several genes",
+      "variants": ["Leopard", "Blanket", "Snowflake", "Frost", "Varnish roan"],
+      "characteristics": [
+        "Mottled skin",
+        "White sclera around eyes",
+        "Striped hooves",
+        "Sparse mane and tail"
+      ],
+      "image_reference": "appaloosa_pattern.png"
+    },
+    {
+      "name": "Brindle",
+      "description": "Vertical stripes of varying colors",
+      "genetics": "Rare pattern, genetic basis not fully understood",
+      "characteristics": [
+        "Vertical striping pattern",
+        "Can appear in various base colors",
+        "Very rare in horses"
+      ],
+      "image_reference": "brindle_pattern.png"
+    }
+  ],
+  "markings": {
+    "face_markings": [
+      {
+        "name": "Star",
+        "description": "White mark on the forehead",
+        "image_reference": "star_marking.png"
+      },
+      {
+        "name": "Stripe",
+        "description": "Narrow white marking running down the face",
+        "image_reference": "stripe_marking.png"
+      },
+      {
+        "name": "Blaze",
+        "description": "Wide white marking running down the face",
+        "image_reference": "blaze_marking.png"
+      },
+      {
+        "name": "Snip",
+        "description": "White mark between the nostrils",
+        "image_reference": "snip_marking.png"
+      },
+      {
+        "name": "Bald Face",
+        "description": "White face that extends beyond the eyes and to the sides",
+        "image_reference": "bald_face_marking.png"
+      }
+    ],
+    "leg_markings": [
+      {
+        "name": "Coronet",
+        "description": "White just above the hoof",
+        "image_reference": "coronet_marking.png"
+      },
+      {
+        "name": "Pastern",
+        "description": "White extending from hoof to pastern",
+        "image_reference": "pastern_marking.png"
+      },
+      {
+        "name": "Sock",
+        "description": "White extending from hoof to ankle",
+        "image_reference": "sock_marking.png"
+      },
+      {
+        "name": "Stocking",
+        "description": "White extending from hoof to knee or hock",
+        "image_reference": "stocking_marking.png"
+      }
+    ],
+    "body_markings": [
+      {
+        "name": "Dorsal Stripe",
+        "description": "Dark line running along the spine",
+        "image_reference": "dorsal_stripe.png"
+      },
+      {
+        "name": "Zebra Markings",
+        "description": "Horizontal stripes on legs",
+        "image_reference": "zebra_markings.png"
+      },
+      {
+        "name": "Whorls",
+        "description": "Circular hair growth patterns",
+        "image_reference": "whorl_marking.png"
+      }
+    ]
+  },
+  "rare_colors": [
+    {
+      "name": "Silver Dapple",
+      "description": "Dilutes black pigment in mane, tail and body, often with dappling",
+      "genetics": "Silver dapple gene affects black pigment only",
+      "common_breeds": ["Morgan", "Rocky Mountain Horse", "Icelandic Horse"]
+    },
+    {
+      "name": "Champagne",
+      "description": "Dilutes both red and black pigment, creates metallic sheen and mottled skin",
+      "genetics": "Champagne gene, dominant",
+      "common_breeds": ["Tennessee Walking Horse", "Quarter Horse"]
+    },
+    {
+      "name": "Pearl",
+      "description": "Subtle dilution that enhances red pigment, double effect when paired with cream gene",
+      "genetics": "Pearl gene, recessive",
+      "common_breeds": ["Iberian breeds", "Quarter Horse"]
+    }
+  ],
+  "color_combinations": [
+    {
+      "name": "Bay Tobiano",
+      "description": "Bay base coat with tobiano pattern",
+      "image_reference": "bay_tobiano.png"
+    },
+    {
+      "name": "Palomino with Flaxen",
+      "description": "Golden coat with very light, almost white mane and tail",
+      "image_reference": "palomino_flaxen.png"
+    },
+    {
+      "name": "Blue Roan Appaloosa",
+      "description": "Blue roan base with appaloosa spotting pattern",
+      "image_reference": "blue_roan_appaloosa.png"
+    }
+  ]
+}
+

@@ -1,0 +1,503 @@
+{
+  "metadata": {
+    "description": "Comprehensive information about horse behavior, movements, and communication",
+    "category": "Equine Information",
+    "version": "1.0"
+  },
+  "natural_behavior": {
+    "herd_dynamics": {
+      "description": "Social structure and organization in natural horse herds",
+      "structure": [
+        {
+          "role": "Lead Mare",
+          "description": "Dominant female who leads the herd to resources",
+          "characteristics": ["Usually older", "Experienced", "Decision-maker for daily activities"]
+        },
+        {
+          "role": "Stallion",
+          "description": "Dominant male who protects the herd",
+          "characteristics": ["Defends against predators and other stallions", "May control multiple mares", "Usually patrols the perimeter"]
+        },
+        {
+          "role": "Subordinate Horses",
+          "description": "Lower-ranking herd members",
+          "characteristics": ["Follow lead mare", "Have specific ranking in hierarchy", "Young males often form bachelor groups"]
+        }
+      ],
+      "hierarchy": "Established and maintained through body language and occasional physical confrontations",
+      "herd_benefits": ["Protection from predators", "Collective knowledge of resources", "Social companionship", "Mutual grooming"]
+    },
+    "feeding_patterns": {
+      "description": "Natural eating behaviors",
+      "grazing_time": "10-17 hours per day in natural settings",
+      "grazing_style": "Continuous small meals, moving slowly while eating",
+      "selection": "Prefer certain grasses and plants, avoid eating near manure",
+      "water_needs": "8-12 gallons per day, prefer clean, fresh water"
+    },
+    "rest_patterns": {
+      "description": "Natural sleeping and resting behaviors",
+      "sleep_requirements": "2-3 hours of total sleep in 24-hour period",
+      "sleep_types": [
+        {
+          "type": "Standing sleep",
+          "description": "Light sleep while standing using the stay apparatus",
+          "duration": "Naps of 15-20 minutes"
+        },
+        {
+          "type": "Sternal recumbency",
+          "description": "Lying down on the sternum with legs tucked under",
+          "duration": "30-40 minutes at a time"
+        },
+        {
+          "type": "Lateral recumbency",
+          "description": "Lying flat on the side, deep sleep",
+          "duration": "10-30 minutes at a time, rarely exceeding 30 minutes"
+        }
+      ],
+      "security_needs": "Require feeling safe to enter deep sleep phases"
+    },
+    "reproductive_behavior": {
+      "mare_estrus": {
+        "description": "Behavioral changes during fertility cycle",
+        "duration": "5-7 days every 21 days during breeding season",
+        "signs": ["Tail raising", "Frequent urination", "Winking of vulva", "Receptivity to stallion"]
+      },
+      "stallion_behavior": {
+        "description": "Behaviors related to reproduction",
+        "territorial": "May defend territory containing mares",
+        "courtship": ["Arched neck", "Prancing", "Nickering", "Flehmen response (curling upper lip)"]
+      },
+      "foaling": {
+        "description": "Behavior before, during, and after birth",
+        "pre_foaling_signs": ["Udder development", "Waxing of teats", "Restlessness", "Nest-building behavior"],
+        "foaling_process": "Usually occurs at night, takes 15-30 minutes once active labor begins",
+        "post_foaling": ["Licking and bonding with foal", "Foal stands within 1-2 hours", "Protective behavior"]
+      }
+    },
+    "defensive_behaviors": {
+      "flight": {
+        "description": "Primary defense strategy, running from perceived threats",
+        "distance": "Flight distance varies by individual and experience",
+        "speed": "Can reach 40 mph (64 km/h) in short bursts"
+      },
+      "fight": {
+        "description": "Secondary defense when flight not possible",
+        "weapons": ["Powerful kicks with hind legs", "Striking with front legs", "Biting"]
+      },
+      "freeze": {
+        "description": "Momentary immobility to assess threat",
+        "function": "Allows for threat evaluation before deciding to flee"
+      }
+    }
+  },
+  "communication": {
+    "vocalizations": [
+      {
+        "name": "Nicker",
+        "description": "Soft, low-pitched greeting sound",
+        "context": "Greeting, anticipation of food, mare to foal communication",
+        "sound_file": "nicker.mp3"
+      },
+      {
+        "name": "Whinny/Neigh",
+        "description": "Loud, high-pitched call",
+        "context": "Calling to distant horses, anxiety when separated from herd",
+        "sound_file": "whinny.mp3"
+      },
+      {
+        "name": "Squeal",
+        "description": "High-pitched, short sound",
+        "context": "Warning, aggressive encounters, mare rejecting stallion",
+        "sound_file": "squeal.mp3"
+      },
+      {
+        "name": "Snort",
+        "description": "Forced expulsion of air through nostrils",
+        "context": "Alertness, excitement, or clearing nasal passages",
+        "sound_file": "snort.mp3"
+      },
+      {
+        "name": "Blow",
+        "description": "Softer expulsion of air than snort",
+        "context": "Greeting, investigation of new objects",
+        "sound_file": "blow.mp3"
+      },
+      {
+        "name": "Groan",
+        "description": "Low, guttural sound",
+        "context": "Pain, extreme exertion, sometimes pleasure during grooming",
+        "sound_file": "groan.mp3"
+      }
+    ],
+    "body_language": {
+      "ears": [
+        {
+          "position": "Forward",
+          "meaning": "Attention, interest, alertness",
+          "image_reference": "ears_forward.png"
+        },
+        {
+          "position": "Backward",
+          "meaning": "Listening behind, irritation, potential aggression",
+          "image_reference": "ears_backward.png"
+        },
+        {
+          "position": "Pinned flat",
+          "meaning": "Anger, aggression, severe discomfort",
+          "image_reference": "ears_pinned.png"
+        },
+        {
+          "position": "Rotating/Mobile",
+          "meaning": "Scanning environment, processing multiple stimuli",
+          "image_reference": "ears_rotating.png"
+        }
+      ],
+      "head_position": [
+        {
+          "position": "High",
+          "meaning": "Alertness, excitement, potential fear",
+          "image_reference": "head_high.png"
+        },
+        {
+          "position": "Level",
+          "meaning": "Relaxed, attentive",
+          "image_reference": "head_level.png"
+        },
+        {
+          "position": "Low",
+          "meaning": "Relaxation, submission, depression, or illness",
+          "image_reference": "head_low.png"
+        },
+        {
+          "position": "Extended",
+          "meaning": "Curiosity, investigation",
+          "image_reference": "head_extended.png"
+        }
+      ],
+      "tail": [
+        {
+          "position": "Raised high",
+          "meaning": "Excitement, alertness, may indicate high energy",
+          "image_reference": "tail_raised.png"
+        },
+        {
+          "position": "Relaxed",
+          "meaning": "Calm, content",
+          "image_reference": "tail_relaxed.png"
+        },
+        {
+          "position": "Clamped down",
+          "meaning": "Fear, discomfort, tension",
+          "image_reference": "tail_clamped.png"
+        },
+        {
+          "position": "Swishing",
+          "meaning": "Irritation, fly control, can escalate to aggression",
+          "image_reference": "tail_swishing.png"
+        }
+      ],
+      "overall_posture": [
+        {
+          "posture": "Tense/Rigid",
+          "meaning": "Alertness, fear, pain",
+          "description": "Muscles tight, body stiff, ready for flight",
+          "image_reference": "posture_tense.png"
+        },
+        {
+          "posture": "Relaxed",
+          "meaning": "Contentment, comfort",
+          "description": "Soft eyes, relaxed muscles, may have a leg rested",
+          "image_reference": "posture_relaxed.png"
+        },
+        {
+          "posture": "Threatening",
+          "meaning": "Warning before aggression",
+          "description": "Head and neck extended, ears pinned, may swing hindquarters toward target",
+          "image_reference": "posture_threatening.png"
+        }
+      ]
+    },
+    "touch_communication": {
+      "mutual_grooming": {
+        "description": "Horses using teeth to scratch each other's withers, back, and neck",
+        "social_function": "Bonding, stress reduction, practical help with itching",
+        "image_reference": "mutual_grooming.png"
+      },
+      "nuzzling": {
+        "description": "Soft touching with the muzzle",
+        "social_function": "Greeting, affection, investigation",
+        "image_reference": "nuzzling.png"
+      }
+    }
+  },
+  "movement": {
+    "natural_gaits": [
+      {
+        "name": "Walk",
+        "description": "Four-beat gait with each foot hitting ground separately",
+        "speed": "4-5 mph (6.4-8 km/h)",
+        "footfall_pattern": "Right hind, right front, left hind, left front",
+        "characteristics": ["Most efficient gait for energy conservation", "Always has at least two feet on ground"],
+        "animation_reference": "walk_animation.mp4"
+      },
+      {
+        "name": "Trot",
+        "description": "Two-beat diagonal gait",
+        "speed": "8-10 mph (13-16 km/h)",
+        "footfall_pattern": "Left front and right hind together, right front and left hind together",
+        "characteristics": ["Suspension phase between beats", "Efficient for covering distance"],
+        "animation_reference": "trot_animation.mp4"
+      },
+      {
+        "name": "Canter",
+        "description": "Three-beat gait with a moment of suspension",
+        "speed": "10-17 mph (16-27 km/h)",
+        "footfall_pattern": "First beat: outside hind leg. Second beat: inside hind and outside fore together. Third beat: inside fore, followed by suspension",
+        "characteristics": ["Can be right or left lead", "More collected than gallop"],
+        "animation_reference": "canter_animation.mp4"
+      },
+      {
+        "name": "Gallop",
+        "description": "Fastest gait, four-beat with a moment of suspension",
+        "speed": "25-30 mph (40-48 km/h), top speed around 55 mph (88 km/h)",
+        "footfall_pattern": "Hind leg, other hind leg, foreleg, other foreleg, followed by suspension",
+        "characteristics": ["Maximum extension", "Used for short bursts of speed"],
+        "animation_reference": "gallop_animation.mp4"
+      }
+    ],
+    "special_gaits": [
+      {
+        "name": "Pace",
+        "description": "Two-beat lateral gait where legs on same side move together",
+        "speed": "Similar to trot",
+        "breeds": ["Standardbreds", "Icelandic Horses"],
+        "animation_reference": "pace_animation.mp4"
+      },
+      {
+        "name": "Tölt",
+        "description": "Four-beat lateral gait with minimal vertical movement",
+        "characteristics": ["Very smooth for rider", "Always one foot on ground"],
+        "breeds": ["Icelandic Horse"],
+        "animation_reference": "tolt_animation.mp4"
+      },
+      {
+        "name": "Running Walk",
+        "description": "Smooth, four-beat gait with foot overreaching",
+        "characteristics": ["Nodding head motion", "Smooth for riding"],
+        "breeds": ["Tennessee Walking Horse"],
+        "animation_reference": "running_walk_animation.mp4"
+      },
+      {
+        "name": "Rack",
+        "description": "Fast, flashy four-beat gait",
+        "characteristics": ["High action", "Very little suspension"],
+        "breeds": ["American Saddlebred", "Racking Horse"],
+        "animation_reference": "rack_animation.mp4"
+      }
+    ],
+    "jumping": {
+      "description": "Natural ability to clear obstacles",
+      "phases": [
+        {
+          "name": "Approach",
+          "description": "Collection and preparation before takeoff",
+          "key_factors": ["Speed", "Rhythm", "Balance"]
+        },
+        {
+          "name": "Takeoff",
+          "description": "Propulsion from ground using hindquarters",
+          "key_factors": ["Angle", "Power", "Timing"]
+        },
+        {
+          "name": "Flight",
+          "description": "Arc over obstacle",
+          "key_factors": ["Tucked front legs", "Arched back", "Extended hind legs"]
+        },
+        {
+          "name": "Landing",
+          "description": "Return to ground, typically on front legs first",
+          "key_factors": ["Balance", "Absorption of impact"]
+        },
+        {
+          "name": "Recovery",
+          "description": "Return to normal gait",
+          "key_factors": ["Balance", "Continuation of movement"]
+        }
+      ],
+      "animation_reference": "jumping_sequence.mp4"
+    },
+    "body_movements": {
+      "head_tossing": {
+        "description": "Upward, sometimes repeated movement of head",
+        "causes": ["Play", "Excitement", "Discomfort (bit, teeth, ears)", "Resistance"],
+        "animation_reference": "head_tossing.mp4"
+      },
+      "pawing": {
+        "description": "Scraping front hoof against ground",
+        "causes": ["Impatience", "Boredom", "Hunger", "Pain", "Desire to roll"],
+        "animation_reference": "pawing.mp4"
+      },
+      "rearing": {
+        "description": "Rising up on hind legs",
+        "causes": ["Excitement", "Play", "Fear", "Aggression", "Evasion of rider"],
+        "animation_reference": "rearing.mp4"
+      },
+      "bucking": {
+        "description": "Lowering head and kicking up hind legs",
+        "causes": ["Play", "Excess energy", "Pain", "Resistance to rider"],
+        "animation_reference": "bucking.mp4"
+      },
+      "rolling": {
+        "description": "Lying down and rotating body from side to side",
+        "causes": ["Comfort", "Grooming", "Itch relief", "After sweating/bathing"],
+        "animation_reference": "rolling.mp4"
+      }
+    }
+  },
+  "cognitive_abilities": {
+    "learning_capacity": {
+      "description": "Horses' ability to learn and remember",
+      "learning_methods": [
+        {
+          "type": "Habituation",
+          "description": "Decreased response to repeated stimuli",
+          "example": "Getting used to traffic noise"
+        },
+        {
+          "type": "Operant conditioning",
+          "description": "Learning through consequences (positive/negative reinforcement)",
+          "example": "Learning to respond to leg pressure"
+        },
+        {
+          "type": "Observational learning",
+          "description": "Learning by watching others",
+          "example": "Young horses learning from older herd members"
+        }
+      ],
+      "memory_span": "Excellent long-term memory, can remember individuals and training for decades"
+    },
+    "intelligence_traits": [
+      {
+        "trait": "Problem-solving",
+        "description": "Ability to figure out solutions to challenges",
+        "examples": ["Opening gates", "Finding ways to reach food"]
+      },
+      {
+        "trait": "Emotional intelligence",
+        "description": "Ability to read and respond to emotions in others",
+        "examples": ["Responding to handler's emotions", "Adjusting behavior based on situation"]
+      },
+      {
+        "trait": "Spatial awareness",
+        "description": "Understanding of body position and surroundings",
+        "examples": ["Navigating obstacles", "Awareness of rider position"]
+      }
+    ],
+    "perception": {
+      "vision": {
+        "field_of_view": "Nearly 360 degrees with blind spots directly in front and behind",
+        "color_perception": "Dichromatic (similar to red-green color blindness)",
+        "night_vision": "Better than humans but adjustment time needed",
+        "depth_perception": "Limited binocular vision (about 65 degrees overlap)"
+      },
+      "hearing": {
+        "range": "Hear frequencies from 14 Hz to 25 kHz (broader than humans)",
+        "directional_ability": "Can rotate ears independently to locate sounds",
+        "sensitivity": "More sensitive than human hearing, can detect distant sounds"
+      },
+      "smell": {
+        "capacity": "Highly developed, better than humans but less than dogs",
+        "uses": ["Identifying other horses", "Finding food", "Detecting predators", "Reproductive status"]
+      },
+      "touch": {
+        "sensitivity": "Extremely sensitive skin, especially muzzle, flanks, and legs",
+        "special_features": ["Whiskers (vibrissae) provide sensory information", "Can feel a fly landing anywhere on body"]
+      },
+      "taste": {
+        "preferences": "Can distinguish sweet, salty, sour, and bitter",
+        "selectivity": "Often avoid bitter plants which may be toxic"
+      }
+    }
+  },
+  "emotional_states": {
+    "primary_emotions": [
+      {
+        "emotion": "Fear",
+        "description": "Response to perceived threat",
+        "physical_signs": ["Elevated head", "Wide eyes", "Flared nostrils", "Tense muscles", "Increased respiratory rate"],
+        "behavioral_signs": ["Fleeing", "Freezing", "Sweating", "Defecation"]
+      },
+      {
+        "emotion": "Contentment",
+        "description": "State of relaxation and satisfaction",
+        "physical_signs": ["Relaxed posture", "Lower head", "Soft eyes", "Regular breathing"],
+        "behavioral_signs": ["Grazing calmly", "Gentle interactions", "May rest a hind leg"]
+      },
+      {
+        "emotion": "Excitement",
+        "description": "Aroused, energetic state",
+        "physical_signs": ["Elevated head", "Arched neck", "Tail raised", "Animated movement"],
+        "behavioral_signs": ["Prancing", "Snorting", "Playful behavior"]
+      },
+      {
+        "emotion": "Aggression",
+        "description": "Hostile or threatening state",
+        "physical_signs": ["Pinned ears", "Bared teeth", "Lowered head", "Raised tail"],
+        "behavioral_signs": ["Biting", "Kicking", "Charging", "Striking"]
+      }
+    ],
+    "complex_emotional_states": [
+      {
+        "emotion": "Grief",
+        "description": "Response to loss, particularly of herd member",
+        "physical_signs": ["Lethargy", "Reduced appetite", "Standing with head low"],
+        "behavioral_signs": ["Searching behavior", "Calling", "Social withdrawal"]
+      },
+      {
+        "emotion": "Jealousy",
+        "description": "Response to perceived preference given to another horse",
+        "physical_signs": ["Ears back", "Tense body language"],
+        "behavioral_signs": ["Pushing between handler and other horse", "Aggressive displays"]
+      },
+      {
+        "emotion": "Curiosity",
+        "description": "Interest in novel stimuli",
+        "physical_signs": ["Forward ears", "Extended neck", "Focused attention"],
+        "behavioral_signs": ["Approaching new objects", "Investigative sniffing", "Tentative interaction"]
+      }
+    ]
+  },
+  "abnormal_behaviors": {
+    "stereotypies": [
+      {
+        "name": "Cribbing/Windsucking",
+        "description": "Grasping surface with teeth, arching neck, and sucking in air",
+        "causes": ["Stress", "Boredom", "Possible digestive discomfort", "Genetic factors"],
+        "management": ["Increased turnout", "Social contact", "Balanced diet", "Environmental enrichment"],
+        "animation_reference": "cribbing.mp4"
+      },
+      {
+        "name": "Weaving",
+        "description": "Rhythmic swaying from side to side",
+        "causes": ["Confinement stress", "Social isolation", "Anticipation (feeding)"],
+        "management": ["Increased turnout", "Stable mirror", "Visual access to other horses"],
+        "animation_reference": "weaving.mp4"
+      },
+      {
+        "name": "Box walking",
+        "description": "Repetitive walking pattern in stall",
+        "causes": ["Confinement", "Boredom", "Excess energy", "Stress"],
+        "management": ["Increased exercise", "Multiple feeding stations", "Environmental enrichment"],
+        "animation_reference": "box_walking.mp4"
+      },
+      {
+        "name": "Wood chewing",
+        "description": "Destructive chewing of wooden structures",
+        "causes": ["Dietary deficiencies", "Boredom", "Teething in young horses"],
+        "management": ["Adequate forage", "Mineral blocks", "Chew toys"],
+        "animation_reference": "wood_chewing.mp4"
+      }
+    ]
+  }
+}
+

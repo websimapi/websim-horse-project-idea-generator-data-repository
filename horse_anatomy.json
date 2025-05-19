@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "description": "Comprehensive information about horse anatomy, proportions, and measurements",
+    "category": "Equine Information",
+    "version": "1.0"
+  },
+  "body_regions": {
+    "head": {
+      "parts": [
+        {
+          "name": "Forehead",
+          "description": "Area between the eyes and ears",
+          "function": "Houses the frontal bone and sinuses",
+          "image_reference": "horse_forehead.png"
+        },
+        {
+          "name": "Poll",
+          "description": "Top of the head between the ears",
+          "function": "Important point of contact for bridle, sensitive area",
+          "image_reference": "horse_poll.png"
+        },
+        {
+          "name": "Forelock",
+          "description": "Tuft of mane that falls over the forehead",
+          "function": "Provides protection from sun and insects",
+          "image_reference": "horse_forelock.png"
+        },
+        {
+          "name": "Eye",
+          "description": "Large, side-set eyes providing wide field of vision",
+          "function": "Vision - horses have nearly 360-degree vision",
+          "notes": "Horse eyes are the largest of any land mammal",
+          "image_reference": "horse_eye.png"
+        },
+        {
+          "name": "Muzzle",
+          "description": "Nose and mouth area",
+          "function": "Breathing, eating, sensory perception",
+          "image_reference": "horse_muzzle.png"
+        },
+        {
+          "name": "Nostril",
+          "description": "External opening to nasal cavity",
+          "function": "Breathing, can flare during exercise or excitement",
+          "image_reference": "horse_nostril.png"
+        },
+        {
+          "name": "Jaw",
+          "description": "Mandible and surrounding area",
+          "function": "Chewing, houses teeth",
+          "image_reference": "horse_jaw.png"
+        },
+        {
+          "name": "Ear",
+          "description": "Upright, funnel-shaped ears",
+          "function": "Hearing, communication through positioning",
+          "notes": "Ears can rotate 180 degrees independently",
+          "image_reference": "horse_ear.png"
+        }
+      ]
+    },
+    "neck": {
+      "parts": [
+        {
+          "name": "Crest",
+          "description": "Top line of the neck",
+          "function": "Muscle attachment, supports head",
+          "image_reference": "horse_crest.png"
+        },
+        {
+          "name": "Throatlatch",
+          "description": "Junction of the head and neck, under the jaw",
+          "function": "Contains windpipe and important structures",
+          "image_reference": "horse_throatlatch.png"
+        },
+        {
+          "name": "Jugular Groove",
+          "description": "Channel on side of neck where jugular vein runs",
+          "function": "Contains major blood vessels",
+          "image_reference": "horse_jugular_groove.png"
+        }
+      ]
+    },
+    "trunk": {
+      "parts": [
+        {
+          "name": "Withers",
+          "description": "Ridge between shoulder blades where neck meets back",
+          "function": "Anchor for muscles, height measurement point",
+          "notes": "Used as the standard measuring point for horse height",
+          "image_reference": "horse_withers.png"
+        },
+        {
+          "name": "Back",
+          "description": "Area from withers to loin",
+          "function": "Supports rider weight, connects front and hind end",
+          "image_reference": "horse_back.png"
+        },
+        {
+          "name": "Loin",
+          "description": "Short area between back and croup",
+          "function": "Transfers power from hindquarters",
+          "image_reference": "horse_loin.png"
+        },
+        {
+          "name": "Croup",
+          "description": "Top line from loin to tail",
+          "function": "Muscle attachment for hindquarters",
+          "image_reference": "horse_croup.png"
+        },
+        {
+          "name": "Barrel",
+          "description": "Body area containing ribs and organs",
+          "function": "Houses vital organs like lungs and digestive system",
+          "image_reference": "horse_barrel.png"
+        },
+        {
+          "name": "Flank",
+          "description": "Area between last rib and hip",
+          "function": "Connects barrel to hindquarters",
+          "image_reference": "horse_flank.png"
+        },
+        {
+          "name": "Shoulder",
+          "description": "Area from withers to point of shoulder",
+          "function": "Attachment for front limb, affects stride length",
+          "image_reference": "horse_shoulder.png"
+        },
+        {
+          "name": "Chest",
+          "description": "Area between forelegs and up to shoulder",
+          "function": "Houses heart and major blood vessels",
+          "image_reference": "horse_chest.png"
+        },
+        {
+          "name": "Girth",
+          "description": "Area behind forelegs where saddle girth goes",
+          "function": "Measurement point for tack fitting",
+          "image_reference": "horse_girth.png"
+        }
+      ]
+    },
+    "hindquarters": {
+      "parts": [
+        {
+          "name": "Hip",
+          "description": "Point of hip bone",
+          "function": "Muscle attachment, power generation",
+          "image_reference": "horse_hip.png"
+        },
+        {
+          "name": "Stifle",
+          "description": "Joint equivalent to human knee",
+          "function": "Important for hindlimb movement",
+          "image_reference": "horse_stifle.png"
+        },
+        {
+          "name": "Gaskin",
+          "description": "Area between stifle and hock",
+          "function": "Contains muscles that flex the hock",
+          "image_reference": "horse_gaskin.png"
+        },
+        {
+          "name": "Hock",
+          "description": "Large joint in hind leg, equivalent to human ankle",
+          "function": "Absorbs shock, translates power from hindquarters",
+          "image_reference": "horse_hock.png"
+        },
+        {
+          "name": "Buttock",
+          "description": "Muscular area behind hip",
+          "function": "Power generation for movement",
+          "image_reference": "horse_buttock.png"
+        },
+        {
+          "name": "Dock",
+          "description": "Base of the tail",
+          "function": "Supports tail",
+          "image_reference": "horse_dock.png"
+        }
+      ]
+    },
+    "legs": {
+      "forelegs": [
+        {
+          "name": "Point of Shoulder",
+          "description": "Junction of shoulder and upper arm",
+          "function": "Important for shoulder movement",
+          "image_reference": "horse_point_of_shoulder.png"
+        },
+        {
+          "name": "Forearm",
+          "description": "Area between knee and elbow",
+          "function": "Contains muscles for leg movement",
+          "image_reference": "horse_forearm.png"
+        },
+        {
+          "name": "Knee",
+          "description": "Joint between forearm and cannon bone (carpus)",
+          "function": "Shock absorption, directional changes",
+          "image_reference": "horse_knee.png"
+        },
+        {
+          "name": "Cannon",
+          "description": "Area between knee and fetlock",
+          "function": "Weight-bearing, limited muscle tissue",
+          "image_reference": "horse_cannon.png"
+        },
+        {
+          "name": "Fetlock",
+          "description": "Joint between cannon and pastern",
+          "function": "Shock absorption",
+          "image_reference": "horse_fetlock.png"
+        },
+        {
+          "name": "Pastern",
+          "description": "Area between fetlock and hoof",
+          "function": "Shock absorption, affects gait quality",
+          "image_reference": "horse_pastern.png"
+        },
+        {
+          "name": "Coronet",
+          "description": "Junction where hoof meets skin",
+          "function": "Growth area for hoof",
+          "image_reference": "horse_coronet.png"
+        },
+        {
+          "name": "Hoof",
+          "description": "Keratinized structure at the end of each leg",
+          "function": "Weight-bearing, protection for inner structures",
+          "image_reference": "horse_hoof.png"
+        }
+      ],
+      "hindlegs": [
+        {
+          "name": "Thigh",
+          "description": "Upper part of hindleg from hip to stifle",
+          "function": "Power generation",
+          "image_reference": "horse_thigh.png"
+        },
+        {
+          "name": "Gaskin",
+          "description": "Area between stifle and hock",
+          "function": "Contains muscles for leg movement",
+          "image_reference": "horse_gaskin.png"
+        },
+        {
+          "name": "Hock",
+          "description": "Large joint in hindleg (tarsus)",
+          "function": "Critical for propulsion and movement",
+          "image_reference": "horse_hock.png"
+        }
+      ]
+    },
+    "tail": {
+      "parts": [
+        {
+          "name": "Dock",
+          "description": "Base of the tail",
+          "function": "Supports tail structure",
+          "image_reference": "horse_dock.png"
+        },
+        {
+          "name": "Skirt",
+          "description": "Long hairs of the tail",
+          "function": "Swatting flies, communication",
+          "image_reference": "horse_tail_skirt.png"
+        }
+      ]
+    }
+  },
+  "skeletal_system": {
+    "description": "The framework that supports the horse's body",
+    "components": [
+      {
+        "name": "Skull",
+        "bone_count": 34,
+        "function": "Protects brain, houses sense organs, supports jaw"
+      },
+      {
+        "name": "Vertebral Column",
+        "bone_count": "54 vertebrae (7 cervical, 18 thoracic, 6 lumbar, 5 sacral, 15-25 caudal)",
+        "function": "Protects spinal cord, supports head and body"
+      },
+      {
+        "name": "Ribs",
+        "bone_count": "36 (18 pairs)",
+        "function": "Protect thoracic organs, assist in breathing"
+      },
+      {
+        "name": "Forelegs",
+        "bone_count": "Multiple bones including scapula, humerus, radius, ulna, carpals, metacarpals, phalanges",
+        "function": "Support weight, locomotion"
+      },
+      {
+        "name": "Hindlegs",
+        "bone_count": "Multiple bones including femur, tibia, fibula, tarsals, metatarsals, phalanges",
+        "function": "Power generation, locomotion"
+      }
+    ],
+    "total_bone_count": "Approximately 205 bones",
+    "image_reference": "horse_skeleton.png"
+  },
+  "muscular_system": {
+    "major_muscle_groups": [
+      {
+        "name": "Neck Muscles",
+        "function": "Move head and neck, important for balance",
+        "key_muscles": ["Splenius", "Brachiocephalicus", "Rhomboideus"]
+      },
+      {
+        "name": "Shoulder Muscles",
+        "function": "Front leg movement, support weight",
+        "key_muscles": ["Trapezius", "Supraspinatus", "Infraspinatus", "Deltoid"]
+      },
+      {
+        "name": "Back Muscles",
+        "function": "Support spine, allow movement",
+        "key_muscles": ["Longissimus dorsi", "Latissimus dorsi"]
+      },
+      {
+        "name": "Hindquarter Muscles",
+        "function": "Power generation, propulsion",
+        "key_muscles": ["Gluteals", "Semitendinosus", "Semimembranosus", "Biceps femoris"]
+      }
+    ],
+    "image_reference": "horse_muscles.png"
+  },
+  "measurements": {
+    "height": {
+      "description": "Measured from ground to withers, traditionally in 'hands' (4 inches each)",
+      "average_ranges": {
+        "draft_breeds": "16-19 hands (64-76 inches, 163-193 cm)",
+        "light_breeds": "14-17 hands (56-68 inches, 142-173 cm)",
+        "ponies": "Under 14.2 hands (under 58 inches, under 147 cm)"
+      },
+      "measurement_technique": "Stand horse on level ground, measure vertical distance from ground to highest point of withers"
+    },
+    "weight": {
+      "description": "Total body mass, usually measured in pounds or kilograms",
+      "average_ranges": {
+        "draft_breeds": "1,500-2,400 pounds (680-1,090 kg)",
+        "light_breeds": "900-1,300 pounds (410-590 kg)",
+        "ponies": "400-900 pounds (180-410 kg)"
+      },
+      "estimation_formula": "Heart girth (in) × heart girth (in) × body length (in) ÷ 300 = approximate weight in pounds"
+    },
+    "proportions": {
+      "description": "Ideal proportional relationships between body parts",
+      "key_ratios": [
+        "Square frame: body length equals height at withers",
+        "Head length roughly equal to neck length",
+        "Shoulder angle ideally 45-50 degrees from vertical"
+      ]
+    }
+  },
+  "internal_systems": {
+    "digestive": {
+      "description": "Specialized for processing fibrous plant material",
+      "key_features": [
+        "Small stomach (4 gallons)",
+        "Long small intestine (70 feet)",
+        "Large cecum for fermentation",
+        "Unable to vomit due to strong cardiac sphincter"
+      ]
+    },
+    "respiratory": {
+      "description": "Designed for efficient oxygen uptake during exercise",
+      "key_features": [
+        "Obligate nasal breathers (cannot breathe through mouth)",
+        "Large lung capacity (55 liters)",
+        "High respiratory rate (8-16 breaths per minute at rest)"
+      ]
+    },
+    "circulatory": {
+      "description": "Powerful system to support athletic performance",
+      "key_features": [
+        "Large heart (9-10 pounds)",
+        "Low resting heart rate (28-44 beats per minute)",
+        "Can increase to 250 beats per minute during intense exercise"
+      ]
+    }
+  },
+  "development_stages": {
+    "foal": {
+      "age_range": "Birth to weaning (6 months)",
+      "characteristics": "Long legs, proportionally short body, rapid growth"
+    },
+    "weanling": {
+      "age_range": "6 months to 1 year",
+      "characteristics": "Continued growth, gaining independence"
+    },
+    "yearling": {
+      "age_range": "1 to 2 years",
+      "characteristics": "Significant growth, adolescent appearance"
+    },
+    "two_year_old": {
+      "age_range": "2 to 3 years",
+      "characteristics": "Approaching adult size but still maturing"
+    },
+    "mature": {
+      "age_range": "4 to 15 years",
+      "characteristics": "Full physical development, prime years"
+    },
+    "senior": {
+      "age_range": "16+ years",
+      "characteristics": "May show signs of aging, changes in body condition"
+    }
+  }
+}
+

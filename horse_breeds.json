@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "description": "Comprehensive information about horse breeds from around the world",
+    "category": "Equine Information",
+    "version": "1.0"
+  },
+  "categories": {
+    "light": "Lighter breeds often used for riding, racing, and other athletic activities",
+    "draft": "Large, powerful breeds developed for farm work and heavy pulling tasks",
+    "pony": "Smaller breeds under 14.2 hands high at maturity",
+    "warmblood": "Breeds developed by crossing draft and light horses, often used for sport",
+    "gaited": "Breeds with special gaits beyond the typical walk, trot, canter, and gallop"
+  },
+  "breeds": [
+    {
+      "name": "Arabian",
+      "category": "light",
+      "origin": "Arabian Peninsula",
+      "height": {
+        "min": 14.1,
+        "max": 15.1,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 800,
+        "max": 1000,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Dished face profile",
+        "High tail carriage",
+        "Compact body",
+        "Arched neck",
+        "Large, expressive eyes"
+      ],
+      "common_colors": ["Bay", "Gray", "Chestnut", "Black"],
+      "temperament": "Intelligent, sensitive, and spirited",
+      "uses": ["Endurance riding", "Show horses", "Racing", "Family riding"],
+      "unique_traits": "One of the oldest horse breeds, known for endurance and refinement",
+      "image_reference": "arabian_horse.png"
+    },
+    {
+      "name": "Thoroughbred",
+      "category": "light",
+      "origin": "England",
+      "height": {
+        "min": 15.2,
+        "max": 17,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1000,
+        "max": 1300,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Long, flat muscling",
+        "Deep chest",
+        "Lean build",
+        "Long legs",
+        "Fine coat"
+      ],
+      "common_colors": ["Bay", "Brown", "Chestnut", "Black", "Gray"],
+      "temperament": "Athletic, high-energy, and sensitive",
+      "uses": ["Racing", "Jumping", "Eventing", "Dressage"],
+      "unique_traits": "Bred specifically for speed and racing",
+      "image_reference": "thoroughbred_horse.png"
+    },
+    {
+      "name": "Clydesdale",
+      "category": "draft",
+      "origin": "Scotland",
+      "height": {
+        "min": 16,
+        "max": 18,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1800,
+        "max": 2200,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Massive build",
+        "Feathering on lower legs",
+        "Broad forehead",
+        "Arched neck",
+        "High-stepping gait"
+      ],
+      "common_colors": ["Bay", "Brown", "Black", "Chestnut", "Roan"],
+      "temperament": "Gentle, patient, and willing",
+      "uses": ["Draft work", "Exhibitions", "Parades", "Promotional appearances"],
+      "unique_traits": "Famous for their use as Budweiser Clydesdales",
+      "image_reference": "clydesdale_horse.png"
+    },
+    {
+      "name": "Shetland Pony",
+      "category": "pony",
+      "origin": "Shetland Islands, Scotland",
+      "height": {
+        "min": 7,
+        "max": 10.2,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 400,
+        "max": 500,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Small size",
+        "Thick mane and tail",
+        "Heavy coat",
+        "Stocky build",
+        "Strong for their size"
+      ],
+      "common_colors": ["All colors"],
+      "temperament": "Intelligent, strong-willed, and hardy",
+      "uses": ["Children's riding", "Driving", "Therapeutic riding", "Showing"],
+      "unique_traits": "One of the strongest breeds relative to size",
+      "image_reference": "shetland_pony.png"
+    },
+    {
+      "name": "Hanoverian",
+      "category": "warmblood",
+      "origin": "Germany",
+      "height": {
+        "min": 15.3,
+        "max": 17.2,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1200,
+        "max": 1400,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Athletic build",
+        "Elegant appearance",
+        "Strong hindquarters",
+        "Well-defined withers",
+        "Long, sloping shoulders"
+      ],
+      "common_colors": ["Bay", "Chestnut", "Black", "Gray"],
+      "temperament": "Trainable, athletic, and willing",
+      "uses": ["Dressage", "Show jumping", "Eventing", "Driving"],
+      "unique_traits": "Developed through selective breeding program in Germany",
+      "image_reference": "hanoverian_horse.png"
+    },
+    {
+      "name": "Tennessee Walking Horse",
+      "category": "gaited",
+      "origin": "United States",
+      "height": {
+        "min": 14.3,
+        "max": 17,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 900,
+        "max": 1200,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Unique running walk gait",
+        "Long neck",
+        "Short back",
+        "Sloping shoulders",
+        "Long stride"
+      ],
+      "common_colors": ["All colors"],
+      "temperament": "Calm, docile, and intelligent",
+      "uses": ["Trail riding", "Pleasure riding", "Showing", "Parades"],
+      "unique_traits": "Famous for smooth 'running walk' gait",
+      "image_reference": "tennessee_walking_horse.png"
+    }
+  ],
+  "rare_breeds": [
+    {
+      "name": "Akhal-Teke",
+      "category": "light",
+      "origin": "Turkmenistan",
+      "height": {
+        "min": 14.2,
+        "max": 16,
+        "unit": "hands"
+      },
+      "characteristics": ["Metallic coat sheen", "Almond-shaped eyes", "Lean build"],
+      "unique_traits": "Known for metallic coat that can appear golden"
+    },
+    {
+      "name": "Przewalski's Horse",
+      "category": "wild",
+      "origin": "Central Asia",
+      "height": {
+        "min": 12,
+        "max": 14,
+        "unit": "hands"
+      },
+      "characteristics": ["Dun coloration", "Erect mane", "No forelock"],
+      "unique_traits": "The only truly wild horse species still in existence"
+    }
+  ],
+  "extinct_breeds": [
+    {
+      "name": "Tarpan",
+      "extinction_date": "1909",
+      "origin": "Eastern Europe",
+      "characteristics": ["Mouse-dun color", "Dorsal stripe", "Primitive markings"],
+      "extinction_cause": "Hunting, interbreeding with domestic horses, habitat loss"
+    }
+  ]
+}
+

@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "description": "Comprehensive information about mythical and fictional horses from various cultures and media",
+    "category": "Equine Information",
+    "version": "1.0"
+  },
+  "mythological_horses": {
+    "greek_roman": [
+      {
+        "name": "Pegasus",
+        "description": "Immortal winged horse born from the blood of Medusa",
+        "origin": "Greek mythology",
+        "associated_with": "Bellerophon, Perseus (in some accounts), Zeus",
+        "powers": ["Flight", "Divine wisdom", "Creation of springs by stomping hoof"],
+        "symbolism": "Divine inspiration, poetic imagination, transition between earth and heaven",
+        "famous_stories": [
+          "Birth from Medusa's blood",
+          "Helping Bellerophon defeat the Chimera",
+          "Becoming a constellation by Zeus's command"
+        ],
+        "image_reference": "pegasus.png"
+      },
+      {
+        "name": "Horses of Helios",
+        "description": "Fire-breathing horses that pulled the sun chariot across the sky",
+        "origin": "Greek mythology",
+        "names": ["Pyrois", "Aeos", "Aethon", "Phlegon"],
+        "associated_with": "Helios (Greek sun god), later Apollo",
+        "powers": ["Breathing fire", "Flying", "Immortality"],
+        "famous_stories": ["Phaethon's disastrous attempt to drive the sun chariot"],
+        "image_reference": "horses_of_helios.png"
+      },
+      {
+        "name": "Arion",
+        "description": "Extremely swift immortal horse with a black mane and tail",
+        "origin": "Greek mythology",
+        "associated_with": "Heracles, Adrastus",
+        "parentage": "Poseidon and Demeter (both in horse form)",
+        "powers": ["Supernatural speed", "Speech", "Immortality"],
+        "image_reference": "arion.png"
+      },
+      {
+        "name": "Xanthus and Balius",
+        "description": "Immortal horses given to Peleus as a wedding gift",
+        "origin": "Greek mythology",
+        "associated_with": "Achilles in the Trojan War",
+        "powers": ["Immortality", "Speech (Xanthus prophesied Achilles' death)", "Supernatural speed"],
+        "image_reference": "xanthus_balius.png"
+      }
+    ],
+    "norse": [
+      {
+        "name": "Sleipnir",
+        "description": "Eight-legged horse of Odin",
+        "origin": "Norse mythology",
+        "associated_with": "Odin, the Allfather",
+        "parentage": "Loki (in mare form) and Svaðilfari",
+        "powers": ["Travel between worlds", "Supernatural speed", "Running on water and air"],
+        "symbolism": "Shamanic journeys, transitions between realms",
+        "appearance": "Gray with eight legs",
+        "image_reference": "sleipnir.png"
+      },
+      {
+        "name": "Hrímfaxi and Skinfaxi",
+        "description": "Horses of night and day",
+        "origin": "Norse mythology",
+        "details": [
+          {
+            "name": "Hrímfaxi",
+            "meaning": "Frost mane",
+            "role": "Horse of Nótt (night)",
+            "description": "Brings night by sprinkling dew from mane"
+          },
+          {
+            "name": "Skinfaxi",
+            "meaning": "Shining mane",
+            "role": "Horse of Dagr (day)",
+            "description": "Brings daylight with glowing mane"
+          }
+        ],
+        "image_reference": "hrimfaxi_skinfaxi.png"
+      }
+    ],
+    "celtic": [
+      {
+        "name": "Enbarr",
+        "description": "Magical horse from the Celtic Otherworld who could travel over water",
+        "origin": "Irish mythology",
+        "associated_with": "Manannán mac Lir (sea god)",
+        "powers": ["Walking on water", "Supernatural speed"],
+        "appearance": "Pure white with silver hooves",
+        "image_reference": "enbarr.png"
+      },
+      {
+        "name": "Kelpie",
+        "description": "Shapeshifting water spirit that often appears as a horse",
+        "origin": "Scottish mythology",
+        "behavior": "Lures humans to ride it, then drowns them",
+        "powers": ["Shapeshifting", "Water control", "Supernatural strength"],
+        "appearance": "Usually black, with a constantly dripping mane",
+        "image_reference": "kelpie.png"
+      },
+      {
+        "name": "Each Uisge",
+        "description": "Dangerous water horse spirit similar to kelpie but dwelling in seas and lochs",
+        "origin": "Scottish mythology",
+        "behavior": "More dangerous than kelpie, completely devours victims except liver",
+        "powers": ["Shapeshifting", "Supernatural strength", "Adhesive skin"],
+        "image_reference": "each_uisge.png"
+      }
+    ],
+    "eastern": [
+      {
+        "name": "Tianma",
+        "description": "Celestial flying horses",
+        "origin": "Chinese mythology",
+        "associated_with": "Emperor Wu of Han and celestial realms",
+        "powers": ["Flight", "Immortality", "Divine nature"],
+        "appearance": "Often depicted with dragon-like features, wings, or fiery manes",
+        "symbolism": "Imperial power, heavenly connection",
+        "image_reference": "tianma.png"
+      },
+      {
+        "name": "Buraq",
+        "description": "Divine steed that carried Prophet Muhammad",
+        "origin": "Islamic tradition",
+        "associated_with": "Night Journey (Isra and Mi'raj) of Muhammad",
+        "appearance": "White horse-like creature with wings and human face",
+        "powers": ["Flight at the speed of light", "Divine nature", "Travel between realms"],
+        "image_reference": "buraq.png"
+      },
+      {
+        "name": "Kanthaka",
+        "description": "Horse of Gautama Buddha",
+        "origin": "Buddhist tradition",
+        "significance": "Carried Prince Siddhartha on his departure from palace life",
+        "appearance": "Pure white stallion",
+        "fate": "Died of grief after Siddhartha left to become an ascetic",
+        "image_reference": "kanthaka.png"
+      }
+    ],
+    "other_cultures": [
+      {
+        "name": "Chollima",
+        "description": "Mythical winged horse that could cover great distances",
+        "origin": "Korean mythology",
+        "speed": "Said to travel 1,000 li (400 km) in a day",
+        "symbolism": "Innovation, economic development (in North Korea)",
+        "image_reference": "chollima.png"
+      },
+      {
+        "name": "Tulpar",
+        "description": "Winged horse similar to Pegasus",
+        "origin": "Turkic and Mongol mythology",
+        "symbolism": "Freedom, bravery, state power",
+        "appearance": "Present on Tatar, Kazakh, and Kyrgyz emblems",
+        "image_reference": "tulpar.png"
+      },
+      {
+        "name": "Al-Borak",
+        "description": "Divine horse with human face and peacock tail",
+        "origin": "Persian mythology",
+        "powers": ["Flight", "Intelligence", "Speech"],
+        "image_reference": "al_borak.png"
+      }
+    ]
+  },
+  "hybrid_horse_creatures": {
+    "centaurs": {
+      "description": "Creatures with upper body of human and lower body of horse",
+      "origin": "Greek mythology",
+      "notable_examples": [
+        {
+          "name": "Chiron",
+          "description": "Wise centaur known for teaching heroes",
+          "students": ["Achilles", "Jason", "Asclepius"],
+          "skills": ["Medicine", "Music", "Archery", "Prophecy"]
+        },
+        {
+          "name": "Nessus",
+          "description": "Centaur whose blood ultimately killed Heracles",
+          "story": "After being shot by Heracles, gave poisoned blood to Deianeira as false love potion"
+        },
+        {
+          "name": "Pholus",
+          "description": "Civilized centaur who hosted Heracles",
+          "fate": "Accidentally killed by one of Heracles' poisoned arrows"
+        }
+      ],
+      "behavior": "Most were wild and uncivilized, representing untamed nature and base desires",
+      "exceptions": "Chiron and few others represented wisdom and civilized teaching",
+      "image_reference": "centaur.png"
+    },
+    "hippogriff": {
+      "description": "Creature with front half of an eagle and hind half of a horse",
+      "origin": "Greco-Roman mythology, popularized in Renaissance literature",
+      "symbolism": "Impossibility (as griffins and horses were natural enemies)",
+      "famous_examples": "Hippogriff in Orlando Furioso by Ludovico Ariosto",
+      "modern_appearances": ["Harry Potter series (Buckbeak)"],
+      "image_reference": "hippogriff.png"
+    },
+    "hippocampus": {
+      "description": "Marine creature with upper body of horse and lower body of fish",
+      "origin": "Phoenician and Greek mythology",
+      "associated_with": ["Poseidon/Neptune", "Sea nymphs", "Water deities"],
+      "symbolism": "Sea power, transition between elements",
+      "appearance": "Horse's head and forelegs with fish tail or sea serpent body",
+      "modern_usage": "Taxonomic name for seahorses (Hippocampus)",
+      "image_reference": "hippocampus.png"
+    },
+    "unicorn": {
+      "description": "Horse-like creature with single spiral horn on forehead",
+      "origin": "Multiple ancient cultures, evolved in European medieval lore",
+      "historical_context": "Possibly based on misidentified rhinos or other animals",
+      "symbolism": [
+        "Purity",
+        "Grace",
+        "Untamable wilderness",
+        "Healing (horn could purify water and heal sickness)"
+      ],
+      "traditional_powers": [
+        "Healing wounds",
+        "Neutralizing poison",
+        "Only approachable by virgins"
+      ],
+      "appearance": {
+        "medieval": "Goat-like beard, lion's tail, cloven hooves",
+        "modern": "More horse-like, with single horn and sometimes cloven hooves"
+      },
+      "cultural_significance": {
+        "heraldry": "Symbol of Scotland, featured in British royal coat of arms",
+        "modern": "Symbol of fantasy, innocence, and magic in popular culture"
+      },
+      "image_reference": "unicorn.png"
+    },
+    "kirin": {
+      "description": "Chinese mythical creature with dragon head, scales, and horse-like body",
+      "origin": "Chinese mythology (qilin), adapted in Japanese as kirin",
+      "appearance": {
+        "chinese": "Dragon scales, ox hooves, deer body, horse-like shape, single horn",
+        "japanese": "More deer-like with flame motifs"
+      },
+      "symbolism": "Prosperity, serenity, wisdom, good luck",
+      "powers": ["Walking on grass without bending it", "Walking on water", "Heralding birth of great leaders"],
+      "image_reference": "kirin.png"
+    }
+  },
+  "fictional_horses": {
+    "literature": [
+      {
+        "name": "Black Beauty",
+        "source": "Novel by Anna Sewell (1877)",
+        "description": "Gentle black stallion who narrates his life story",
+        "significance": "One of first animal perspective novels, advocated for humane treatment",
+        "breed": "Thoroughbred",
+        "image_reference": "black_beauty.png"
+      },
+      {
+        "name": "Shadowfax",
+        "source": "The Lord of the Rings by J.R.R. Tolkien",
+        "description": "Lord of all horses, steed of Gandalf",
+        "special_traits": ["Incredible speed", "Intelligence", "Can understand human speech"],
+        "appearance": "Silver-gray, no bridle or saddle needed",
+        "image_reference": "shadowfax.png"
+      },
+      {
+        "name": "Bucephalus",
+        "source": "Historical/semi-legendary horse of Alexander the Great",
+        "description": "Massive black stallion with a white star",
+        "legend": "Untamable until young Alexander noticed it was afraid of its shadow",
+        "historical_significance": "Accompanied Alexander through conquests, city named after him",
+        "image_reference": "bucephalus.png"
+      },
+      {
+        "name": "Rocinante",
+        "source": "Don Quixote by Miguel de Cervantes",
+        "description": "Thin, past-his-prime horse of Don Quixote",
+        "symbolism": "Parallels his master's delusional grandeur vs. reality",
+        "name_meaning": "Previously a workhorse (rocín) but now elevated 'ante' (before)",
+        "image_reference": "rocinante.png"
+      }
+    ],
+    "film_television": [
+      {
+        "name": "Secretariat",
+        "source": "Historical racehorse featured in 2010 Disney film",
+        "achievements": "Triple Crown winner in 1973, set records still standing today",
+        "significance": "One of greatest racehorses in history",
+        "appearance": "Chestnut with three white socks and a star",
+        "image_reference": "secretariat.png"
+      },
+      {
+        "name": "Artax",
+        "source": "The Neverending Story (1984 film)",
+        "description": "Horse of warrior Atreyu",
+        "famous_scene": "Tragic death in the Swamp of Sadness",
+        "symbolism": "Loss of hope and deep grief",
+        "image_reference": "artax.png"
+      },
+      {
+        "name": "Spirit",
+        "source": "Spirit: Stallion of the Cimarron (2002 film)",
+        "description": "Wild mustang stallion fighting captivity",
+        "themes": "Freedom, dignity, connection to nature",
+        "appearance": "Buckskin mustang with black mane and tail",
+        "image_reference": "spirit.png"
+      },
+      {
+        "name": "Maximus",
+        "source": "Tangled (2010 film)",
+        "description": "Palace horse pursuing Flynn Rider",
+        "personality": "Determined, righteous, dog-like behavior",
+        "appearance": "White Andalusian or Lusitano",
+        "image_reference": "maximus.png"
+      }
+    ],
+    "animation_comics": [
+      {
+        "name": "Rainbow Dash",
+        "source": "My Little Pony: Friendship is Magic",
+        "description": "Pegasus pony with rainbow mane and tail",
+        "personality": "Athletic, loyal, sometimes brash",
+        "special_talents": "Speed, Sonic Rainboom ability",
+        "image_reference": "rainbow_dash.png"
+      },
+      {
+        "name": "Rapidash",
+        "source": "Pokémon franchise",
+        "description": "Fire-type Pokémon resembling a unicorn with flames",
+        "abilities": ["Fire attacks", "High speed", "Evolution from Ponyta"],
+        "appearance": "White horse with horn and mane/tail of flames",
+        "image_reference": "rapidash.png"
+      },
+      {
+        "name": "Epona",
+        "source": "The Legend of Zelda video game series",
+        "description": "Link's faithful horse companion",
+        "first_appearance": "Ocarina of Time (1998)",
+        "special_traits": "Comes when called with special song",
+        "appearance": "Chestnut with white mane and blaze",
+        "image_reference": "epona.png"
+      }
+    ],
+    "folklore_fairytales": [
+      {
+        "name": "Swift-Wind",
+        "source": "Various folk tales",
+        "description": "Magical horse that can travel vast distances instantly",
+        "variations": "Similar horses appear in Russian, Eastern European tales",
+        "powers": ["Supernatural speed", "Sometimes flight", "Often advisor to hero"],
+        "image_reference": "swift_wind.png"
+      },
+      {
+        "name": "Falada",
+        "source": "The Goose Girl (Brothers Grimm fairy tale)",
+        "description": "Talking horse who continues to speak even after death",
+        "story": "Helps expose the false princess after being beheaded",
+        "significance": "Symbol of truth that cannot be silenced",
+        "image_reference": "falada.png"
+      }
+    ]
+  },
+  "symbolic_horses": {
+    "death_horses": [
+      {
+        "name": "Pale Horse of Death",
+        "source": "Book of Revelation, Bible",
+        "description": "Mount of the Fourth Horseman of the Apocalypse",
+        "significance": "Represents death and destruction",
+        "quote": "And I looked, and behold a pale horse: and his name that sat on him was Death",
+        "image_reference": "pale_horse.png"
+      },
+      {
+        "name": "Sleipnir as Psychopomp",
+        "description": "Odin's horse that could travel to underworld",
+        "significance": "Transported souls between worlds",
+        "culture": "Norse mythology",
+        "image_reference": "sleipnir_psychopomp.png"
+      },
+      {
+        "name": "Night Mare",
+        "description": "Malevolent spirit or demon in horse form",
+        "etymology": "Origin of the word 'nightmare'",
+        "folklore": "Believed to sit on chests of sleepers, causing bad dreams",
+        "image_reference": "night_mare.png"
+      }
+    ],
+    "divine_horses": [
+      {
+        "name": "Hayagriva",
+        "description": "Horse-headed avatar of Vishnu",
+        "origin": "Hindu mythology",
+        "significance": "Knowledge, wisdom, divinity",
+        "appearance": "Human body with horse head",
+        "image_reference": "hayagriva.png"
+      },
+      {
+        "name": "Sun Horses",
+        "description": "Horses pulling sun chariots across the sky",
+        "cultures": ["Greek (Helios)", "Hindu (Surya)", "Norse (Sol)"],
+        "symbolism": "Cosmic order, passage of time",
+        "image_reference": "sun_horses.png"
+      }
+    ],
+    "fertility_prosperity": [
+      {
+        "name": "Mari Lwyd",
+        "description": "Horse skull on pole carried door-to-door",
+        "origin": "Welsh folklore",
+        "ritual": "Carried at New Year with songs and challenges",
+        "significance": "Fertility, prosperity for coming year",
+        "image_reference": "mari_lwyd.png"
+      },
+      {
+        "name": "Hobby Horse",
+        "description": "Ceremonial horse costume or effigy",
+        "regions": "Various European folk festivals",
+        "significance": "Fertility, luck, seasonal renewal",
+        "variations": ["Padstow 'Obby 'Oss (Cornwall)", "Minehead Hobby Horse (Somerset)"],
+        "image_reference": "hobby_horse.png"
+      }
+    ]
+  },
+  "horse_constellations": [
+    {
+      "name": "Pegasus",
+      "description": "One of largest constellations in northern sky",
+      "significance": "Represents the mythological winged horse",
+      "notable_features": ["Great Square of Pegasus", "51 Pegasi (first sun-like star found with exoplanet)"],
+      "visibility": "Northern hemisphere autumn nights",
+      "image_reference": "pegasus_constellation.png"
+    },
+    {
+      "name": "Equuleus",
+      "description": "Small constellation near Pegasus",
+      "meaning": "Little Horse or Foal",
+      "size": "Second smallest constellation in sky",
+      "mythology": "Various associations including foal of Castor, brother of Pegasus",
+      "image_reference": "equuleus_constellation.png"
+    },
+    {
+      "name": "Centaurus",
+      "description": "Bright southern constellation",
+      "significance": "Represents centaur (often identified as Chiron)",
+      "notable_features": ["Alpha Centauri (closest star system to Sun)", "Omega Centauri (largest globular cluster in Milky Way)"],
+      "image_reference": "centaurus_constellation.png"
+    }
+  ]
+}
+
