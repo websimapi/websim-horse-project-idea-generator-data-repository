@@ -2,20 +2,22 @@
   "metadata": {
     "description": "Comprehensive information about horse breeds from around the world",
     "category": "Equine Information",
-    "version": "1.0"
+    "version": "1.1"
   },
   "categories": {
     "light": "Lighter breeds often used for riding, racing, and other athletic activities",
     "draft": "Large, powerful breeds developed for farm work and heavy pulling tasks",
     "pony": "Smaller breeds under 14.2 hands high at maturity",
     "warmblood": "Breeds developed by crossing draft and light horses, often used for sport",
-    "gaited": "Breeds with special gaits beyond the typical walk, trot, canter, and gallop"
+    "gaited": "Breeds with special gaits beyond the typical walk, trot, canter, and gallop",
+    "stock": "Breeds developed for working with livestock, particularly cattle"
   },
   "breeds": [
     {
       "name": "Arabian",
       "category": "light",
       "origin": "Arabian Peninsula",
+      "history": "One of the oldest horse breeds in the world, with archaeological evidence dating back 4,500 years. Arabian horses spread throughout the world through trade and warfare, influencing many other breeds. Prized by Bedouin tribes who kept meticulous oral pedigrees and selectively bred for desert survival, loyalty, and stamina.",
       "height": {
         "min": 14.1,
         "max": 15.1,
@@ -31,18 +33,45 @@
         "High tail carriage",
         "Compact body",
         "Arched neck",
-        "Large, expressive eyes"
+        "Large, expressive eyes",
+        "Small, refined ears",
+        "Often possess one less vertebra, rib, and lumbar bone than other breeds",
+        "Dense bone structure",
+        "Natural athleticism and endurance"
       ],
-      "common_colors": ["Bay", "Gray", "Chestnut", "Black"],
-      "temperament": "Intelligent, sensitive, and spirited",
-      "uses": ["Endurance riding", "Show horses", "Racing", "Family riding"],
-      "unique_traits": "One of the oldest horse breeds, known for endurance and refinement",
+      "common_colors": ["Bay", "Gray", "Chestnut", "Black", "Roan"],
+      "rare_colors": ["Dominant White", "Sabino", "Rabicano"],
+      "temperament": "Intelligent, sensitive, and spirited. Known for forming strong bonds with humans. Generally quick to learn but can be high-strung in some lines.",
+      "uses": [
+        "Endurance riding",
+        "Show horses",
+        "Racing",
+        "Family riding",
+        "Dressage",
+        "Jumping",
+        "Cultural ceremonies",
+        "Breed improvement (crossbreeding)"
+      ],
+      "health_considerations": [
+        "Susceptible to certain genetic disorders including Severe Combined Immunodeficiency (SCID)",
+        "Cerebellar abiotrophy (CA)",
+        "Lavender Foal Syndrome (LFS)"
+      ],
+      "unique_traits": "One of the oldest horse breeds, known for endurance, refinement, and the ability to thrive in harsh desert conditions. The Arabian's superior endurance is partially due to a higher red blood cell count than other breeds.",
+      "famous_examples": [
+        "Marengo (Napoleon Bonaparte's horse)",
+        "*Bask (influential show and breeding stallion)",
+        "Khemosabi (legendary show horse)",
+        "Cass Ole (star of 'The Black Stallion' film)"
+      ],
+      "breed_registry": "Many worldwide, including Arabian Horse Association (US) and World Arabian Horse Organization (WAHO)",
       "image_reference": "arabian_horse.png"
     },
     {
       "name": "Thoroughbred",
       "category": "light",
       "origin": "England",
+      "history": "Developed in 17th and 18th century England when native mares were bred to imported Arabian, Barb, and Turkoman stallions. All modern Thoroughbreds trace back to three foundation sires: the Darley Arabian, the Godolphin Arabian, and the Byerley Turk. The General Stud Book, started in 1791, was the first breed registry for horses.",
       "height": {
         "min": 15.2,
         "max": 17,
@@ -58,18 +87,99 @@
         "Deep chest",
         "Lean build",
         "Long legs",
-        "Fine coat"
+        "Fine coat",
+        "Refined head",
+        "High withers",
+        "Long, sloping shoulders",
+        "Powerful hindquarters",
+        "Thin skin and prominent veins"
       ],
       "common_colors": ["Bay", "Brown", "Chestnut", "Black", "Gray"],
-      "temperament": "Athletic, high-energy, and sensitive",
-      "uses": ["Racing", "Jumping", "Eventing", "Dressage"],
-      "unique_traits": "Bred specifically for speed and racing",
+      "rare_colors": ["Roan", "Palomino", "White"],
+      "markings": "White markings on face and legs are common, though excessive white was historically discriminated against",
+      "temperament": "Athletic, hot-blooded, energetic, and sensitive. Known for courage, competitiveness, and forward movement. Can be high-strung or nervous in some lines.",
+      "uses": [
+        "Racing (flat and steeplechase)",
+        "Jumping",
+        "Eventing",
+        "Dressage",
+        "Fox hunting",
+        "Polo",
+        "Crossbreeding to improve other breeds"
+      ],
+      "health_considerations": [
+        "Higher risk of racing injuries",
+        "Exercise-induced pulmonary hemorrhage (EIPH)",
+        "Gastric ulcers",
+        "Some lines prone to orthopedic issues"
+      ],
+      "unique_traits": "Bred specifically for speed and racing. Possesses the highest documented top speed of any horse breed (43.97 mph/70.76 km/h by Winning Brew in 2008). Superior cardiovascular system with larger heart proportionate to body size than most breeds.",
+      "famous_examples": [
+        "Secretariat (1973 Triple Crown winner with records still standing)",
+        "Man o' War (considered one of the greatest racehorses of all time)",
+        "Seabiscuit (underdog champion and subject of popular book and film)",
+        "Frankel (undefeated in 14 races, highest-rated racehorse in history)"
+      ],
+      "breed_registry": "The Jockey Club (US, UK, and other countries)",
       "image_reference": "thoroughbred_horse.png"
+    },
+    {
+      "name": "Quarter Horse",
+      "category": "stock",
+      "origin": "United States",
+      "history": "Developed in colonial America from crosses between imported English Thoroughbreds and native horses of Spanish descent. Originally bred for quarter-mile races (hence the name) but later became the premier cattle working horse. The American Quarter Horse Association, formed in 1940, is now the largest breed registry in the world.",
+      "height": {
+        "min": 14.3,
+        "max": 16,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 950,
+        "max": 1200,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Muscular, compact body",
+        "Small, refined head",
+        "Broad chest",
+        "Powerful hindquarters",
+        "Short, strong back",
+        "Low center of gravity",
+        "Sprinter's build"
+      ],
+      "common_colors": ["Sorrel", "Bay", "Black", "Brown", "Chestnut", "Dun", "Palomino", "Gray", "Roan", "Buckskin"],
+      "temperament": "Docile, calm, and willing. Known for intelligence and trainability with a sensible disposition. Generally good-natured and suitable for various riders.",
+      "uses": [
+        "Ranch work",
+        "Rodeo events",
+        "Western pleasure",
+        "Reining",
+        "Cutting",
+        "Barrel racing",
+        "Trail riding",
+        "Racing (sprint)"
+      ],
+      "health_considerations": [
+        "Hyperkalemic Periodic Paralysis (HYPP) in some bloodlines",
+        "Polysaccharide Storage Myopathy (PSSM)",
+        "Hereditary Equine Regional Dermal Asthenia (HERDA)",
+        "Malignant Hyperthermia (MH)"
+      ],
+      "unique_traits": "Exceptional sprinting ability with recorded speeds up to 55 mph over short distances. Innate 'cow sense' in many lines bred for working cattle. Different body types have evolved for specific disciplines: heavier, more muscular 'bulldog' type for halter; leaner, athletic type for racing; and balanced, agile type for versatility events.",
+      "famous_examples": [
+        "Doc Bar (legendary cutting horse sire)",
+        "Three Bars (influential racing and breeding stallion)",
+        "Poco Bueno (foundation sire)",
+        "Dash For Cash (leading race horse and sire)"
+      ],
+      "breed_registry": "American Quarter Horse Association (AQHA)",
+      "image_reference": "quarter_horse.png"
     },
     {
       "name": "Clydesdale",
       "category": "draft",
       "origin": "Scotland",
+      "history": "Originated in the early 18th century in Lanarkshire (formerly known as Clydesdale), Scotland. Developed from local mares crossbred with Flemish stallions to create powerful farm horses. Named after the River Clyde valley where they were developed. Became popular worldwide for agricultural work, then faced decline with mechanization before becoming famous as the Budweiser Clydesdales.",
       "height": {
         "min": 16,
         "max": 18,
@@ -82,21 +192,99 @@
       },
       "characteristics": [
         "Massive build",
-        "Feathering on lower legs",
+        "Abundant feathering on lower legs",
         "Broad forehead",
         "Arched neck",
-        "High-stepping gait"
+        "High-stepping gait",
+        "Long, flowing mane and tail",
+        "Large, round feet",
+        "Powerful shoulders and hindquarters",
+        "Typically more refined than other draft breeds"
       ],
       "common_colors": ["Bay", "Brown", "Black", "Chestnut", "Roan"],
-      "temperament": "Gentle, patient, and willing",
-      "uses": ["Draft work", "Exhibitions", "Parades", "Promotional appearances"],
-      "unique_traits": "Famous for their use as Budweiser Clydesdales",
+      "unique_markings": "Extensive white markings on the face, legs, and sometimes the body are desirable in modern breeding. The classic Clydesdale look includes four white 'stockings' and a blaze or bald face.",
+      "temperament": "Gentle, patient, and willing despite their size. Known for being docile, intelligent, and easy to train with a desire to please.",
+      "uses": [
+        "Draft work",
+        "Exhibitions",
+        "Parades",
+        "Promotional appearances",
+        "Logging",
+        "Driving",
+        "Riding (increasingly popular)",
+        "Crossbreeding for sport horses"
+      ],
+      "health_considerations": [
+        "Draft-related issues like Scratches (pastern dermatitis) due to feathering",
+        "Chronic Progressive Lymphedema (CPL)",
+        "Larger breeds can be more susceptible to certain metabolic issues"
+      ],
+      "unique_traits": "Famous for their use as Budweiser Clydesdales since 1933, which has significantly influenced the modern appearance of the breed. Despite their size, they are known for being more active and energetic than some other draft breeds, with a flashy, high-stepping movement.",
+      "population_status": "Considered 'vulnerable' by the Rare Breeds Survival Trust with fewer than 5,000 registered worldwide.",
+      "famous_examples": [
+        "Budweiser Clydesdales teams",
+        "King LeGear (early 20th century promotional giant)",
+        "Poe (tallest horse on record at the time - almost 20.2 hands)"
+      ],
+      "breed_registry": "Clydesdale Horse Society (UK), Clydesdale Breeders of the USA",
       "image_reference": "clydesdale_horse.png"
+    },
+    {
+      "name": "Percheron",
+      "category": "draft",
+      "origin": "France",
+      "history": "Originated in the Perche region of Normandy, France. Ancient ancestors may include Barb horses brought by the Moors. Later refined with Arabian blood during the 8th century and periodically afterward. Exported worldwide for farming, logging, and as artillery horses in wars. Today they are the most numerous draft breed in North America.",
+      "height": {
+        "min": 16,
+        "max": 19,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1800,
+        "max": 2600,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Powerful build",
+        "Clean legs (minimal feathering)",
+        "Broad, flat forehead",
+        "Medium-large sized head",
+        "Arched, crested neck",
+        "Deep chest",
+        "Muscular hindquarters",
+        "Alert expression"
+      ],
+      "common_colors": ["Black", "Gray", "Less commonly bay, roan, or chestnut"],
+      "temperament": "Willing, intelligent, and docile with a pleasant disposition. Known for being easy to work with despite their size. Relatively energetic for a draft breed.",
+      "uses": [
+        "Farm work",
+        "Logging",
+        "Driving",
+        "Carriage horses",
+        "Recreation riding",
+        "Crossbreeding for sport horses",
+        "Exhibition",
+        "Pulling competitions"
+      ],
+      "health_considerations": [
+        "Generally hardy with few breed-specific issues",
+        "Some lines may have higher incidence of junctional epidermolysis bullosa (JEB)",
+        "Standard draft horse concerns related to size"
+      ],
+      "unique_traits": "More athletic and energetic than many draft breeds, with a ground-covering trot. The only draft breed primarily found in black and gray colors. Requiring less feed proportionate to body weight than some other draft breeds made them economical work horses.",
+      "famous_examples": [
+        "Dr. LeGear (famous promotional horse standing 21 hands)",
+        "The Wheel of Industry Percherons (famous six-horse hitch)",
+        "Many military horses in WWI"
+      ],
+      "breed_registry": "Percheron Horse Association of America, Société Hippique Percheronne de France",
+      "image_reference": "percheron_horse.png"
     },
     {
       "name": "Shetland Pony",
       "category": "pony",
       "origin": "Shetland Islands, Scotland",
+      "history": "Native to the Shetland Islands of Scotland, with evidence suggesting ponies have been on the islands since the Bronze Age (around 2000 BCE). Developed in harsh conditions with limited food and severe weather, creating an extremely hardy, small breed. Became popular for child riders and as pit ponies in coal mines during the Industrial Revolution.",
       "height": {
         "min": 7,
         "max": 10.2,
@@ -110,20 +298,112 @@
       "characteristics": [
         "Small size",
         "Thick mane and tail",
-        "Heavy coat",
+        "Heavy, double coat in winter",
         "Stocky build",
+        "Short legs",
+        "Broad back",
+        "Deep girth",
+        "Intelligent expression",
         "Strong for their size"
       ],
-      "common_colors": ["All colors"],
-      "temperament": "Intelligent, strong-willed, and hardy",
-      "uses": ["Children's riding", "Driving", "Therapeutic riding", "Showing"],
-      "unique_traits": "One of the strongest breeds relative to size",
+      "types": [
+        {"name": "American Shetland", "traits": "Often taller and more refined than original type"},
+        {"name": "Classic Shetland", "traits": "More closely resembles original island type"},
+        {"name": "Modern Shetland", "traits": "Refined with high-stepping action, developed for showing"}
+      ],
+      "common_colors": ["All colors found in horses including solid colors, pinto patterns, and Appaloosa patterns"],
+      "temperament": "Intelligent, strong-willed, and hardy. Often described as having 'big horse' personality in a small package. Can be clever, crafty, and sometimes stubborn.",
+      "uses": [
+        "Children's riding",
+        "Driving",
+        "Therapeutic riding",
+        "Showing in-hand and performance",
+        "Historically used in mines",
+        "Pet or companion",
+        "Light draft work proportionate to size"
+      ],
+      "health_considerations": [
+        "Prone to obesity and related issues like laminitis",
+        "Metabolic issues in some lines",
+        "Occasionally seen: dwarfism"
+      ],
+      "unique_traits": "One of the strongest breeds relative to size, reportedly able to pull twice their own weight. Incredibly hardy with excellent survival instincts adapted to harsh environments. Thick double coat provides exceptional insulation against extreme weather.",
+      "population_status": "Numerous worldwide, not considered at risk.",
+      "famous_examples": [
+        "Grand-Champion Little Hawk",
+        "Socks (President Clinton's White House pet)",
+        "Breyer model 'Misty of Chincoteague' (though technically part-Shetland)"
+      ],
+      "breed_registry": "Shetland Pony Stud-Book Society (UK), American Shetland Pony Club (US)",
       "image_reference": "shetland_pony.png"
+    },
+    {
+      "name": "Welsh Pony and Cob",
+      "category": "pony",
+      "origin": "Wales",
+      "history": "Ancient breed developed in Wales with evidence dating back to 1600 BCE. Influenced by Roman horses, Arabians, and Spanish Barbs through the centuries. Lived semi-feral in the Welsh mountains, developing hardiness and sure-footedness. Formalized into four sections by the Welsh Pony and Cob Society in 1901.",
+      "sections": [
+        {
+          "designation": "Section A (Welsh Mountain Pony)",
+          "height": "Not exceeding 12.2 hands",
+          "characteristics": "Most refined, closest to original mountain type"
+        },
+        {
+          "designation": "Section B (Welsh Pony)",
+          "height": "Not exceeding 14.2 hands",
+          "characteristics": "Riding type with more Arab influence"
+        },
+        {
+          "designation": "Section C (Welsh Pony of Cob Type)",
+          "height": "Not exceeding 13.2 hands",
+          "characteristics": "Stockier, smaller version of the Section D"
+        },
+        {
+          "designation": "Section D (Welsh Cob)",
+          "height": "Exceeding 13.2 hands, no upper limit (typically 14-15.2 hands)",
+          "characteristics": "Substantial, strong cob type"
+        }
+      ],
+      "characteristics": [
+        "Small, refined head",
+        "Large, expressive eyes",
+        "Small ears",
+        "Strong hindquarters",
+        "Free-moving gait",
+        "Hardy constitution",
+        "Dense bone for size"
+      ],
+      "common_colors": ["Gray", "Bay", "Black", "Brown", "Chestnut", "Roan", "Cream dilutes less common"],
+      "temperament": "Intelligent, willing, and spirited but sensible. Known for their 'pony character' – clever and sometimes cheeky, but generally good-natured and tractable.",
+      "uses": [
+        "Children's riding (smaller sections)",
+        "Adult riding (larger sections)",
+        "Driving",
+        "Showing",
+        "Jumping",
+        "Dressage",
+        "Eventing",
+        "Endurance",
+        "Historically for farm work and coal mines"
+      ],
+      "health_considerations": [
+        "Generally hardy and long-lived",
+        "Some lines may have higher incidence of respiratory issues"
+      ],
+      "unique_traits": "Remarkable versatility across the size spectrum, from child's mount to adult's working animal. Known for exceptional movement with natural cadence and suspension. Consistent type across all sections with differences primarily in size and substance.",
+      "famous_examples": [
+        "Coed Coch Madog (influential Section A stallion)",
+        "Dyoll Starlight (legendary Section B foundation sire)",
+        "Nebo Black Magic (famous Section D stallion)"
+      ],
+      "breed_registry": "Welsh Pony and Cob Society (UK), Welsh Pony and Cob Society of America",
+      "image_reference": "welsh_pony_cob.png"
     },
     {
       "name": "Hanoverian",
       "category": "warmblood",
       "origin": "Germany",
+      "history": "Originated in the Hanover region of Germany. Development began in 1735 when King George II of England, who was also the Elector of Hanover, established the State Stud at Celle. Local mares were systematically bred to Thoroughbred, Holsteiner, Cleveland Bay, and Neapolitan stallions to create versatile carriage and military horses. After World War II, focus shifted to creating sport horses for international competition.",
       "height": {
         "min": 15.3,
         "max": 17.2,
@@ -139,18 +419,102 @@
         "Elegant appearance",
         "Strong hindquarters",
         "Well-defined withers",
-        "Long, sloping shoulders"
+        "Long, sloping shoulders",
+        "Powerful, elastic movement",
+        "Expressive head",
+        "Strong back",
+        "Well-muscled neck"
       ],
-      "common_colors": ["Bay", "Chestnut", "Black", "Gray"],
-      "temperament": "Trainable, athletic, and willing",
-      "uses": ["Dressage", "Show jumping", "Eventing", "Driving"],
-      "unique_traits": "Developed through selective breeding program in Germany",
+      "common_colors": ["Bay", "Chestnut", "Black", "Gray", "Brown"],
+      "rare_colors": ["Roan", "Palomino"],
+      "temperament": "Trainable, athletic, and willing. Typically sensible with good character, though individual temperaments vary. Generally more level-headed than some hotter breeds while maintaining necessary energy for sport.",
+      "uses": [
+        "Dressage",
+        "Show jumping",
+        "Eventing",
+        "Driving",
+        "Hunting",
+        "General riding",
+        "Historically for military and carriage"
+      ],
+      "health_considerations": [
+        "Osteochondrosis (OCD) can occur in some lines",
+        "Navicular syndrome",
+        "Some bloodlines may carry genetic disorders like Warmblood Fragile Foal Syndrome (WFFS)"
+      ],
+      "unique_traits": "Developed through systematic selection program overseen by the German government. Rigorous breeding approval process with performance testing for stallions and mares. Known for modern emphasis on sport horse abilities while maintaining substance and rideability.",
+      "breeding_program": "Uses the breeding value index, which calculates genetic potential based on own performance and progeny performance. All breeding stock must pass stringent inspections and mares must meet minimum criteria for studbook acceptance.",
+      "famous_examples": [
+        "Weltmeyer (legendary breeding stallion)",
+        "Sandro Hit (dressage competitor and influential sire)",
+        "For Pleasure (Olympic show jumping champion)",
+        "Salinero (Olympic dressage gold medalist with Anky van Grunsven)"
+      ],
+      "breed_registry": "Verband hannoverscher Warmblutzüchter (German Hanoverian Society)",
       "image_reference": "hanoverian_horse.png"
+    },
+    {
+      "name": "Dutch Warmblood (KWPN)",
+      "category": "warmblood",
+      "origin": "Netherlands",
+      "history": "Modern development began after World War II when Dutch native breeds were systematically crossed with imported warmbloods and Thoroughbreds. The KWPN (Koninklijk Warmbloed Paardenstamboek Nederland) was formed in 1970 from the merger of the NWP and WHR breeding associations. Initially focused on versatile utility horses, but specialized after the 1980s into distinct breeding directions for different disciplines.",
+      "height": {
+        "min": 15.2,
+        "max": 17.3,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1200,
+        "max": 1500,
+        "unit": "pounds"
+      },
+      "breeding_directions": [
+        {"name": "Dressage", "traits": "Uphill movement, elegant appearance, active hindquarters"},
+        {"name": "Jumping", "traits": "Scope, reflexes, technique, more rectangular frame"},
+        {"name": "Harness", "traits": "High knee action, upright neck, showy movement"},
+        {"name": "Gelders", "traits": "Versatile utility type, more traditional Dutch characteristics"}
+      ],
+      "characteristics": [
+        "Athletic build",
+        "Long legs",
+        "Strong topline",
+        "Powerful hindquarters",
+        "Expressive head",
+        "Strong neck",
+        "Good feet and legs",
+        "Elegant appearance"
+      ],
+      "common_colors": ["Bay", "Black", "Chestnut", "Gray", "Brown"],
+      "rare_colors": ["Tobiano (only in Gelders type)"],
+      "temperament": "Intelligent, willing, and trainable. Generally level-headed but energetic enough for top sport. Selected for good character and workability in addition to athletic ability.",
+      "uses": [
+        "Dressage",
+        "Show jumping",
+        "Eventing",
+        "Combined driving",
+        "Harness competition",
+        "General riding"
+      ],
+      "health_considerations": [
+        "KWPN has implemented radiograph screening for OCD and other conditions",
+        "Stringent health inspections for breeding stock",
+        "Testing for genetic disorders like Warmblood Fragile Foal Syndrome (WFFS)"
+      ],
+      "unique_traits": "Consistently ranks at the top of the World Breeding Federation for Sport Horses (WBFSH) rankings in dressage and show jumping. Known for breeding system that emphasizes performance testing and keeps detailed data on all horses. Uses a linear scoring system to objectively measure traits.",
+      "famous_examples": [
+        "Totilas (record-breaking dressage stallion)",
+        "Valegro (Olympic gold medalist and world record holder in dressage)",
+        "Hickstead (Olympic show jumping champion with Eric Lamaze)",
+        "Jazz (influential dressage sire)"
+      ],
+      "breed_registry": "Koninklijk Warmbloed Paardenstamboek Nederland (KWPN)",
+      "image_reference": "dutch_warmblood.png"
     },
     {
       "name": "Tennessee Walking Horse",
       "category": "gaited",
       "origin": "United States",
+      "history": "Developed in the southern United States, primarily Tennessee, in the late 19th and early 20th centuries. Created from Narragansett Pacers, Canadian Pacers, Standardbreds, Thoroughbreds, Morgan, and American Saddlebred stock. Originally bred as a utility horse for southern plantation owners and farmers who needed a smooth-riding horse that could work all day. The breed registry was established in 1935.",
       "height": {
         "min": 14.3,
         "max": 17,
@@ -166,13 +530,230 @@
         "Long neck",
         "Short back",
         "Sloping shoulders",
-        "Long stride"
+        "Long stride",
+        "Typically heavy mane and tail",
+        "Refined head",
+        "Strong loins",
+        "Athletic build"
       ],
-      "common_colors": ["All colors"],
-      "temperament": "Calm, docile, and intelligent",
-      "uses": ["Trail riding", "Pleasure riding", "Showing", "Parades"],
-      "unique_traits": "Famous for smooth 'running walk' gait",
+      "gaits": [
+        {
+          "name": "Flat Walk",
+          "description": "Smooth, even four-beat gait with moderate speed and overreach"
+        },
+        {
+          "name": "Running Walk",
+          "description": "Distinctive four-beat gait with noticeable overstride and head nod"
+        },
+        {
+          "name": "Canter",
+          "description": "Collected, smooth, rocking-chair motion"
+        }
+      ],
+      "common_colors": ["All solid colors and many pinto patterns", "Black", "Chestnut", "Sorrel", "Bay", "Roan", "Gray common"],
+      "temperament": "Calm, docile, and intelligent. Known for easy-going nature and willingness. Typically good-natured and mild-mannered, suitable for various riders.",
+      "uses": [
+        "Trail riding",
+        "Pleasure riding",
+        "Showing",
+        "Parades",
+        "Versatility competitions",
+        "Ranch work",
+        "Driving"
+      ],
+      "health_considerations": [
+        "Generally healthy breed",
+        "Some lines more prone to navicular syndrome",
+        "Industry concerns about soring practices in some show circuits"
+      ],
+      "unique_traits": "Famous for smooth 'running walk' gait - a four-beat lateral gait with a gliding motion and head nodding in rhythm. Running walk is approximately 10-20 mph without the bounce of a trot, making it comfortable for long distances.",
+      "controversies": "The breed has been embroiled in controversy over 'soring' - the practice of using chemicals or mechanical devices to accentuate the gait for show. This has led to divisions in the breed community between 'natural' and 'performance' show circuits.",
+      "famous_examples": [
+        "Midnight Sun (influential sire)",
+        "Merry Go Boy (legendary show horse)",
+        "Trigger Jr. (one of Roy Rogers' mounts)",
+        "Pride's Generator (multi-champion stallion)"
+      ],
+      "breed_registry": "Tennessee Walking Horse Breeders' and Exhibitors' Association (TWHBEA)",
       "image_reference": "tennessee_walking_horse.png"
+    },
+    {
+      "name": "Morgan",
+      "category": "light",
+      "origin": "United States",
+      "history": "One of the earliest breeds developed in the United States, all Morgans trace back to a single foundation sire, a stallion named Figure (later called Justin Morgan after his owner) born in 1789. Figure's exact breeding is unknown, but he passed on his distinctive type with remarkable consistency. The breed was used for general riding, driving, farm work, and contributed to the development of other American breeds. The Morgan Horse Club was founded in 1909.",
+      "height": {
+        "min": 14.1,
+        "max": 15.2,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 900,
+        "max": 1100,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Compact, powerful build",
+        "Crested neck",
+        "Expressive eyes",
+        "Small ears",
+        "Deep body",
+        "Strong legs",
+        "Nicely shaped head with straight or slightly dished profile",
+        "Well-muscled hindquarters",
+        "Natural high tail carriage"
+      ],
+      "common_colors": ["Bay", "Black", "Chestnut", "Brown", "Less commonly palomino, buckskin, gray, roan, dun"],
+      "temperament": "Willing, kind, and people-oriented. Known for intelligence, eagerness to please, and versatility. Generally good-natured with a desire to bond with humans.",
+      "uses": [
+        "Driving (single and multiple hitches)",
+        "Saddle seat",
+        "Hunt seat",
+        "Western disciplines",
+        "Dressage",
+        "Jumping",
+        "Trail riding",
+        "Therapeutic riding",
+        "Youth programs"
+      ],
+      "health_considerations": [
+        "Generally hardy and long-lived",
+        "Some lines may have higher incidence of certain genetic disorders"
+      ],
+      "unique_traits": "Known for passing on type with high consistency, even in crossbreeding. Extraordinary strength and endurance for size. The original Morgan, Figure, was famous for outperforming larger horses in pulling contests, running races, and endurance trials.",
+      "subdivisions": {
+        "description": "While not official separate types, Morgans today often fall into recognizable groups:",
+        "types": [
+          {"name": "Working Western", "traits": "More substantial, often less animated movement"},
+          {"name": "Show/Park", "traits": "More animated action, often more refined"},
+          {"name": "Foundation", "traits": "Closest to original Justin Morgan type, more compact"}
+        ]
+      },
+      "famous_examples": [
+        "Figure/Justin Morgan (foundation sire)",
+        "Black Hawk (influential early stallion)",
+        "Upwey Ben Don (legendary show horse)",
+        "Beamington (influential for modern type)"
+      ],
+      "breed_registry": "American Morgan Horse Association",
+      "image_reference": "morgan_horse.png"
+    },
+    {
+      "name": "Friesian",
+      "category": "light",
+      "origin": "Netherlands",
+      "history": "Ancient breed originating in Friesland, Netherlands. Ancestors were present in the region during Roman times. During the Middle Ages, Friesians likely influenced many other European breeds. Nearly extinct several times, including after World War II when only three stallion lines remained. Strict breeding standards and growing popularity for their dramatic appearance have increased numbers significantly since the 1960s.",
+      "height": {
+        "min": 14.3,
+        "max": 17,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1200,
+        "max": 1400,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Always black in color",
+        "Abundant mane and tail",
+        "Feathering on lower legs",
+        "Powerful build",
+        "Arched, high-set neck",
+        "Compact, muscular body",
+        "Elegant head with slightly convex profile",
+        "High knee action",
+        "Energetic, cadenced movement"
+      ],
+      "common_colors": ["Only black is accepted for registration"],
+      "markings": "Small white star may be permitted for registration, but no other white markings allowed",
+      "temperament": "Willing, loyal, and people-oriented. Known for intelligence and trainability. Generally good-natured and eager to please despite their imposing appearance.",
+      "uses": [
+        "Dressage",
+        "Driving (single and pairs)",
+        "Circus performances",
+        "Film and television",
+        "Saddle seat",
+        "Pleasure riding",
+        "Historically for war and farm work"
+      ],
+      "health_considerations": [
+        "Chewing or cribbing behavior more common in this breed",
+        "Dwarfism in some bloodlines",
+        "Aortic rupture more common than in other breeds",
+        "Retained placenta in mares",
+        "Increased risk of insect hypersensitivity"
+      ],
+      "unique_traits": "Only breed that combines black coat, abundant hair, and high-stepping action. Dramatic appearance with flowing mane and tail. Distinctive 'baroque' type preserved through strict breeding standards. Natural ability for collection and elevation in movement.",
+      "classifications": [
+        {"name": "Studbook (Star, Crown, Model)", "description": "Main breeding stock with quality designations"},
+        {"name": "Foalbook", "description": "Initial registration before quality assessment"},
+        {"name": "Auxiliary books", "description": "For horses not fully meeting breed standards"}
+      ],
+      "famous_examples": [
+        "Othello (film horse in 'Ladyhawke')",
+        "Frederik the Great (internet-famous 'most beautiful horse in the world')",
+        "Friesians in various films including 'The Mask of Zorro' and 'Chronicles of Narnia'"
+      ],
+      "breed_registry": "Koninklijke Vereniging Het Friesch Paarden-Stamboek (KFPS)",
+      "image_reference": "friesian_horse.png"
+    },
+    {
+      "name": "Icelandic Horse",
+      "category": "gaited",
+      "origin": "Iceland",
+      "history": "Brought to Iceland by Norse settlers between 860 and 935 AD. Isolation on the island and selective breeding created a pure breed that has remained largely unchanged for over 1,000 years. No horses have been imported to Iceland since 982 AD, and exported horses cannot return, maintaining the breed's purity and health. Historically essential for transportation and agriculture in Iceland's harsh landscape.",
+      "height": {
+        "min": 12.2,
+        "max": 14,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 730,
+        "max": 840,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Small, pony-sized body",
+        "Thick, double coat",
+        "Abundant mane and tail",
+        "Hardy constitution",
+        "Broad chest",
+        "Strong legs with substantial bone",
+        "Muscular build",
+        "Wide variety of colors",
+        "Expressive, alert appearance"
+      ],
+      "gaits": [
+        {"name": "Walk", "description": "Four-beat, normal walking gait"},
+        {"name": "Trot", "description": "Two-beat diagonal gait"},
+        {"name": "Canter/Gallop", "description": "Three-beat canter, four-beat gallop"},
+        {"name": "Tölt", "description": "Four-beat lateral gait, very smooth with no suspension phase"},
+        {"name": "Flying Pace", "description": "Two-beat lateral gait with suspension, very fast"}
+      ],
+      "common_colors": ["Over 40 distinct colors and 100 pattern variations including bay, black, chestnut, palomino, pinto, dun, gray, roan"],
+      "temperament": "Friendly, intelligent, and confident. Known for being versatile, willing, and independent-minded. Generally calm but spirited when needed, with high trainability.",
+      "uses": [
+        "Riding (trail, competition, pleasure)",
+        "Traditional Icelandic gait competitions",
+        "Endurance riding",
+        "Driving",
+        "Trekking",
+        "Historically for transportation, farm work, and sheep herding"
+      ],
+      "health_considerations": [
+        "Extremely hardy with few breed-specific health issues",
+        "Strict import regulations have protected Icelandic horses from many common equine diseases",
+        "Summer eczema can occur in exported horses (not seen in Iceland)"
+      ],
+      "unique_traits": "The only horse breed in Iceland due to 1,000 years of isolation. Unique ability to perform five gaits when most horses can only perform three or four. Exceptional hardiness allowing them to live outdoors year-round in harsh conditions. Long lifespan, often remaining rideable well into their 20s or even 30s.",
+      "cultural_importance": "Central to Icelandic culture and history, featured in Norse mythology and Icelandic sagas. Traditional horse roundups (réttir) remain important cultural events in Iceland.",
+      "famous_examples": [
+        "Hermóður (first Icelandic horse exported to Germany)",
+        "Blesi (renowned five-gaited stallion)",
+        "Competition horses in the Landsmót national championships"
+      ],
+      "breed_registry": "Icelandic Agricultural Authority and Icelandic Horse Associations worldwide",
+      "image_reference": "icelandic_horse.png"
     }
   ],
   "rare_breeds": [
@@ -180,35 +761,446 @@
       "name": "Akhal-Teke",
       "category": "light",
       "origin": "Turkmenistan",
+      "history": "One of the oldest existing horse breeds, dating back at least 3,000 years. Developed by the Turkmen people of Central Asia as desert-bred war, racing, and expedition horses. Named after the Teke tribe and the Akhal oasis. Nearly extinct multiple times, including during the Soviet era, but preserved by dedicated breeders.",
       "height": {
         "min": 14.2,
         "max": 16,
         "unit": "hands"
       },
-      "characteristics": ["Metallic coat sheen", "Almond-shaped eyes", "Lean build"],
-      "unique_traits": "Known for metallic coat that can appear golden"
+      "weight": {
+        "min": 900,
+        "max": 1000,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Metallic coat sheen",
+        "Almond-shaped eyes",
+        "Lean build",
+        "Sparse mane and tail",
+        "Long, elegant neck",
+        "Flat, dry muscling",
+        "Refined bone structure",
+        "Distinctive 'hooded' ears",
+        "Long, slender legs"
+      ],
+      "common_colors": ["Bay", "Chestnut", "Palomino", "Cremello", "Black", "Gray", "Perlino"],
+      "temperament": "Loyal, sensitive, and intelligent. Forms strong bonds with one person. Can be aloof with strangers but devoted to their owner. Alert and hot-blooded, requiring experienced handling.",
+      "uses": [
+        "Endurance riding",
+        "Racing",
+        "Dressage",
+        "Show jumping",
+        "Eventing",
+        "Historically for war and long desert expeditions"
+      ],
+      "health_considerations": [
+        "Generally hardy with few breed-specific issues",
+        "Some skin sensitivities in certain lines",
+        "Small gene pool requires careful breeding management"
+      ],
+      "unique_traits": "Known for metallic coat that can appear golden or silver, especially in buckskins, palominos, and cremellos. This is caused by the structure of the hair that refracts light. Exceptional endurance and ability to survive on minimal water and food, adaptations to their desert origin. Famous for the historic 2,500-mile ride from Ashgabat to Moscow in 84 days.",
+      "population_status": "Rare, with approximately 6,000-8,000 purebreds worldwide.",
+      "famous_examples": [
+        "Absent (Olympic gold medal winner in dressage)",
+        "Mrenkara (subject of the breed's foundation story)",
+        "Boinou (influential foundation sire)"
+      ],
+      "breed_registry": "International Association of Akhal-Teke Breeding (MAAK) and various national associations",
+      "image_reference": "akhal_teke.png"
     },
     {
       "name": "Przewalski's Horse",
       "category": "wild",
       "origin": "Central Asia",
+      "history": "The only true wild horse species that has never been domesticated. Named after Russian explorer Nikolai Przewalski who documented them in 1881. Extinct in the wild by the 1960s due to hunting, habitat loss, and competition with livestock. Survived only in zoos and private collections. Reintroduction programs began in the 1990s in Mongolia, China, and Kazakhstan.",
       "height": {
         "min": 12,
         "max": 14,
         "unit": "hands"
       },
-      "characteristics": ["Dun coloration", "Erect mane", "No forelock"],
-      "unique_traits": "The only truly wild horse species still in existence"
+      "weight": {
+        "min": 550,
+        "max": 750,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Dun coloration",
+        "Erect mane (no forelock)",
+        "Thick neck",
+        "Stocky build",
+        "Zebra-like stripes on legs",
+        "Dorsal stripe",
+        "Large head",
+        "Short ears",
+        "Different chromosome count than domestic horses (66 vs 64)"
+      ],
+      "genetic_status": "Not ancestral to domestic horses as once thought. DNA evidence suggests they diverged from the common ancestor of domestic horses about 500,000 years ago.",
+      "common_colors": ["Only dun with pangare (lighter belly and muzzle)"],
+      "temperament": "True wild animal behavior - wary, independent, and not naturally inclined to human interaction. Herd-oriented with natural fight or flight responses.",
+      "conservation_status": "Endangered. After successful breeding programs increased numbers from 12 founder animals to several hundred, reintroductions to protected areas have established small wild populations.",
+      "unique_traits": "The only truly wild horse species still in existence (mustangs, brumbies, etc. are feral domestic horses). Unlike domestic horses, they have 66 chromosomes. Cannot be domesticated in the traditional sense, though captive individuals can become somewhat habituated to humans.",
+      "population_status": "Approximately 2,000 individuals worldwide, with about 400 living in the wild.",
+      "conservation_programs": [
+        "Hustai National Park (Mongolia)",
+        "Great Gobi B Strictly Protected Area (Mongolia)",
+        "Chernobyl Exclusion Zone (Ukraine, unplanned population)",
+        "Various zoos worldwide participating in Species Survival Plan"
+      ],
+      "image_reference": "przewalski_horse.png"
+    },
+    {
+      "name": "Suffolk Punch",
+      "category": "draft",
+      "origin": "England",
+      "history": "Developed in Suffolk County, England in the 16th century. Oldest existing breed of draft horse that still retains its original draft type without significant modification. Purposely bred for farm work with emphasis on pulling power rather than appearance. Suffered severe decline after mechanization of agriculture, reaching critically endangered status.",
+      "height": {
+        "min": 16,
+        "max": 17.2,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 1600,
+        "max": 2200,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Always chestnut in color (locally called 'sorrel')",
+        "Minimal feathering on legs",
+        "Compact, rounded body",
+        "Muscular, arched neck",
+        "Short, strong legs",
+        "Broad chest",
+        "Deep shoulders",
+        "Strong back",
+        "Clean joints"
+      ],
+      "common_colors": ["Only chestnut, ranging from light golden to dark liver"],
+      "markings": "Small white markings on face and minimal white on legs permitted but not preferred",
+      "temperament": "Docile, easy-going, and willing to work. Known for good nature, intelligence, and steady disposition. Less excitable than some other draft breeds.",
+      "uses": [
+        "Farm work",
+        "Logging",
+        "Heavy draft",
+        "Advertising/promotional work",
+        "Recreational driving",
+        "Conservation grazing",
+        "Breeding to preserve the rare genome"
+      ],
+      "health_considerations": [
+        "Generally hardy with few breed-specific issues",
+        "Small gene pool requires careful breeding management",
+        "Occasional issues with fertility due to limited genetic diversity"
+      ],
+      "unique_traits": "The only draft breed found exclusively in one color (chestnut). Lack of feathering on legs made them more efficient in heavy clay soils of eastern England. Clean legs were less prone to skin infections common in heavily feathered drafts. Renowned for longevity, willing work ethic, and easy keeping.",
+      "population_status": "Critically endangered with fewer than 500 purebred mares worldwide. Listed as 'critical' by the Rare Breeds Survival Trust and the Livestock Conservancy.",
+      "conservation_efforts": "Various conservation breeding programs in the UK, North America, and Australia. 'semen banks established for genetic preservation.",
+      "famous_examples": [
+        "Salisbury (23rd century foundation stallion)",
+        "Colony Foggy Dew (influential modern stallion)",
+        "Suffolk horses used by the British Royal family"
+      ],
+      "breed_registry": "Suffolk Horse Society (UK), American Suffolk Horse Association",
+      "image_reference": "suffolk_punch.png"
+    },
+    {
+      "name": "Marwari",
+      "category": "light",
+      "origin": "India",
+      "history": "Ancient breed from the Marwar region (Jodhpur) of India. Developed by the Rathore clan of Rajputs as a desert war horse. Bred for loyalty, courage, and hardiness in battle. Nearly became extinct after British colonization discouraged native breeds in favor of Thoroughbreds. Recent revival efforts have improved their status, though they remain rare outside India.",
+      "height": {
+        "min": 14.2,
+        "max": 16,
+        "unit": "hands"
+      },
+      "weight": {
+        "min": 750,
+        "max": 950,
+        "unit": "pounds"
+      },
+      "characteristics": [
+        "Distinctive inward-curving ears that often touch or cross at tips",
+        "Elegant head with curved profile",
+        "Slender body",
+        "Strong, compact hooves",
+        "High tail carriage",
+        "Hardy constitution",
+        "Natural ambling gait in some lines",
+        "Deep chest",
+        "Alertness and stamina"
+      ],
+      "common_colors": ["Bay", "Gray", "Chestnut", "Palomino", "Piebald", "Skewbald"],
+      "preferred_colors": "Traditional preference for horses with white markings, particularly predominant white patterns, which were considered auspicious",
+      "temperament": "Spirited, intelligent, and loyal. Known for courage, trainability, and forming strong bonds with owners. Alert and responsive but can be high-spirited.",
+      "uses": [
+        "Riding",
+        "Ceremonial purposes",
+        "Exhibition",
+        "Religious festivals",
+        "Historically for warfare",
+        "Endurance riding",
+        "Polo"
+      ],
+      "health_considerations": [
+        "Generally hardy and adapted to harsh conditions",
+        "Some genetic disorders in certain bloodlines",
+        "Export restrictions have limited international breeding programs"
+      ],
+      "unique_traits": "Distinctive curved ears that can rotate 180 degrees and often touch at the tips are the breed's most recognizable feature. Natural revaal ambling gait in some families provides smooth riding in desert conditions. Exceptional heat tolerance and ability to thrive on minimal water. Cultural belief that the curved ears were designed to resemble the shape of a snake, making the horse fearless in battle.",
+      "cultural_significance": "Sacred in Indian culture and historically associated with Rajput warriors and nobility. Featured in traditional paintings, folklore, and religious ceremonies. Considered a symbol of Rajasthani heritage.",
+      "population_status": "Approximately 900-1000 purebreds remaining, making them a rare breed.",
+      "famous_examples": [
+        "Chetak (legendary war horse of Maharana Pratap)",
+        "Horses of the ceremonial guard of the President of India"
+      ],
+      "breed_registry": "Indigenous Horse Society of India, Marwari Horse Society",
+      "image_reference": "marwari_horse.png"
     }
   ],
   "extinct_breeds": [
     {
       "name": "Tarpan",
-      "extinction_date": "1909",
-      "origin": "Eastern Europe",
-      "characteristics": ["Mouse-dun color", "Dorsal stripe", "Primitive markings"],
-      "extinction_cause": "Hunting, interbreeding with domestic horses, habitat loss"
+      "extinction_date": "1909 (last captive specimen)",
+      "origin": "Eastern Europe and Western Asia",
+      "history": "One of the true wild horse subspecies (Equus ferus ferus) that ranged across Europe and Asia. Hunted to extinction in the wild by the late 1800s, with the last wild specimen killed in Ukraine in 1879. The last captive Tarpan died in a Russian zoo in 1909. Influenced many domestic breeds before extinction.",
+      "characteristics": [
+        "Mouse-dun color",
+        "Dorsal stripe",
+        "Primitive markings (leg barring, shoulder stripe)",
+        "Upright short mane",
+        "No forelock",
+        "Small, stocky build",
+        "Relatively large head"
+      ],
+      "extinction_cause": "Hunting, interbreeding with domestic horses, habitat loss, and capture for domestication attempts",
+      "breeding_back_attempts": [
+        {
+          "name": "Heck Horse",
+          "description": "Created by Heinz and Lutz Heck in the 1930s through selective breeding of primitive domestic breeds"
+        },
+        {
+          "name": "Konik",
+          "description": "Polish landrace breed believed to retain significant Tarpan genetics"
+        }
+      ],
+      "historical_significance": "One of the three primary wild equine subspecies (along with Przewalski's horse and wild ass) that influenced domestic horse development. Featured in prehistoric cave paintings.",
+      "image_reference": "tarpan_historical.png"
+    },
+    {
+      "name": "Norfolk Trotter",
+      "extinction_date": "Mid-19th century as a distinct breed",
+      "origin": "England",
+      "history": "Developed in Norfolk, England in the 18th century as a fast trotting horse for road travel. Known for speed, endurance, and ground-covering trot. Primarily used for pulling coaches and carriages. Did not become extinct in the traditional sense but was absorbed into other breeds through crossbreeding, particularly the Hackney Horse.",
+      "characteristics": [
+        "Powerful trotting action",
+        "Stamina for long-distance travel",
+        "Strong, muscular build",
+        "Generally 15-16 hands",
+        "Bay, black, or brown coloration most common"
+      ],
+      "extinction_cause": "Absorbed into the Hackney Horse breed; changing transportation needs with railway development",
+      "legacy_breeds": [
+        {
+          "name": "Hackney Horse",
+          "description": "Direct descendant that formalized into a distinct breed through Norfolk Trotter bloodlines"
+        },
+        {
+          "name": "American Standardbred",
+          "description": "Strongly influenced by imported Norfolk Trotters, particularly through the stallion Messenger"
+        },
+        {
+          "name": "Russian Trotter",
+          "description": "Developed using Norfolk Trotter blood among other influences"
+        }
+      ],
+      "famous_examples": [
+        "Shales (foundation stallion born 1755)",
+        "Marshland Shales (famous example born 1802)",
+        "Fireaway (influential sire)"
+      ],
+      "image_reference": "norfolk_trotter_historical.png"
+    },
+    {
+      "name": "Old English Black",
+      "extinction_date": "17th-18th century",
+      "origin": "England",
+      "history": "Medieval English war horse and later principal coaching and agricultural horse of England before selective breeding created more specialized breeds. Known as the 'Great Horse' during the Middle Ages when it carried knights in armor. Eventually developed into specialized breeds for different purposes, leading to its disappearance as a distinct type.",
+      "characteristics": [
+        "Large and powerful build",
+        "Predominantly black in color",
+        "Strong legs",
+        "Broad chest",
+        "Thick mane and tail",
+        "15-17 hands tall",
+        "Substantial bone"
+      ],
+      "extinction_cause": "Evolving warfare technology reduced need for heavy war horses; selective breeding for specialized uses",
+      "legacy_breeds": [
+        {
+          "name": "Shire Horse",
+          "description": "Direct descendant, developed as agricultural power increased in importance"
+        },
+        {
+          "name": "Clydesdale",
+          "description": "Contains Old English Black genetics through ancestral stock"
+        },
+        {
+          "name": "Suffolk Punch",
+          "description": "May have been influenced by Old English Black horses"
+        }
+      ],
+      "historical_significance": "Essential to medieval warfare, agricultural development, and early transportation in England. Regarded as the foundation of modern British heavy horses.",
+      "image_reference": "old_english_black_historical.png"
     }
-  ]
+  ],
+  "endangered_breeds": [
+    {
+      "name": "Caspian",
+      "category": "light",
+      "origin": "Iran",
+      "population_status": {
+        "classification": "Critical",
+        "estimated_population": "Less than 1,500 worldwide"
+      },
+      "history": "Ancient breed rediscovered in 1965 near the Caspian Sea in Iran, where they were previously thought extinct. Archaeological evidence suggests they may be direct descendants of small, refined horses from 3,000 BCE, possibly ancestors to the Arabian and other hot-blooded breeds.",
+      "height": {
+        "min": 9.3,
+        "max": 12.2,
+        "unit": "hands"
+      },
+      "characteristics": [
+        "Refined bone structure despite small size",
+        "Large, intelligent eyes",
+        "Short, fine head",
+        "Proportions of a horse rather than a pony",
+        "Hard hooves with no feathering",
+        "Naturally athletic movement"
+      ],
+      "common_colors": ["Bay", "Gray", "Chestnut", "Black", "Occasionally dun or grulla"],
+      "conservation_efforts": [
+        "International Caspian Society coordinates preservation efforts",
+        "Breeding programs in multiple countries",
+        "DNA banking",
+        "Education and awareness programs"
+      ],
+      "image_reference": "caspian_horse.png"
+    },
+    {
+      "name": "Cleveland Bay",
+      "category": "light",
+      "origin": "England",
+      "population_status": {
+        "classification": "Critical",
+        "estimated_population": "Less than 800 worldwide"
+      },
+      "history": "England's oldest established horse breed, developed in Cleveland and Yorkshire. Originally bred as pack horses for carrying goods between monasteries and markets, later used for coaching, agriculture, and hunting. Nearly extinct after World War II and again in the 1960s.",
+      "height": {
+        "min": 16,
+        "max": 17,
+        "unit": "hands"
+      },
+      "characteristics": [
+        "Always bay in color",
+        "Minimal white markings (small star only permitted)",
+        "Strong, clean legs",
+        "Hard, well-formed hooves",
+        "Short back",
+        "Powerful hindquarters",
+        "Substantial bone"
+      ],
+      "unique_traits": "Only native British breed with no recorded infusion of outside blood since establishment. Consistent bay color with black points is a hallmark of the breed's homogeneity.",
+      "conservation_efforts": [
+        "Royal patronage by Queen Elizabeth II who maintained a breeding program",
+        "Breeding incentives by Cleveland Bay Horse Society",
+        "Crossbreeding programs producing sport horses while maintaining pure bloodlines"
+      ],
+      "image_reference": "cleveland_bay.png"
+    },
+    {
+      "name": "Colonial Spanish Mustang",
+      "category": "light",
+      "origin": "North America (from Spanish imports)",
+      "population_status": {
+        "classification": "Critical",
+        "estimated_population": "Approximately 3,000 pure strain horses"
+      },
+      "history": "Direct descendants of horses brought by Spanish explorers in the 16th century. These horses escaped or were released, adapted to the wild, and became the foundation of the American mustang. Only a small percentage of today's wild horses maintain this pure Spanish heritage.",
+      "height": {
+        "min": 13,
+        "max": 14.2,
+        "unit": "hands"
+      },
+      "characteristics": [
+        "Spanish phenotype",
+        "Low-set tail",
+        "Narrow chest",
+        "Short coupled",
+        "Deep girth",
+        "Hard hooves",
+        "Various colors including dun, grullo, and primitive markings"
+      ],
+      "unique_traits": "Living historical and cultural artifacts representing the earliest European equine influence in the Americas. Genetically distinct from most modern breeds.",
+      "conservation_efforts": [
+        "Several conservation herds including Chincoteague, Corolla, and Pryor Mountain populations",
+        "Breed registries like Spanish Mustang Registry and Horse of the Americas",
+        "Bureau of Land Management management of some pure herds",
+        "DNA testing to verify Spanish ancestry"
+      ],
+      "image_reference": "colonial_spanish_mustang.png"
+    }
+  ],
+  "breed_groups": {
+    "description": "Organizational categories used by various international bodies",
+    "groups": [
+      {
+        "name": "Fédération Equestre Internationale (FEI) Sport Horse Breeds",
+        "purpose": "Categorization for international competition horses",
+        "examples": ["Hanoverian", "Dutch Warmblood", "Thoroughbred", "Selle Français"]
+      },
+      {
+        "name": "World Breeding Federation for Sport Horses (WBFSH)",
+        "purpose": "Organization of sport horse studbooks for Olympic disciplines",
+        "examples": ["Holsteiner", "Oldenburg", "KWPN", "Irish Sport Horse"]
+      },
+      {
+        "name": "Rare Breeds Survival Trust Categories (UK)",
+        "purpose": "Conservation status classification",
+        "categories": [
+          {"name": "Critical", "definition": "Fewer than 300 breeding females"},
+          {"name": "Endangered", "definition": "300-500 breeding females"},
+          {"name": "Vulnerable", "definition": "500-900 breeding females"},
+          {"name": "At Risk", "definition": "900-1500 breeding females"},
+          {"name": "Minority", "definition": "1500-3000 breeding females"}
+        ]
+      }
+    ]
+  },
+  "horse_type_characteristics": {
+    "description": "Typical traits associated with different functional types of horses",
+    "types": [
+      {
+        "type": "Hot-bloods",
+        "origins": "Middle Eastern and North African breeds",
+        "characteristics": ["Light build", "Fine skin and coat", "Athletic", "Energetic temperament", "Speed-oriented"],
+        "examples": ["Arabian", "Thoroughbred", "Akhal-Teke", "Barb"]
+      },
+      {
+        "type": "Cold-bloods",
+        "origins": "European farm and war horses",
+        "characteristics": ["Heavy build", "Thick coat", "Strong bone", "Calm temperament", "Draft-oriented"],
+        "examples": ["Clydesdale", "Percheron", "Belgian", "Shire", "Suffolk Punch"]
+      },
+      {
+        "type": "Warm-bloods",
+        "origins": "Crosses between hot and cold bloods",
+        "characteristics": ["Athletic build", "Substantial but not heavy", "Balanced temperament", "Sport-oriented"],
+        "examples": ["Hanoverian", "Dutch Warmblood", "Holsteiner", "Trakehner"]
+      },
+      {
+        "type": "Pony types",
+        "origins": "Various indigenous small equines",
+        "characteristics": ["Under 14.2 hands", "Hardiness", "Thick coat", "Often stocky build", "Versatile"],
+        "examples": ["Welsh Pony", "Shetland", "Connemara", "New Forest"]
+      }
+    ]
+  }
 }
-
