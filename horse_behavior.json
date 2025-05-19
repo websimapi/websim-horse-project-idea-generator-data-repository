@@ -2,7 +2,7 @@
   "metadata": {
     "description": "Comprehensive information about horse behavior, movements, and communication",
     "category": "Equine Information",
-    "version": "1.0"
+    "version": "1.1"
   },
   "natural_behavior": {
     "herd_dynamics": {
@@ -11,28 +11,166 @@
         {
           "role": "Lead Mare",
           "description": "Dominant female who leads the herd to resources",
-          "characteristics": ["Usually older", "Experienced", "Decision-maker for daily activities"]
+          "characteristics": ["Usually older", "Experienced", "Decision-maker for daily activities"],
+          "responsibilities": ["Determines feeding locations", "Leads herd to water", "Initiates movement away from danger", "Maintains group cohesion"]
         },
         {
           "role": "Stallion",
           "description": "Dominant male who protects the herd",
-          "characteristics": ["Defends against predators and other stallions", "May control multiple mares", "Usually patrols the perimeter"]
+          "characteristics": ["Defends against predators and other stallions", "May control multiple mares", "Usually patrols the perimeter"],
+          "responsibilities": ["Protecting herd from predators", "Fighting or driving away rival stallions", "Breeding with mares", "Herding stray mares back to group"]
         },
         {
-          "role": "Subordinate Horses",
-          "description": "Lower-ranking herd members",
-          "characteristics": ["Follow lead mare", "Have specific ranking in hierarchy", "Young males often form bachelor groups"]
+          "role": "Subordinate Mares",
+          "description": "Lower-ranking female herd members",
+          "characteristics": ["Follow lead mare", "Have specific ranking in hierarchy", "May have foals at side"],
+          "position": "Middle of the herd, often the most protected position"
+        },
+        {
+          "role": "Young Horses",
+          "description": "Juveniles from foals to sub-adults",
+          "characteristics": ["Playful", "Learning social skills", "Testing boundaries", "Gradually developing independence"],
+          "position": "Usually near their mothers until 2-3 years of age"
+        },
+        {
+          "role": "Bachelor Groups",
+          "description": "Young or displaced stallions without mares",
+          "characteristics": ["Form separate herds", "Practice fighting skills", "Develop social bonds", "May challenge established stallions eventually"],
+          "function": "Social development and preparation for eventual herd acquisition"
         }
       ],
-      "hierarchy": "Established and maintained through body language and occasional physical confrontations",
-      "herd_benefits": ["Protection from predators", "Collective knowledge of resources", "Social companionship", "Mutual grooming"]
+      "hierarchy": {
+        "description": "Established and maintained through body language and occasional physical confrontations",
+        "establishment": "Initial hierarchy formed through direct confrontations involving threats and sometimes physical contact",
+        "maintenance": "Usually maintained through subtle body language once established",
+        "stability": "Relatively stable in established herds with few serious confrontations",
+        "effects": ["Determines feeding priority", "Affects breeding opportunities", "Influences access to preferred resting areas"]
+      },
+      "herd_benefits": ["Protection from predators", "Collective knowledge of resources", "Social companionship", "Mutual grooming", "Shared vigilance", "Teaching of young horses"],
+      "social_bonds": {
+        "description": "Lasting connections between individual horses",
+        "types": [
+          {
+            "bond_type": "Mare-foal bond",
+            "characteristics": ["Strongest social bond", "Lasts 2-3 years naturally", "Provides protection and nutrition", "Essential for normal behavioral development"]
+          },
+          {
+            "bond_type": "Peer friendships",
+            "characteristics": ["Often form between horses of similar age and sex", "Characterized by mutual grooming, play, and resting together", "Can last for years if horses remain together"]
+          },
+          {
+            "bond_type": "Stallion-mare bonds",
+            "characteristics": ["Can be surprisingly strong in established harems", "Stallions may show preferences for certain mares", "Includes protective behavior beyond breeding"]
+          }
+        ],
+        "behavioral_indicators": ["Standing in close proximity", "Mutual grooming", "Synchronized activities", "Distress when separated"]
+      },
+      "play_behavior": {
+        "description": "Recreational and developmental physical activities",
+        "functions": ["Physical development", "Social skill acquisition", "Cognitive stimulation", "Stress reduction"],
+        "types": [
+          {
+            "type": "Locomotor play",
+            "description": "Running, bucking, rearing, and other energetic movements",
+            "purpose": "Develops coordination, strength, and cardiovascular fitness",
+            "peak_occurrence": "Early morning and evening hours, especially in young horses"
+          },
+          {
+            "type": "Object play",
+            "description": "Manipulation of items like sticks, branches, or man-made objects",
+            "purpose": "Develops problem-solving and environmental interaction skills"
+          },
+          {
+            "type": "Social play",
+            "description": "Interactive play with other horses including play fighting, chasing",
+            "purpose": "Develops social skills and establishes relationships",
+            "patterns": ["Invitations to play include arched neck, tail flagging, prancing", "Contains self-handicapping by older/stronger horses", "Takes turns in offensive/defensive roles"]
+          }
+        ],
+        "age_factors": "Most common in foals and juveniles, decreases with age but can continue throughout life, especially in geldings"
+      },
+      "spatial_relationships": {
+        "description": "Organization of horses within physical space",
+        "patterns": [
+          {
+            "pattern": "Personal space",
+            "description": "Individual distance maintained around each horse",
+            "variations": "Size varies based on rank, familiarity, and individual preference"
+          },
+          {
+            "pattern": "Preferred associations",
+            "description": "Tendency to remain close to specific herd members",
+            "basis": "Often based on social bonds, age similarities, or familial relationships"
+          },
+          {
+            "pattern": "Herd positioning",
+            "description": "Patterns of physical arrangement when grazing, traveling, or resting",
+            "typical_structure": "High-ranking horses often positioned where they can monitor surroundings, young and subordinate horses in middle positions"
+          }
+        ]
+      }
     },
     "feeding_patterns": {
       "description": "Natural eating behaviors",
       "grazing_time": "10-17 hours per day in natural settings",
       "grazing_style": "Continuous small meals, moving slowly while eating",
-      "selection": "Prefer certain grasses and plants, avoid eating near manure",
-      "water_needs": "8-12 gallons per day, prefer clean, fresh water"
+      "selection": {
+        "description": "Prefer certain grasses and plants, avoid eating near manure",
+        "preference_factors": ["Sweetness", "Nutrient content", "Texture", "Familiarity"],
+        "avoidance_factors": ["Bitterness (often indicates toxicity)", "Proximity to feces", "Unusual odors"]
+      },
+      "water_needs": {
+        "description": "8-12 gallons per day, prefer clean, fresh water",
+        "drinking_pattern": "Multiple small drinks throughout day rather than few large drinks",
+        "factors_affecting_consumption": ["Exercise level", "Temperature", "Feed type (dry vs. moist)", "Reproductive status"],
+        "drinking_behavior": "Often prefers to see surface of water, may refuse cloudy water"
+      },
+      "foraging_strategies": {
+        "description": "Methods used to maximize nutrition acquisition",
+        "techniques": [
+          {
+            "technique": "Selective browsing",
+            "description": "Using mobile lips to select specific plants and plant parts",
+            "benefit": "Maximizes nutritional quality of intake"
+          },
+          {
+            "technique": "Patch switching",
+            "description": "Moving between feeding areas when quality decreases",
+            "benefit": "Optimizes energy expenditure vs. nutritional return"
+          },
+          {
+            "technique": "Social facilitation",
+            "description": "More likely to eat when other horses are eating",
+            "benefit": "Increases consumption when food is available"
+          }
+        ]
+      },
+      "seasonal_variations": {
+        "description": "Changes in feeding behavior throughout the year",
+        "patterns": [
+          {
+            "season": "Spring",
+            "behaviors": ["Increased intake of fresh growth", "More selective grazing", "May consume rapidly growing plants containing higher moisture"]
+          },
+          {
+            "season": "Summer",
+            "behaviors": ["Grazing during cooler parts of day", "Seeking shade during heat", "Higher water consumption"]
+          },
+          {
+            "season": "Fall",
+            "behaviors": ["Building fat reserves", "Less selective grazing", "Consuming higher-fiber forage as available"]
+          },
+          {
+            "season": "Winter",
+            "behaviors": ["Longer feeding time", "Pawing through snow to access forage", "Consuming bark and woody vegetation when grass unavailable"]
+          }
+        ]
+      },
+      "salt_seeking": {
+        "description": "Natural desire for sodium and other minerals",
+        "behaviors": ["Licking natural salt deposits", "Seeking mineral-rich soil", "Preference for brackish water in some environments"],
+        "importance": "Essential for electrolyte balance and proper cellular function"
+      }
     },
     "rest_patterns": {
       "description": "Natural sleeping and resting behaviors",
@@ -41,52 +179,435 @@
         {
           "type": "Standing sleep",
           "description": "Light sleep while standing using the stay apparatus",
-          "duration": "Naps of 15-20 minutes"
+          "duration": "Naps of 15-20 minutes",
+          "characteristics": ["Eyes half-closed", "Lower lip may droop", "One hind leg often rested", "Ears relaxed and turned outward"],
+          "brain_activity": "Slow-wave sleep (SWS)"
         },
         {
           "type": "Sternal recumbency",
           "description": "Lying down on the sternum with legs tucked under",
-          "duration": "30-40 minutes at a time"
+          "duration": "30-40 minutes at a time",
+          "characteristics": ["Head may be held up or rested on ground", "Alert to surroundings", "Can rise quickly if needed"],
+          "brain_activity": "Combination of slow-wave and paradoxical (REM) sleep"
         },
         {
           "type": "Lateral recumbency",
           "description": "Lying flat on the side, deep sleep",
-          "duration": "10-30 minutes at a time, rarely exceeding 30 minutes"
+          "duration": "10-30 minutes at a time, rarely exceeding 30 minutes",
+          "characteristics": ["Complete muscle relaxation", "May exhibit muscle twitching, vocal sounds, or 'running' movements", "Most vulnerable position"],
+          "brain_activity": "Primarily paradoxical (REM) sleep",
+          "necessity": "Essential for complete mental restoration, cannot enter REM sleep while standing"
         }
       ],
-      "security_needs": "Require feeling safe to enter deep sleep phases"
+      "security_needs": {
+        "description": "Require feeling safe to enter deep sleep phases",
+        "factors": ["Familiarity with environment", "Presence of trusted herd members", "Absence of perceived threats", "Comfortable footing"],
+        "sentinel_behavior": "In herds, horses often take turns sleeping deeply while others remain more alert"
+      },
+      "daily_patterns": {
+        "description": "Timing of rest throughout 24-hour period",
+        "patterns": [
+          {
+            "time": "Daytime",
+            "behavior": "Brief standing naps, especially after feeding or during heat of day"
+          },
+          {
+            "time": "Dawn/Dusk",
+            "behavior": "Increased activity, least likely to be resting"
+          },
+          {
+            "time": "Night",
+            "behavior": "Most deep sleep occurs between midnight and early morning"
+          }
+        ],
+        "factors_affecting": ["Season", "Temperature", "Feed availability", "Presence of predators or disturbances"]
+      },
+      "resting_postures": {
+        "description": "Body positions during non-sleep rest",
+        "types": [
+          {
+            "posture": "Three-point rest",
+            "description": "Standing with weight on three legs, one hind leg rested"
+          },
+          {
+            "posture": "Head-lowered rest",
+            "description": "Standing with neck and head lowered, eyes partially closed"
+          },
+          {
+            "posture": "Mutual resting",
+            "description": "Horses standing side by side, often head-to-tail for fly protection"
+          }
+        ]
+      }
     },
     "reproductive_behavior": {
       "mare_estrus": {
         "description": "Behavioral changes during fertility cycle",
         "duration": "5-7 days every 21 days during breeding season",
-        "signs": ["Tail raising", "Frequent urination", "Winking of vulva", "Receptivity to stallion"]
+        "signs": [
+          "Tail raising",
+          "Frequent urination in small amounts",
+          "Winking of vulva (rhythmic eversion)",
+          "Receptivity to stallion",
+          "Squatting stance",
+          "Increased vocalization"
+        ],
+        "seasonal_patterns": {
+          "description": "Seasonally polyestrous - cycles during specific seasons",
+          "northern_hemisphere": "Primary breeding season February through June, affected by daylight hours",
+          "factors_affecting": ["Daylight length", "Temperature", "Nutrition status", "Presence of stallions"]
+        },
+        "teasing_behavior": {
+          "description": "Process of determining estrus status",
+          "natural_context": "Mare approaches stallion, initiates interaction when in estrus",
+          "managed_context": "Controlled exposure to stallion to observe reactions",
+          "responses": {
+            "in_estrus": ["Presenting hindquarters", "Urinating", "Standing for stallion"],
+            "not_in_estrus": ["Kicking", "Squealing", "Moving away", "Pinned ears"]
+          }
+        }
       },
       "stallion_behavior": {
         "description": "Behaviors related to reproduction",
         "territorial": "May defend territory containing mares",
-        "courtship": ["Arched neck", "Prancing", "Nickering", "Flehmen response (curling upper lip)"]
+        "courtship": [
+          "Arched neck (prancing approach)",
+          "Nickering with characteristic vocalization",
+          "Flehmen response (curling upper lip after smelling urine)",
+          "Herding and guarding receptive mares",
+          "Marking territory with urine and feces"
+        ],
+        "detection_abilities": {
+          "description": "Capacity to identify mares in estrus",
+          "methods": ["Smell (detection of pheromones)", "Visual cues (posturing)", "Testing responses to approaches"],
+          "sensitivity": "Can detect hormonal changes before obvious behavioral signs"
+        },
+        "competition": {
+          "description": "Interactions between stallions for breeding rights",
+          "behaviors": ["Challenge displays", "Fighting", "Herding mares away from competitors"],
+          "strategies": ["Direct confrontation", "Sneaking behavior by subordinate males", "Coalition formation in some populations"]
+        }
+      },
+      "mating": {
+        "description": "The actual breeding process",
+        "sequence": [
+          {
+            "stage": "Approach",
+            "behaviors": ["Mare stands receptively", "Stallion approaches from rear", "Nuzzling and biting of mare's neck"]
+          },
+          {
+            "stage": "Mounting",
+            "behaviors": ["Stallion rears onto mare's back", "Mare adopts breeding stance", "Front legs embrace mare's sides"]
+          },
+          {
+            "stage": "Copulation",
+            "behaviors": ["Brief (typically 10-20 seconds)", "Multiple pelvic thrusts", "Ejaculation typically accompanied by flagging tail"]
+          },
+          {
+            "stage": "Dismount",
+            "behaviors": ["Stallion slides off to one side", "Both may rest briefly afterward", "Mare may urinate shortly after"]
+          }
+        ],
+        "frequency": "Multiple matings during estrus period, often several times daily with same mare"
       },
       "foaling": {
         "description": "Behavior before, during, and after birth",
-        "pre_foaling_signs": ["Udder development", "Waxing of teats", "Restlessness", "Nest-building behavior"],
-        "foaling_process": "Usually occurs at night, takes 15-30 minutes once active labor begins",
-        "post_foaling": ["Licking and bonding with foal", "Foal stands within 1-2 hours", "Protective behavior"]
+        "pre_foaling_signs": [
+          "Udder development (2-4 weeks before)",
+          "Waxing of teats (24-48 hours before)",
+          "Restlessness, circling, getting up and down",
+          "Nest-building behavior (pawing, arranging bedding)",
+          "Sweating, especially on neck and flanks",
+          "Frequent urination and defecation",
+          "Isolation from other horses"
+        ],
+        "foaling_process": {
+          "description": "Usually occurs at night, takes 15-30 minutes once active labor begins",
+          "stages": [
+            {
+              "stage": "First stage (early labor)",
+              "duration": "1-4 hours",
+              "behaviors": ["Restlessness", "Sweating", "Frequent urination", "Looking at flanks"]
+            },
+            {
+              "stage": "Second stage (active labor)",
+              "duration": "15-30 minutes",
+              "behaviors": ["Lying down", "Active straining", "Water bag appearance and rupture", "Delivery of foal"]
+            },
+            {
+              "stage": "Third stage (placental delivery)",
+              "duration": "1-3 hours",
+              "behaviors": ["Continued mild contractions", "Passage of placenta", "Resting with occasional attention to foal"]
+            }
+          ]
+        },
+        "post_foaling": {
+          "description": "Maternal behaviors immediately after birth",
+          "behaviors": [
+            "Licking and nuzzling foal (stimulates breathing, dries coat, creates bond)",
+            "Nickering softly to foal",
+            "Protective positioning between foal and perceived threats",
+            "Encouraging foal to stand (typically within 1-2 hours)",
+            "Guiding foal to udder for first nursing",
+            "Eating of placenta in some mares (natural but often prevented in domestic settings)"
+          ],
+          "bonding_process": {
+            "timing": "Critical period in first hour after birth",
+            "mechanism": "Combination of hormonal influences and sensory recognition (smell, sound, sight)",
+            "disruption_effects": "Rejection or poor maternal behavior if bond formation is interrupted"
+          }
+        },
+        "maiden_mare_factors": {
+          "description": "Specific considerations for first-time mothers",
+          "challenges": ["May show confusion about maternal role", "Higher incidence of rejection", "More easily startled by normal foal behavior"],
+          "management": ["Quieter environment", "Supervision", "Assistance with initial nursing"]
+        }
+      },
+      "maternal_behavior": {
+        "description": "Ongoing care and protection of foals",
+        "nursing": {
+          "frequency": "Every 30-60 minutes in first weeks, decreasing gradually",
+          "duration": "Each session typically 1-2 minutes",
+          "weaning": "Natural weaning occurs gradually between 8-12 months"
+        },
+        "protection": {
+          "description": "Behaviors that ensure foal safety",
+          "methods": ["Positioning between foal and threats", "Aggressive defense against predators or threatening horses", "Retrieval if foal strays"],
+          "intensity": "Generally highest in first few weeks, gradually allowing more independence"
+        },
+        "teaching": {
+          "description": "Transfer of essential knowledge and skills",
+          "methods": ["Demonstration", "Guidance", "Correction of inappropriate behavior"],
+          "skills_acquired": ["Appropriate social behavior", "Food selection", "Environmental hazard recognition", "Water source location"]
+        }
       }
     },
     "defensive_behaviors": {
       "flight": {
         "description": "Primary defense strategy, running from perceived threats",
-        "distance": "Flight distance varies by individual and experience",
-        "speed": "Can reach 40 mph (64 km/h) in short bursts"
+        "distance": {
+          "description": "Flight distance varies by individual and experience",
+          "factors_affecting": ["Previous experiences", "Temperament", "Familiarity with stimulus", "Social context"],
+          "measurement": "Distance at which horse will begin to move away from approaching threat"
+        },
+        "speed": {
+          "description": "Can reach 40 mph (64 km/h) in short bursts",
+          "energy_efficiency": "Galloping is energy-intensive, typically used only for immediate threats",
+          "distance_capacity": "Can maintain canter/gallop for several miles if necessary"
+        },
+        "flight_patterns": [
+          {
+            "pattern": "Direct escape",
+            "description": "Straight-line running away from threat",
+            "context": "Open terrain with clear escape route"
+          },
+          {
+            "pattern": "Circling",
+            "description": "Running in wide arc to keep threat in sight",
+            "context": "When monitoring threat while maintaining distance"
+          },
+          {
+            "pattern": "Group flight",
+            "description": "Coordinated movement with herd members",
+            "advantage": "Confusion for predators, protection through numbers"
+          }
+        ]
       },
       "fight": {
         "description": "Secondary defense when flight not possible",
-        "weapons": ["Powerful kicks with hind legs", "Striking with front legs", "Biting"]
+        "weapons": [
+          {
+            "type": "Powerful kicks with hind legs",
+            "force": "Can deliver over 1,000 pounds of force",
+            "target": "Usually aimed at threat approaching from behind",
+            "warning_signs": "Pinned ears, raised tail, shifting weight to forelegs"
+          },
+          {
+            "type": "Striking with front legs",
+            "context": "Threats approached from front",
+            "execution": "Rearing up and extending forelegs forcefully",
+            "warning_signs": "Head raised high, ears pinned, snaking neck"
+          },
+          {
+            "type": "Biting",
+            "context": "Close-quarters defense or dominance display",
+            "target": "Typically neck, shoulders, or withers of opponent",
+            "warning_signs": "Bared teeth, stretched neck, ears flat back"
+          }
+        ],
+        "fighting_techniques": [
+          {
+            "technique": "Rear and strike",
+            "description": "Rising on hind legs to strike with front hooves",
+            "context": "Stallion fights, serious confrontations"
+          },
+          {
+            "technique": "Spinning kick",
+            "description": "Quickly turning hindquarters toward threat to deliver kick",
+            "context": "When approached from behind or side"
+          },
+          {
+            "technique": "Charge and bite",
+            "description": "Rushing forward with intent to bite",
+            "context": "Dominance disputes, territorial defense"
+          }
+        ]
       },
       "freeze": {
         "description": "Momentary immobility to assess threat",
-        "function": "Allows for threat evaluation before deciding to flee"
+        "function": {
+          "primary": "Allows for threat evaluation before deciding to flee",
+          "secondary": "May prevent triggering predator chase response",
+          "tertiary": "Gives time for all herd members to become alert"
+        },
+        "characteristics": ["Rigid body posture", "Heightened alertness", "Elevated head and neck", "Flared nostrils", "Wide eyes"],
+        "duration": "Typically brief (2-10 seconds) before transitioning to flight or resuming previous activity"
+      },
+      "alert_posture": {
+        "description": "Vigilant stance when potential threat detected",
+        "characteristics": [
+          "Head and neck elevated",
+          "Ears pointed toward potential threat",
+          "Nostrils slightly dilated",
+          "Body oriented toward stimulus",
+          "Weight shifted to readiness for movement"
+        ],
+        "function": "Improves sensory gathering while preparing for possible flight",
+        "contagious_effect": "One horse assuming alert posture quickly spreads to entire herd"
+      },
+      "threat_assessment": {
+        "description": "Process of evaluating potential dangers",
+        "factors_considered": ["Movement patterns", "Size and shape", "Odor", "Sounds", "Previous experiences with similar stimuli"],
+        "decision_hierarchy": ["Identify threat", "Determine proximity/immediacy", "Assess escape routes", "Choose appropriate response"]
+      }
+    },
+    "seasonal_behaviors": {
+      "description": "Behavioral changes tied to seasonal cycles",
+      "spring": {
+        "general": ["Increased energy and playfulness", "Shedding winter coat", "More active grazing patterns"],
+        "reproductive": "Mares entering estrus cycles, stallions showing increased reproductive behavior",
+        "social": "More frequent play behavior, especially in younger horses"
+      },
+      "summer": {
+        "general": ["Heat-avoidance behaviors", "Seeking shade during hottest hours", "Increased drinking", "More night activity"],
+        "social": "Closer herd bunching around water sources and shade",
+        "protective": "More tail swishing and stomping due to increased insect activity"
+      },
+      "fall": {
+        "general": ["Increased feeding to build fat reserves", "Beginning of winter coat growth", "Less heat-stress behavior"],
+        "reproductive": "Decreasing sexual behaviors as breeding season ends",
+        "social": "More relaxed herd structures, less reproductive competition"
+      },
+      "winter": {
+        "general": ["Energy conservation", "Seeking wind breaks and shelter", "Reduced play behavior", "Pawing through snow to access forage"],
+        "social": "Closer physical proximity for warmth, especially in harsh conditions",
+        "physiological_adaptations": "Growing thicker coat, increasing body fat, slowing metabolism"
+      }
+    },
+    "grooming_behavior": {
+      "description": "Self-maintenance and social bonding through grooming",
+      "self_grooming": {
+        "methods": [
+          {
+            "behavior": "Rolling",
+            "purpose": ["Removing loose hair and parasites", "Scratching itchy areas", "Dust bathing for parasite control"],
+            "pattern": "Often after exercise, when sweaty, or when introduced to new area"
+          },
+          {
+            "behavior": "Rubbing",
+            "purpose": "Scratch areas inaccessible by other means",
+            "targets": "Trees, posts, fences, or other solid objects"
+          },
+          {
+            "behavior": "Nibbling/biting",
+            "purpose": "Precise removal of irritants or parasite relief",
+            "targets": "Own body parts within reach (chest, legs, flanks)"
+          },
+          {
+            "behavior": "Tail swishing",
+            "purpose": "Insect repellent",
+            "patterns": "Increases with insect activity, can become nearly constant in severe conditions"
+          },
+          {
+            "behavior": "Shaking",
+            "purpose": "Remove debris, insects, or water",
+            "types": ["Full body shake", "Head shake", "Skin twitching"]
+          }
+        ]
+      },
+      "mutual_grooming": {
+        "description": "Horses using teeth to scratch each other's withers, back, and neck",
+        "social_function": ["Bonding", "Stress reduction", "Practical help with itching", "Establishment and maintenance of relationships"],
+        "pattern": "Typically performed at withers, neck, back - areas difficult for horse to reach itself",
+        "initiation": "Often begins with one horse nibbling, second horse reciprocates",
+        "relationship_indicator": "Frequency correlates with social bond strength",
+        "image_reference": "mutual_grooming.png"
+      },
+      "facilitated_grooming": {
+        "description": "Using environmental elements to assist grooming",
+        "methods": [
+          "Standing in breezy areas to reduce insects",
+          "Using water sources for cooling and cleaning",
+          "Rubbing against appropriate surfaces (trees, rocks)",
+          "Standing in smoke from fires to repel insects (observed in semi-wild populations)"
+        ]
+      }
+    },
+    "play_behavior": {
+      "description": "Non-functional, pleasurable activities",
+      "functions": [
+        "Physical development",
+        "Social skill acquisition",
+        "Environmental exploration",
+        "Cognitive development",
+        "Stress release"
+      ],
+      "play_types": [
+        {
+          "type": "Locomotor play",
+          "description": "Movement-based play without apparent purpose",
+          "examples": ["Running", "Bucking", "Rearing", "Sliding stops", "Quick direction changes"],
+          "purpose": "Develops coordination, builds muscle, improves cardiovascular fitness"
+        },
+        {
+          "type": "Object play",
+          "description": "Manipulation of items in environment",
+          "examples": ["Picking up and tossing items", "Pushing objects", "Playing with water", "Manipulating gates/doors"],
+          "purpose": "Develops dexterity, encourages exploration, builds problem-solving skills"
+        },
+        {
+          "type": "Social play",
+          "description": "Interactive play with other horses",
+          "examples": ["Play fighting", "Chase games", "Tag-like activities", "Mutual prancing"],
+          "purpose": "Builds social skills, establishes relationships, practices communication"
+        }
+      ],
+      "play_signals": {
+        "description": "Communications that indicate playful intent",
+        "visual_cues": ["Arched neck", "Tail held high", "Exaggerated movements", "Open, relaxed facial expression"],
+        "behavioral_cues": ["Self-handicapping", "Role reversals", "Lack of aggressive follow-through", "Pauses to allow partner response"]
+      },
+      "age_and_play": {
+        "description": "Relationship between age and play behavior",
+        "patterns": [
+          {
+            "age_group": "Foals (0-6 months)",
+            "play_characteristics": ["Short bursts of solitary play", "Beginning social play with dam", "Exploration-focused"]
+          },
+          {
+            "age_group": "Weanlings/Yearlings (6 months-2 years)",
+            "play_characteristics": ["Peak of play behavior", "Complex social play", "Rough-and-tumble play common", "Play fighting increases"]
+          },
+          {
+            "age_group": "Young adults (2-4 years)",
+            "play_characteristics": ["Decreasing frequency", "More specific play partners", "Greater social component"]
+          },
+          {
+            "age_group": "Mature adults (4+ years)",
+            "play_characteristics": ["Limited play mostly with familiar companions", "More restrained", "Often initiated during environmental changes"]
+          }
+        ],
+        "sex_differences": "Colts typically engage in more locomotor and rough play than fillies across all age groups"
       }
     }
   },
@@ -96,37 +617,202 @@
         "name": "Nicker",
         "description": "Soft, low-pitched greeting sound",
         "context": "Greeting, anticipation of food, mare to foal communication",
+        "sound_characteristics": {
+          "pitch": "Low to medium",
+          "volume": "Soft to moderate",
+          "duration": "Brief, repeated sounds (1-3 seconds)",
+          "production": "Produced with mouth closed or barely open, vibration of vocal cords"
+        },
+        "variations": [
+          {
+            "subtype": "Greeting nicker",
+            "context": "Used when approaching familiar horses or humans",
+            "characteristics": "Softer, shorter"
+          },
+          {
+            "subtype": "Maternal nicker",
+            "context": "Mare communicating with foal",
+            "characteristics": "Very soft, rhythmic, often accompanied by head lowering"
+          },
+          {
+            "subtype": "Food nicker",
+            "context": "Anticipation of feeding",
+            "characteristics": "Slightly more urgent, repeated more frequently"
+          }
+        ],
         "sound_file": "nicker.mp3"
       },
       {
         "name": "Whinny/Neigh",
         "description": "Loud, high-pitched call",
         "context": "Calling to distant horses, anxiety when separated from herd",
+        "sound_characteristics": {
+          "pitch": "Begins high, often lowers at end",
+          "volume": "Loud, can carry up to 1/2 mile",
+          "duration": "3-5 seconds typically",
+          "production": "Produced with mouth open, full use of vocal resonators"
+        },
+        "variations": [
+          {
+            "subtype": "Contact call",
+            "context": "Seeking herd members or specific individuals",
+            "characteristics": "More melodic, questioning tone"
+          },
+          {
+            "subtype": "Alarm whinny",
+            "context": "Warning others of potential danger",
+            "characteristics": "Sharper, more urgent quality"
+          },
+          {
+            "subtype": "Separation anxiety whinny",
+            "context": "When isolated from group",
+            "characteristics": "Repeated frequently, may become hoarse with repetition"
+          }
+        ],
+        "physiological_signs": "Elevated head, stretched neck, flared nostrils",
         "sound_file": "whinny.mp3"
       },
       {
         "name": "Squeal",
         "description": "High-pitched, short sound",
         "context": "Warning, aggressive encounters, mare rejecting stallion",
+        "sound_characteristics": {
+          "pitch": "Very high",
+          "volume": "Loud, piercing",
+          "duration": "1-2 seconds",
+          "production": "Produced with teeth exposed, intense exhalation"
+        },
+        "variations": [
+          {
+            "subtype": "Threat squeal",
+            "context": "During aggressive encounters",
+            "characteristics": "Accompanied by strike threat or actual strike"
+          },
+          {
+            "subtype": "Meeting squeal",
+            "context": "When unfamiliar horses first meet",
+            "characteristics": "Often mutual, followed by investigative behavior"
+          },
+          {
+            "subtype": "Breeding rejection",
+            "context": "Mare rejecting stallion advances",
+            "characteristics": "Accompanied by kick threat, often repeated"
+          }
+        ],
+        "physiological_signs": "Usually accompanied by pinned ears, may include bared teeth",
         "sound_file": "squeal.mp3"
       },
       {
         "name": "Snort",
         "description": "Forced expulsion of air through nostrils",
         "context": "Alertness, excitement, or clearing nasal passages",
+        "sound_characteristics": {
+          "pitch": "Low to medium",
+          "volume": "Moderate to loud",
+          "duration": "Brief (0.5-1 second)",
+          "production": "Produced by forceful exhalation through nose, not vocal cords"
+        },
+        "variations": [
+          {
+            "subtype": "Alarm snort",
+            "context": "Response to potential threats",
+            "characteristics": "Sharp, often repeated, accompanied by alert posture"
+          },
+          {
+            "subtype": "Clearing snort",
+            "context": "Removing dust or irritants from nasal passages",
+            "characteristics": "Forceful, often includes visible discharge"
+          },
+          {
+            "subtype": "Play snort",
+            "context": "During playful activities",
+            "characteristics": "Softer, associated with animated movement"
+          }
+        ],
+        "communicative_function": "Often alerts other horses to potential concern",
         "sound_file": "snort.mp3"
       },
       {
         "name": "Blow",
         "description": "Softer expulsion of air than snort",
         "context": "Greeting, investigation of new objects",
+        "sound_characteristics": {
+          "pitch": "Low",
+          "volume": "Soft to moderate",
+          "duration": "1-2 seconds",
+          "production": "Gentle exhalation through relaxed, widened nostrils"
+        },
+        "variations": [
+          {
+            "subtype": "Greeting blow",
+            "context": "When approaching another horse or human for investigation",
+            "characteristics": "Very soft, often with extended neck"
+          },
+          {
+            "subtype": "Investigative blow",
+            "context": "When examining novel objects",
+            "characteristics": "Directed at specific object, often repeated"
+          }
+        ],
+        "physiological_signs": "Relaxed facial expression, forward ears, extended nose",
         "sound_file": "blow.mp3"
       },
       {
         "name": "Groan",
         "description": "Low, guttural sound",
         "context": "Pain, extreme exertion, sometimes pleasure during grooming",
+        "sound_characteristics": {
+          "pitch": "Very low",
+          "volume": "Variable from soft to loud",
+          "duration": "2-4 seconds typically",
+          "production": "Deep vocalization, often with mouth closed"
+        },
+        "variations": [
+          {
+            "subtype": "Pain groan",
+            "context": "Response to discomfort or pain",
+            "characteristics": "More intense, may be accompanied by physical tension"
+          },
+          {
+            "subtype": "Effort groan",
+            "context": "During physical exertion",
+            "characteristics": "Rhythmic with effort, as in pulling heavy loads"
+          },
+          {
+            "subtype": "Pleasure groan",
+            "context": "During satisfying grooming or scratching",
+            "characteristics": "Softer, accompanied by signs of relaxation"
+          }
+        ],
         "sound_file": "groan.mp3"
+      },
+      {
+        "name": "Roar",
+        "description": "Loud, throaty vocalization",
+        "context": "Extreme aggression, primarily stallions during fights",
+        "sound_characteristics": {
+          "pitch": "Medium to low",
+          "volume": "Very loud",
+          "duration": "2-3 seconds",
+          "production": "Produced with open mouth, intense exhalation"
+        },
+        "rarity": "Uncommon, typically only heard during serious stallion fights",
+        "physiological_signs": "Aggressive posture, may occur during rearing",
+        "sound_file": "roar.mp3"
+      },
+      {
+        "name": "Sigh",
+        "description": "Long exhalation through nose or mouth",
+        "context": "Relaxation, resignation, relief of tension",
+        "sound_characteristics": {
+          "pitch": "Low",
+          "volume": "Soft",
+          "duration": "2-4 seconds",
+          "production": "Long, controlled exhalation"
+        },
+        "physiological_signs": "Often accompanied by lowering of head, relaxation of facial muscles",
+        "significance": "Indicates transition to more relaxed state",
+        "sound_file": "sigh.mp3"
       }
     ],
     "body_language": {
@@ -134,66 +820,175 @@
         {
           "position": "Forward",
           "meaning": "Attention, interest, alertness",
+          "context": "Focusing on something ahead, listening to sounds in front",
+          "associated_behaviors": "Usually accompanied by alert facial expression, attentive posture",
           "image_reference": "ears_forward.png"
         },
         {
           "position": "Backward",
           "meaning": "Listening behind, irritation, potential aggression",
+          "context": "Monitoring sounds behind while moving forward, mild annoyance",
+          "subtypes": [
+            {
+              "variation": "Loosely back",
+              "meaning": "Listening behind, mild attention"
+            },
+            {
+              "variation": "Firmly back but not pinned",
+              "meaning": "Irritation, mild warning"
+            }
+          ],
           "image_reference": "ears_backward.png"
         },
         {
           "position": "Pinned flat",
           "meaning": "Anger, aggression, severe discomfort",
+          "context": "Fighting, strong threat display, intense pain",
+          "warning_value": "Serious indication of potential aggression, especially when combined with other threat signals",
+          "progression": "Often begins with ears back, then transitions to pinned as aggression escalates",
           "image_reference": "ears_pinned.png"
         },
         {
           "position": "Rotating/Mobile",
           "meaning": "Scanning environment, processing multiple stimuli",
+          "context": "Normal awareness in relaxed horse, environmental monitoring",
+          "significance": "Indicates attentive but relaxed state, actively gathering information",
+          "frequency": "Nearly constant ear movement is normal in alert, relaxed horses",
           "image_reference": "ears_rotating.png"
+        },
+        {
+          "position": "One forward, one back",
+          "meaning": "Split attention, monitoring multiple sources",
+          "context": "Attending to stimuli in different directions, uncertainty",
+          "significance": "Processing competing information, divided attention"
+        },
+        {
+          "position": "Drooping to sides",
+          "meaning": "Extreme relaxation, fatigue, illness, or anesthesia effect",
+          "context": "Deep sleep, exhaustion, medical conditions",
+          "significance": "Lack of muscle tone in ear structures, indicates non-alert state"
         }
       ],
       "head_position": [
         {
           "position": "High",
           "meaning": "Alertness, excitement, potential fear",
+          "neck_carriage": "Elevated, tense",
+          "context": "Perceiving potential threats, high arousal states",
           "image_reference": "head_high.png"
         },
         {
           "position": "Level",
           "meaning": "Relaxed, attentive",
+          "neck_carriage": "Natural arch, relaxed muscles",
+          "context": "Normal activity, comfortable awareness",
           "image_reference": "head_level.png"
         },
         {
           "position": "Low",
           "meaning": "Relaxation, submission, depression, or illness",
+          "neck_carriage": "Below normal carriage, may have diminished muscle tone",
+          "context": "Rest, submission to dominant animal, lethargy",
+          "variations": [
+            {
+              "subtype": "Relaxed low",
+              "indicators": "Soft eye, relaxed muzzle, gentle movement"
+            },
+            {
+              "subtype": "Depressed low",
+              "indicators": "Dull eye, limited response to stimuli, minimal movement"
+            }
+          ],
           "image_reference": "head_low.png"
         },
         {
           "position": "Extended",
           "meaning": "Curiosity, investigation",
+          "neck_carriage": "Stretched forward, often with slight lowering",
+          "context": "Examining novel objects or situations",
+          "significance": "Information gathering, cautious exploration",
           "image_reference": "head_extended.png"
+        },
+        {
+          "position": "Vertical flexion",
+          "meaning": "Collection, attention to rider, sometimes evasion",
+          "neck_carriage": "Arched, poll highest point",
+          "context": "Responding to rein aids, dressage work, natural collection"
+        },
+        {
+          "position": "Snaking (side to side, low carriage)",
+          "meaning": "Threat, aggressive intention, stallion herding behavior",
+          "neck_carriage": "Extended forward but low, weaving motion",
+          "context": "Stallions moving mares, aggressive encounters between horses"
         }
       ],
       "tail": [
         {
           "position": "Raised high",
           "meaning": "Excitement, alertness, may indicate high energy",
+          "context": "Beginning movement, play, alarm, stallion display",
+          "variations": [
+            {
+              "subtype": "Flagged tail (vertical)",
+              "meaning": "High excitement, display (especially in Arabians)",
+              "context": "Showing off, play, alarm"
+            },
+            {
+              "subtype": "Crested tail (curled over back)",
+              "meaning": "Extreme excitement or fear",
+              "context": "Flight response, intense display"
+            }
+          ],
           "image_reference": "tail_raised.png"
         },
         {
           "position": "Relaxed",
           "meaning": "Calm, content",
+          "context": "Normal activity, relaxed state",
+          "variations": [
+            {
+              "subtype": "Gently swinging",
+              "meaning": "Relaxed movement, content",
+              "context": "Walking, grazing"
+            },
+            {
+              "subtype": "Still",
+              "meaning": "Complete relaxation or focused attention",
+              "context": "Rest, concentration"
+            }
+          ],
           "image_reference": "tail_relaxed.png"
         },
         {
           "position": "Clamped down",
           "meaning": "Fear, discomfort, tension",
+          "context": "Pain, anxiety, submission, cold weather",
+          "physiological_correlation": "Often accompanied by tense muscles throughout hindquarters",
           "image_reference": "tail_clamped.png"
         },
         {
           "position": "Swishing",
           "meaning": "Irritation, fly control, can escalate to aggression",
+          "context": "Insect harassment, building tension, warning",
+          "variations": [
+            {
+              "subtype": "Slow swishing",
+              "meaning": "Primarily fly control, mild irritation",
+              "context": "Normal in summer conditions"
+            },
+            {
+              "subtype": "Rapid/aggressive swishing",
+              "meaning": "Increasing irritation, warning signal",
+              "context": "Preceding more aggressive actions"
+            }
+          ],
           "image_reference": "tail_swishing.png"
+        },
+        {
+          "position": "Wringing (circular motion)",
+          "meaning": "Extreme irritation, significant discomfort",
+          "context": "Pain, severe annoyance, building aggression",
+          "warning_value": "Serious indication of distress or imminent aggressive action"
         }
       ],
       "overall_posture": [
@@ -201,32 +996,291 @@
           "posture": "Tense/Rigid",
           "meaning": "Alertness, fear, pain",
           "description": "Muscles tight, body stiff, ready for flight",
+          "indicators": ["Raised head", "Tight muscles visible across topline", "Minimal weight shifting", "Quick, shallow breathing"],
           "image_reference": "posture_tense.png"
         },
         {
           "posture": "Relaxed",
           "meaning": "Contentment, comfort",
           "description": "Soft eyes, relaxed muscles, may have a leg rested",
+          "indicators": ["Even weight distribution (or three-point stance)", "Lowered head", "Soft eye", "Regular breathing", "Occasional sighs"],
           "image_reference": "posture_relaxed.png"
         },
         {
           "posture": "Threatening",
           "meaning": "Warning before aggression",
           "description": "Head and neck extended, ears pinned, may swing hindquarters toward target",
+          "variations": [
+            {
+              "subtype": "Frontal threat",
+              "characteristics": ["Head lowered", "Ears pinned", "May paw ground", "Direct approach"],
+              "target": "Potential kick or strike with forelegs"
+            },
+            {
+              "subtype": "Hindquarter threat",
+              "characteristics": ["Hindquarters oriented toward threat", "Head turned to maintain visual contact", "Tail raised or clamped"],
+              "target": "Potential kick with hind legs"
+            }
+          ],
+          "escalation_indicators": ["Increased muscle tension", "More extreme ear position", "Intensified vocalization"],
           "image_reference": "posture_threatening.png"
+        },
+        {
+          "posture": "Submissive",
+          "meaning": "Deference to dominant individual",
+          "description": "Lowered head, yielding of space, reduced eye contact",
+          "indicators": ["Moving away when approached", "Lowered head position", "Allowing dominant animal to displace from resources"],
+          "context": "Social interactions, resource competition, introductions to new herd"
+        },
+        {
+          "posture": "Alert",
+          "meaning": "Vigilance, attention to environment",
+          "description": "Head up, ears forward, body ready for movement",
+          "indicators": ["Elevated head and neck", "Forward ears", "Wide eyes", "Nostrils slightly dilated", "Minimal other movement"],
+          "purpose": "Maximum sensory gathering while prepared for action"
         }
-      ]
+      ],
+      "facial_expressions": {
+        "description": "Combinations of eye, nostril, and muzzle positions conveying emotional states",
+        "elements": [
+          {
+            "feature": "Eyes",
+            "expressions": [
+              {
+                "appearance": "Soft eye",
+                "description": "Relaxed muscles around eye, calm gaze",
+                "meaning": "Relaxation, contentment"
+              },
+              {
+                "appearance": "Wide eye",
+                "description": "Eye opened widely, white may be visible",
+                "meaning": "Fear, surprise, high alertness"
+              },
+              {
+                "appearance": "Hard eye",
+                "description": "Tense muscles around eye, intense focus",
+                "meaning": "Aggression, intense concentration"
+              },
+              {
+                "appearance": "Partially closed eye",
+                "description": "Eyelids drooping",
+                "meaning": "Relaxation, drowsiness, pain"
+              }
+            ]
+          },
+          {
+            "feature": "Nostrils",
+            "expressions": [
+              {
+                "appearance": "Relaxed nostrils",
+                "description": "Normal size, minimal flare",
+                "meaning": "Calm breathing, relaxation"
+              },
+              {
+                "appearance": "Dilated nostrils",
+                "description": "Expanded, rounded opening",
+                "meaning": "Increased oxygen need, excitement, fear"
+              },
+              {
+                "appearance": "Tense nostrils",
+                "description": "Stretched tight, elongated",
+                "meaning": "Pain, tension, stress"
+              }
+            ]
+          },
+          {
+            "feature": "Muzzle",
+            "expressions": [
+              {
+                "appearance": "Relaxed muzzle",
+                "description": "Soft lips, natural position",
+                "meaning": "Contentment, relaxation"
+              },
+              {
+                "appearance": "Tight muzzle",
+                "description": "Compressed lips, tension visible",
+                "meaning": "Stress, discomfort, concentration"
+              },
+              {
+                "appearance": "Extended upper lip (Flehmen)",
+                "description": "Upper lip curled upward",
+                "meaning": "Processing scent information, usually reproductive investigation"
+              },
+              {
+                "appearance": "Chewing/mouthing",
+                "description": "Gentle movement of lips and jaw",
+                "meaning": "Processing information, relaxation response, submission"
+              }
+            ]
+          }
+        ],
+        "combined_expressions": [
+          {
+            "name": "Pain face",
+            "description": "Characteristic expression during discomfort",
+            "elements": ["Tense muzzle", "Partially closed eyes", "Fixed stare", "Nostrils tense and slightly dilated", "Muscles tense around eyes and muzzle"]
+          },
+          {
+            "name": "Fear face",
+            "description": "Expression during acute fear",
+            "elements": ["Wide eyes with visible white", "Fully dilated nostrils", "Tense upper lip", "Elevated head posture"]
+          },
+          {
+            "name": "Relaxed face",
+            "description": "Expression during contentment",
+            "elements": ["Soft eye", "Relaxed muzzle", "Natural nostril shape", "May include slow blinks", "Lower lip may droop slightly"]
+          }
+        ]
+      },
+      "proximity_communication": {
+        "description": "Use of physical spacing to communicate intentions and relationships",
+        "elements": [
+          {
+            "aspect": "Personal space",
+            "description": "Individual distance maintained around each horse",
+            "significance": "Size varies based on familiarity, rank, and individual preference",
+            "violation_responses": ["Movement away", "Pinned ears", "Potential aggression if retreat not possible"]
+          },
+          {
+            "aspect": "Approach style",
+            "description": "Manner of decreasing distance between horses",
+            "variations": [
+              {
+                "style": "Direct approach",
+                "meaning": "Confidence, potential dominance display or aggression",
+                "characteristics": "Straight line, direct eye contact"
+              },
+              {
+                "style": "Indirect approach",
+                "meaning": "Submission, non-threatening intention",
+                "characteristics": "Curved path, averted gaze, relaxed posture"
+              },
+              {
+                "style": "Hesitant approach",
+                "meaning": "Uncertainty, caution",
+                "characteristics": "Stop-start movement, extended investigation"
+              }
+            ]
+          },
+          {
+            "aspect": "Yielding behavior",
+            "description": "Giving up space or resources to another horse",
+            "significance": "Indicates relative rank, respect of boundaries",
+            "expressions": ["Moving aside when approached", "Abandoning food when another approaches", "Changing direction to avoid confrontation"]
+          }
+        ]
+      }
     },
     "touch_communication": {
       "mutual_grooming": {
         "description": "Horses using teeth to scratch each other's withers, back, and neck",
         "social_function": "Bonding, stress reduction, practical help with itching",
+        "pattern": "Usually reciprocal, turns taken in roughly equal time periods",
+        "preferred_areas": "Primarily withers, neck, and upper back - areas difficult for horse to reach themselves",
+        "initiation": "Often begins with one horse nibbling, second horse recognizes invitation and reciprocates",
+        "relationship_indicator": "Frequency correlates with social bond strength",
         "image_reference": "mutual_grooming.png"
       },
       "nuzzling": {
         "description": "Soft touching with the muzzle",
         "social_function": "Greeting, affection, investigation",
+        "contexts": [
+          {
+            "situation": "Greeting",
+            "characteristics": "Gentle nose-to-nose touch, often includes blowing softly"
+          },
+          {
+            "situation": "Mare-foal interaction",
+            "characteristics": "Mare nuzzling foal's body, stimulating circulation and elimination"
+          },
+          {
+            "situation": "Affection/reassurance",
+            "characteristics": "Gentle contact to neck or shoulder region between bonded horses"
+          }
+        ],
         "image_reference": "nuzzling.png"
+      },
+      "body_contact": {
+        "description": "Non-grooming physical contact between horses",
+        "types": [
+          {
+            "contact_type": "Standing close",
+            "description": "Horses positioning with sides touching or nearly touching",
+            "context": "Heat regulation, insect protection, bonding, security",
+            "significance": "Indicates comfort and trust"
+          },
+          {
+            "contact_type": "Head over neck/back",
+            "description": "One horse resting head over another's neck or back",
+            "context": "Relaxation between bonded pairs, mild dominance display",
+            "variations": "Duration and pressure indicate whether affectionate or controlling"
+          },
+          {
+            "contact_type": "Following contact",
+            "description": "Walking with muzzle near another's tail/hindquarters",
+            "context": "Group movement, mare-foal pairs, courtship"
+          }
+        ]
+      },
+      "physical_pressure": {
+        "description": "Use of body positioning to influence another horse's movement",
+        "examples": [
+          {
+            "pressure_type": "Driving",
+            "description": "Using body position to make another horse move",
+            "method": "Positioning behind or to side of target horse with threatening posture",
+            "context": "Dominance display, resource control, herding behavior"
+          },
+          {
+            "pressure_type": "Blocking",
+            "description": "Preventing another horse's movement by body placement",
+            "method": "Positioning body as obstacle in intended path",
+            "context": "Resource guarding, mare protecting foal, dominance"
+          },
+          {
+            "pressure_type": "Crowding",
+            "description": "Intentionally invading personal space",
+            "method": "Moving unnecessarily close, forcing other horse to yield",
+            "context": "Dominance testing, displacement from resources"
+          }
+        ]
+      }
+    },
+    "chemical_communication": {
+      "description": "Exchange of information through scent and pheromones",
+      "mechanisms": [
+        {
+          "type": "Urine marking",
+          "function": "Territorial marking, reproductive status signaling",
+          "behavior_patterns": [
+            "Stallions creating stud piles (defecation sites marked with urine)",
+            "Mares in estrus urinating small amounts frequently",
+            "Flehmen response to investigate urine chemical information"
+          ]
+        },
+        {
+          "type": "Fecal marking",
+          "function": "Territorial boundaries, individual identification",
+          "behavior_patterns": [
+            "Defecation in specific communal areas",
+            "Stallions covering mare feces with their own",
+            "Investigation of new feces in a territory"
+          ]
+        },
+        {
+          "type": "Body odors",
+          "function": "Individual identification, health status, emotional state",
+          "detection": "Primarily through mutual nasal investigation during greeting",
+          "significance": "Provides detailed information about familiar and unfamiliar horses"
+        }
+      ],
+      "flehmen_response": {
+        "description": "Specialized behavior to process scent information",
+        "method": "Upper lip curled back, head raised, temporary breathing cessation",
+        "purpose": "Draws scents into vomeronasal organ for chemical analysis",
+        "primary_triggers": "Reproductive scents, novel odors, urine investigation",
+        "prevalence": "More common in stallions but performed by all horses",
+        "image_reference": "flehmen_response.png"
       }
     }
   },
@@ -498,6 +1552,138 @@
         "animation_reference": "wood_chewing.mp4"
       }
     ]
+  },
+  "human_interaction": {
+    "description": "Behaviors specific to horse-human relationships",
+    "relationship_formation": {
+      "description": "Process of developing connection between horse and human",
+      "stages": [
+        {
+          "stage": "Initial contact",
+          "behaviors": "Investigation, assessment of threat level, establishing boundaries",
+          "human_considerations": "Non-threatening approach, respect for personal space, calm demeanor"
+        },
+        {
+          "stage": "Trust building",
+          "behaviors": "Acceptance of proximity, relaxation in presence, voluntary approach",
+          "human_considerations": "Consistency, clear communication, positive experiences"
+        },
+        {
+          "stage": "Partnership",
+          "behaviors": "Cooperative work, mutual attention, responsive communication",
+          "human_considerations": "Fair leadership, clear boundaries, mutual respect"
+        }
+      ],
+      "attachment_patterns": [
+        {
+          "pattern": "Secure attachment",
+          "characteristics": ["Confident in human presence", "Appropriately responsive", "Balanced dependency"],
+          "indicators": "Calm greeting, willing cooperation, appropriate boundaries"
+        },
+        {
+          "pattern": "Insecure attachment",
+          "characteristics": ["Anxious in human presence", "Inconsistent responses", "Excessive dependency or avoidance"],
+          "indicators": "Nervous greeting, unpredictable cooperation, boundary issues"
+        }
+      ]
+    },
+    "learning_from_humans": {
+      "description": "How horses acquire behavior patterns through human interaction",
+      "mechanisms": [
+        {
+          "type": "Pressure-release learning",
+          "description": "Learning through the relief of pressure",
+          "applications": "Response to rein, leg, and lead rope cues",
+          "principles": "Timing of release critical, consistent signals, gradual refinement"
+        },
+        {
+          "type": "Target training",
+          "description": "Learning to touch specific objects for reward",
+          "applications": "Teaching specific movements, positioning, medical procedures",
+          "principles": "Clear marker signals, consistent reward timing, systematic shaping"
+        },
+        {
+          "type": "Observational learning",
+          "description": "Learning by watching humans demonstrate",
+          "applications": "Problem-solving, environmental navigation, reducing fear",
+          "principles": "Clear demonstration, attentional focus, social facilitation"
+        }
+      ],
+      "training_factors": [
+        {
+          "factor": "Timing",
+          "importance": "Critical for associating correct behavior with reward or release",
+          "optimal_window": "Within 3 seconds of desired behavior"
+        },
+        {
+          "factor": "Consistency",
+          "importance": "Essential for clear understanding of expected behavior",
+          "application": "Similar cues, responses, and consequences across sessions"
+        },
+        {
+          "factor": "Emotional state",
+          "importance": "Determines ability to process and retain information",
+          "optimal_state": "Alert but relaxed, attentive but not fearful"
+        }
+      ]
+    },
+    "handler_recognition": {
+      "description": "Ability to identify and remember specific humans",
+      "mechanisms": [
+        {
+          "sense": "Visual recognition",
+          "characteristics": "Can identify familiar humans by appearance, clothing, and movement patterns",
+          "distance_factor": "Recognition from substantial distances (100+ meters)"
+        },
+        {
+          "sense": "Voice recognition",
+          "characteristics": "Distinguished by pitch, rhythm, and speech patterns",
+          "specificity": "Can differentiate between similar voices of family members"
+        },
+        {
+          "sense": "Scent recognition",
+          "characteristics": "Identifies individual human scent profiles",
+          "persistence": "Recognition possible even with clothing changes"
+        },
+        {
+          "sense": "Touch recognition",
+          "characteristics": "Remembers handling styles, pressure patterns, interaction habits",
+          "application": "Different responses to different handlers based on previous interaction"
+        }
+      ],
+      "memory_aspects": {
+        "duration": "Long-term recognition of handlers even after years of separation",
+        "emotional_associations": "Strong memory for emotional content of interactions",
+        "context_specificity": "May recognize handler in one environment but show uncertainty in novel settings"
+      }
+    },
+    "cooperative_behaviors": {
+      "description": "Activities involving coordination between horse and human",
+      "examples": [
+        {
+          "behavior": "Leading",
+          "description": "Walking beside handler with controlled pace and direction",
+          "horse_contribution": "Attention to handler position, responsiveness to pressure changes",
+          "human_contribution": "Clear direction signals, appropriate pace setting, spatial awareness"
+        },
+        {
+          "behavior": "Riding",
+          "description": "Carrying human while responding to guidance cues",
+          "horse_contribution": "Balance maintenance, attention to subtle signals, adaptation to rider",
+          "human_contribution": "Clear communication, balanced position, appropriate guidance"
+        },
+        {
+          "behavior": "Liberty work",
+          "description": "Cooperation without physical contact or restraint",
+          "horse_contribution": "Voluntary attention, response to gesture cues, maintained proximity",
+          "human_contribution": "Clear body language, established patterns, reinforcement timing"
+        }
+      ],
+      "synchronization": {
+        "description": "Coordination of movement and attention between horse and human",
+        "mechanisms": "Mutual attention, rhythmic entrainment, anticipatory response patterns",
+        "development": "Increases with relationship duration and quality of interaction"
+      }
+    }
   }
 }
-
