@@ -2,7 +2,7 @@
   "metadata": {
     "description": "Comprehensive information about horse anatomy, proportions, and measurements",
     "category": "Equine Information",
-    "version": "1.0"
+    "version": "1.1"
   },
   "body_regions": {
     "head": {
@@ -11,53 +11,107 @@
           "name": "Forehead",
           "description": "Area between the eyes and ears",
           "function": "Houses the frontal bone and sinuses",
+          "anatomical_notes": "Contains the frontal bone which protects the brain and forms large frontal sinuses that lighten the skull",
           "image_reference": "horse_forehead.png"
         },
         {
           "name": "Poll",
           "description": "Top of the head between the ears",
           "function": "Important point of contact for bridle, sensitive area",
+          "anatomical_notes": "Contains the atlanto-occipital joint where the skull meets the first cervical vertebra",
           "image_reference": "horse_poll.png"
         },
         {
           "name": "Forelock",
           "description": "Tuft of mane that falls over the forehead",
           "function": "Provides protection from sun and insects",
+          "anatomical_notes": "Specialized long hairs that grow from the upper forehead and poll regions",
           "image_reference": "horse_forelock.png"
         },
         {
           "name": "Eye",
           "description": "Large, side-set eyes providing wide field of vision",
           "function": "Vision - horses have nearly 360-degree vision",
-          "notes": "Horse eyes are the largest of any land mammal",
+          "anatomical_notes": "Horizontal pupil, third eyelid (nictitating membrane), tapetum lucidum reflecting layer enhances night vision",
+          "notes": "Horse eyes are the largest of any land mammal, approximately 2 inches in diameter",
           "image_reference": "horse_eye.png"
         },
         {
           "name": "Muzzle",
           "description": "Nose and mouth area",
           "function": "Breathing, eating, sensory perception",
+          "anatomical_notes": "Highly sensitive with numerous tactile nerve endings, allows for discriminating selection of food",
           "image_reference": "horse_muzzle.png"
         },
         {
           "name": "Nostril",
           "description": "External opening to nasal cavity",
           "function": "Breathing, can flare during exercise or excitement",
+          "anatomical_notes": "Large, flexible openings capable of significant dilation during exercise, lined with sensory hairs",
           "image_reference": "horse_nostril.png"
         },
         {
           "name": "Jaw",
           "description": "Mandible and surrounding area",
           "function": "Chewing, houses teeth",
+          "anatomical_notes": "Mandible has unique sideways grinding motion for processing fibrous plant material",
           "image_reference": "horse_jaw.png"
         },
         {
           "name": "Ear",
           "description": "Upright, funnel-shaped ears",
           "function": "Hearing, communication through positioning",
-          "notes": "Ears can rotate 180 degrees independently",
+          "anatomical_notes": "Cartilaginous structure with 16 muscles allowing independent rotation and precise control",
+          "notes": "Ears can rotate 180 degrees independently to locate sound sources",
           "image_reference": "horse_ear.png"
+        },
+        {
+          "name": "Cheek",
+          "description": "Side area of face between eye and mouth",
+          "function": "Houses cheek teeth and muscles of mastication",
+          "anatomical_notes": "Contains powerful masseter muscles essential for grinding feed",
+          "image_reference": "horse_cheek.png"
+        },
+        {
+          "name": "Lips",
+          "description": "Prehensile upper and lower lips",
+          "function": "Food selection and manipulation",
+          "anatomical_notes": "Extremely sensitive with specialized nerve endings, particularly the upper lip for food selection",
+          "image_reference": "horse_lips.png"
         }
-      ]
+      ],
+      "teeth": {
+        "description": "Specialized dental structures for herbivorous diet",
+        "formula": "Adult horse: 2(I 3/3, C 0-1/0-1, P 3-4/3, M 3/3) = 36-42 teeth total",
+        "types": [
+          {
+            "name": "Incisors",
+            "location": "Front of mouth, 6 upper and 6 lower",
+            "function": "Cutting/grasping grass and forage",
+            "unique_feature": "Change appearance with age, used for age estimation"
+          },
+          {
+            "name": "Canines",
+            "location": "Gap (interdental space) between incisors and premolars",
+            "function": "Primarily vestigial, more developed in males",
+            "unique_feature": "Often absent or rudimentary in mares"
+          },
+          {
+            "name": "Wolf teeth",
+            "location": "Just in front of first premolar",
+            "function": "Vestigial first premolars",
+            "unique_feature": "Small, often removed if they cause bitting issues"
+          },
+          {
+            "name": "Premolars and Molars (cheek teeth)",
+            "location": "Sides of jaws, 6 upper and 6 lower on each side",
+            "function": "Grinding plant material",
+            "unique_feature": "Form continuous grinding surface with enamel ridges"
+          }
+        ],
+        "aging_through_teeth": "Horses' ages can be estimated by examining wear patterns, cups in incisors, Galvayne's groove, and angle of incidence",
+        "image_reference": "horse_teeth.png"
+      }
     },
     "neck": {
       "parts": [
@@ -65,21 +119,40 @@
           "name": "Crest",
           "description": "Top line of the neck",
           "function": "Muscle attachment, supports head",
+          "anatomical_notes": "Contains nuchal ligament that passively supports the head and neck with minimal muscular effort",
           "image_reference": "horse_crest.png"
         },
         {
           "name": "Throatlatch",
           "description": "Junction of the head and neck, under the jaw",
           "function": "Contains windpipe and important structures",
+          "anatomical_notes": "Houses trachea, esophagus, major blood vessels, and guttural pouches",
           "image_reference": "horse_throatlatch.png"
         },
         {
           "name": "Jugular Groove",
           "description": "Channel on side of neck where jugular vein runs",
           "function": "Contains major blood vessels",
+          "anatomical_notes": "Common site for intravenous injections and blood draws, contains jugular vein and carotid artery",
           "image_reference": "horse_jugular_groove.png"
+        },
+        {
+          "name": "Mane",
+          "description": "Long hairs growing from the crest of the neck",
+          "function": "Protection from elements, insects; temperature regulation",
+          "anatomical_notes": "Specialized hairs that grow continuously and typically fall to one side",
+          "image_reference": "horse_mane.png"
         }
-      ]
+      ],
+      "vertebrae": {
+        "description": "Seven cervical vertebrae form the bony structure of the neck",
+        "features": [
+          "First vertebra (atlas) allows nodding motion",
+          "Second vertebra (axis) allows rotational movement",
+          "Remaining five vertebrae allow for flexibility and reach"
+        ],
+        "image_reference": "neck_vertebrae.png"
+      }
     },
     "trunk": {
       "parts": [
@@ -87,6 +160,7 @@
           "name": "Withers",
           "description": "Ridge between shoulder blades where neck meets back",
           "function": "Anchor for muscles, height measurement point",
+          "anatomical_notes": "Formed by the dorsal spinous processes of approximately 5th-9th thoracic vertebrae, attachment point for many muscles",
           "notes": "Used as the standard measuring point for horse height",
           "image_reference": "horse_withers.png"
         },
@@ -94,49 +168,71 @@
           "name": "Back",
           "description": "Area from withers to loin",
           "function": "Supports rider weight, connects front and hind end",
+          "anatomical_notes": "Made up of thoracic vertebrae (typically T9-T18) with relatively inflexible joints due to interlocking processes",
           "image_reference": "horse_back.png"
         },
         {
           "name": "Loin",
           "description": "Short area between back and croup",
           "function": "Transfers power from hindquarters",
+          "anatomical_notes": "Corresponds to lumbar vertebrae (typically 6), lacks rib support making it vulnerable to injury",
           "image_reference": "horse_loin.png"
         },
         {
           "name": "Croup",
           "description": "Top line from loin to tail",
           "function": "Muscle attachment for hindquarters",
+          "anatomical_notes": "Formed by sacrum and surrounding musculature, transmits propulsive force from hindlimbs",
           "image_reference": "horse_croup.png"
         },
         {
           "name": "Barrel",
           "description": "Body area containing ribs and organs",
           "function": "Houses vital organs like lungs and digestive system",
+          "anatomical_notes": "Supported by 18 pairs of ribs (8 true ribs attached to sternum, 10 floating ribs), houses heart, lungs, and digestive organs",
           "image_reference": "horse_barrel.png"
         },
         {
           "name": "Flank",
           "description": "Area between last rib and hip",
           "function": "Connects barrel to hindquarters",
+          "anatomical_notes": "Thin-walled area with primarily abdominal muscles, site for observing respiratory rate",
           "image_reference": "horse_flank.png"
         },
         {
           "name": "Shoulder",
           "description": "Area from withers to point of shoulder",
           "function": "Attachment for front limb, affects stride length",
+          "anatomical_notes": "Contains scapula (shoulder blade) which is attached to trunk only by muscles, no bony connection to spine, allowing shock absorption",
           "image_reference": "horse_shoulder.png"
         },
         {
           "name": "Chest",
           "description": "Area between forelegs and up to shoulder",
           "function": "Houses heart and major blood vessels",
+          "anatomical_notes": "Protected by sternum and rib cage, width varies significantly between breeds affecting athletic capacity",
           "image_reference": "horse_chest.png"
         },
         {
           "name": "Girth",
           "description": "Area behind forelegs where saddle girth goes",
           "function": "Measurement point for tack fitting",
+          "anatomical_notes": "Contains intercostal muscles between ribs, area expands and contracts during breathing",
           "image_reference": "horse_girth.png"
+        },
+        {
+          "name": "Sternum",
+          "description": "Breastbone at the bottom of the chest",
+          "function": "Attachment point for ribs, protection for heart",
+          "anatomical_notes": "Flat bone that forms the ventral portion of the thoracic cavity",
+          "image_reference": "horse_sternum.png"
+        },
+        {
+          "name": "Underline",
+          "description": "Ventral line of the body from elbow to flank",
+          "function": "Supports abdominal contents",
+          "anatomical_notes": "Made up of abdominal muscles and connective tissue, slope varies with condition and fitness",
+          "image_reference": "horse_underline.png"
         }
       ]
     },
@@ -144,41 +240,67 @@
       "parts": [
         {
           "name": "Hip",
-          "description": "Point of hip bone",
+          "description": "Point of hip bone (tuber coxae)",
           "function": "Muscle attachment, power generation",
+          "anatomical_notes": "Visible prominence of the ilium (part of pelvis), attachment point for multiple muscle groups",
           "image_reference": "horse_hip.png"
         },
         {
           "name": "Stifle",
           "description": "Joint equivalent to human knee",
           "function": "Important for hindlimb movement",
+          "anatomical_notes": "Complex joint where femur, tibia and patella meet, contains elaborate ligament structure similar to human knee",
           "image_reference": "horse_stifle.png"
         },
         {
           "name": "Gaskin",
           "description": "Area between stifle and hock",
           "function": "Contains muscles that flex the hock",
+          "anatomical_notes": "Contains tibia and fibula bones, site of powerful muscle groups that drive forward motion",
           "image_reference": "horse_gaskin.png"
         },
         {
           "name": "Hock",
           "description": "Large joint in hind leg, equivalent to human ankle",
           "function": "Absorbs shock, translates power from hindquarters",
+          "anatomical_notes": "Complex of 6 tarsal bones and multiple joints, critical for propulsion and susceptible to stress injuries",
           "image_reference": "horse_hock.png"
         },
         {
           "name": "Buttock",
           "description": "Muscular area behind hip",
           "function": "Power generation for movement",
+          "anatomical_notes": "Contains powerful gluteal muscles that are primary drivers for propulsion",
           "image_reference": "horse_buttock.png"
         },
         {
           "name": "Dock",
           "description": "Base of the tail",
           "function": "Supports tail",
+          "anatomical_notes": "Contains coccygeal vertebrae (15-21 small bones) that decrease in size toward the tail end",
           "image_reference": "horse_dock.png"
+        },
+        {
+          "name": "Point of Buttock",
+          "description": "Rearmost point of the pelvis (ischial tuberosity)",
+          "function": "Muscle attachment for hamstring group",
+          "anatomical_notes": "Important landmark for evaluating hindquarter conformation",
+          "image_reference": "horse_point_of_buttock.png"
+        },
+        {
+          "name": "Thigh",
+          "description": "Area from hip to stifle",
+          "function": "Contains powerful muscles for propulsion",
+          "anatomical_notes": "Contains femur bone and surrounding musculature, primary force generation for forward movement",
+          "image_reference": "horse_thigh.png"
         }
-      ]
+      ],
+      "pelvis": {
+        "description": "Bony structure forming foundation of hindquarters",
+        "components": ["Ilium", "Ischium", "Pubis"],
+        "function": "Transfers force from hindlimbs to spine, protects reproductive organs",
+        "image_reference": "horse_pelvis.png"
+      }
     },
     "legs": {
       "forelegs": [
@@ -186,48 +308,104 @@
           "name": "Point of Shoulder",
           "description": "Junction of shoulder and upper arm",
           "function": "Important for shoulder movement",
+          "anatomical_notes": "Joint between scapula and humerus (shoulder joint), capable of wide range of motion",
           "image_reference": "horse_point_of_shoulder.png"
+        },
+        {
+          "name": "Elbow",
+          "description": "Point at back of upper foreleg",
+          "function": "Joint between upper and lower foreleg",
+          "anatomical_notes": "Joint between humerus and radius/ulna, extends and flexes during movement",
+          "image_reference": "horse_elbow.png"
         },
         {
           "name": "Forearm",
           "description": "Area between knee and elbow",
           "function": "Contains muscles for leg movement",
+          "anatomical_notes": "Contains radius and ulna bones, ulna is fused to radius in mature horses",
           "image_reference": "horse_forearm.png"
         },
         {
           "name": "Knee",
           "description": "Joint between forearm and cannon bone (carpus)",
           "function": "Shock absorption, directional changes",
+          "anatomical_notes": "Complex joint containing 7-8 carpal bones arranged in two rows, similar to human wrist",
           "image_reference": "horse_knee.png"
         },
         {
           "name": "Cannon",
           "description": "Area between knee and fetlock",
           "function": "Weight-bearing, limited muscle tissue",
+          "anatomical_notes": "Contains large metacarpal bone (cannon) and two small metacarpal bones (splints) with minimal soft tissue covering",
           "image_reference": "horse_cannon.png"
         },
         {
           "name": "Fetlock",
           "description": "Joint between cannon and pastern",
           "function": "Shock absorption",
+          "anatomical_notes": "Equivalent to human knuckle, contains sesamoid bones at back of joint and suspensory apparatus for support",
           "image_reference": "horse_fetlock.png"
         },
         {
           "name": "Pastern",
           "description": "Area between fetlock and hoof",
           "function": "Shock absorption, affects gait quality",
+          "anatomical_notes": "Contains proximal and distal phalanx bones, angle has significant impact on soundness",
           "image_reference": "horse_pastern.png"
         },
         {
           "name": "Coronet",
           "description": "Junction where hoof meets skin",
           "function": "Growth area for hoof",
+          "anatomical_notes": "Contains coronary band which produces the hoof wall, analogous to human nail bed",
           "image_reference": "horse_coronet.png"
+        },
+        {
+          "name": "Ergot",
+          "description": "Small callous-like structure on back of fetlock",
+          "function": "Vestigial structure, remnant of ancestral toe",
+          "anatomical_notes": "Varies in size between individuals and breeds",
+          "image_reference": "horse_ergot.png"
+        },
+        {
+          "name": "Chestnut",
+          "description": "Horny growth on inside of legs",
+          "function": "Vestigial structure, possibly remnant of scent gland",
+          "anatomical_notes": "Located above knee on forelegs, below hock on hindlegs",
+          "image_reference": "horse_chestnut.png"
         },
         {
           "name": "Hoof",
           "description": "Keratinized structure at the end of each leg",
           "function": "Weight-bearing, protection for inner structures",
+          "anatomical_notes": "Complex structure containing coffin bone (distal phalanx), navicular bone, and sensitive laminae",
+          "sections": [
+            {
+              "name": "Wall",
+              "description": "Outer layer of the hoof",
+              "function": "Primary weight-bearing structure, grows downward from coronary band"
+            },
+            {
+              "name": "Sole",
+              "description": "Bottom of the hoof",
+              "function": "Secondary weight-bearing, protection"
+            },
+            {
+              "name": "Frog",
+              "description": "V-shaped structure on bottom of hoof",
+              "function": "Traction, shock absorption, blood circulation"
+            },
+            {
+              "name": "Bars",
+              "description": "Inward folds of the wall at the heel",
+              "function": "Support and expansion mechanism"
+            },
+            {
+              "name": "White Line",
+              "description": "Junction of wall and sole",
+              "function": "Indicates where sensitive and insensitive tissues meet"
+            }
+          ],
           "image_reference": "horse_hoof.png"
         }
       ],
@@ -236,21 +414,38 @@
           "name": "Thigh",
           "description": "Upper part of hindleg from hip to stifle",
           "function": "Power generation",
+          "anatomical_notes": "Contains femur bone and large muscle groups including quadriceps and hamstring equivalents",
           "image_reference": "horse_thigh.png"
         },
         {
           "name": "Gaskin",
           "description": "Area between stifle and hock",
           "function": "Contains muscles for leg movement",
+          "anatomical_notes": "Contains tibia and fibula (the latter being much reduced in horses)",
           "image_reference": "horse_gaskin.png"
         },
         {
           "name": "Hock",
           "description": "Large joint in hindleg (tarsus)",
           "function": "Critical for propulsion and movement",
+          "anatomical_notes": "Complex joint with 6 tarsal bones, site of conditions like bone spavin and curb",
           "image_reference": "horse_hock.png"
+        },
+        {
+          "name": "Cannon",
+          "description": "Area between hock and fetlock",
+          "function": "Weight-bearing, minimal soft tissue",
+          "anatomical_notes": "Contains large metatarsal bone and two small splint bones",
+          "image_reference": "horse_hind_cannon.png"
         }
-      ]
+      ],
+      "comparative_anatomy": {
+        "description": "Horses walk on the tip of what corresponds to the third finger/toe",
+        "evolution": "Modern horse leg evolved from five-toed ancestor through progressive reduction",
+        "forelimb_comparison": "Elbow = human elbow, Knee = human wrist, Fetlock = knuckle of middle finger",
+        "hindlimb_comparison": "Stifle = human knee, Hock = human ankle, Fetlock = knuckle of middle toe",
+        "image_reference": "leg_evolution.png"
+      }
     },
     "tail": {
       "parts": [
@@ -258,15 +453,24 @@
           "name": "Dock",
           "description": "Base of the tail",
           "function": "Supports tail structure",
+          "anatomical_notes": "Contains coccygeal vertebrae and surrounding musculature",
           "image_reference": "horse_dock.png"
         },
         {
           "name": "Skirt",
           "description": "Long hairs of the tail",
           "function": "Swatting flies, communication",
+          "anatomical_notes": "Specialized long guard hairs that grow continuously",
           "image_reference": "horse_tail_skirt.png"
         }
-      ]
+      ],
+      "functions": [
+        "Insect control",
+        "Balance during movement",
+        "Social signaling and communication",
+        "Protection of perineal region"
+      ],
+      "muscles": "Contains coccygeal muscles that allow raising, lowering, and side-to-side movement"
     }
   },
   "skeletal_system": {
@@ -275,53 +479,323 @@
       {
         "name": "Skull",
         "bone_count": 34,
-        "function": "Protects brain, houses sense organs, supports jaw"
+        "function": "Protects brain, houses sense organs, supports jaw",
+        "major_bones": [
+          "Frontal (forehead)",
+          "Parietal (top of skull)",
+          "Occipital (back of skull)",
+          "Temporal (sides of skull)",
+          "Nasal (upper nose area)",
+          "Mandible (lower jaw)",
+          "Maxilla (upper jaw)"
+        ],
+        "image_reference": "horse_skull.png"
       },
       {
         "name": "Vertebral Column",
         "bone_count": "54 vertebrae (7 cervical, 18 thoracic, 6 lumbar, 5 sacral, 15-25 caudal)",
-        "function": "Protects spinal cord, supports head and body"
+        "function": "Protects spinal cord, supports head and body",
+        "special_features": [
+          "Nuchal ligament runs from poll to withers, supports head",
+          "Spinous processes at withers can reach 8-10 inches in height",
+          "Interlocking processes limit twisting but allow flexibility"
+        ],
+        "image_reference": "horse_vertebrae.png"
       },
       {
         "name": "Ribs",
         "bone_count": "36 (18 pairs)",
-        "function": "Protect thoracic organs, assist in breathing"
+        "function": "Protect thoracic organs, assist in breathing",
+        "types": [
+          {
+            "name": "True ribs (sternal)",
+            "count": "8 pairs",
+            "description": "Directly connect to sternum"
+          },
+          {
+            "name": "False ribs (asternal)",
+            "count": "10 pairs",
+            "description": "Connect to cartilage of preceding ribs"
+          }
+        ],
+        "image_reference": "horse_ribs.png"
       },
       {
         "name": "Forelegs",
-        "bone_count": "Multiple bones including scapula, humerus, radius, ulna, carpals, metacarpals, phalanges",
-        "function": "Support weight, locomotion"
+        "bone_count": "20 per leg",
+        "function": "Support weight, locomotion",
+        "major_bones": [
+          {
+            "name": "Scapula",
+            "description": "Shoulder blade, attached to body only by muscles",
+            "unique_feature": "No direct bony connection to spine, allows shock absorption"
+          },
+          {
+            "name": "Humerus",
+            "description": "Upper arm bone connecting shoulder to elbow"
+          },
+          {
+            "name": "Radius/Ulna",
+            "description": "Forearm bones, ulna is reduced and fused to radius in adults"
+          },
+          {
+            "name": "Carpals",
+            "description": "Seven or eight small bones forming the knee joint"
+          },
+          {
+            "name": "Metacarpals",
+            "description": "One large cannon bone and two splint bones"
+          },
+          {
+            "name": "Phalanges",
+            "description": "Three bones forming the finger (long pastern, short pastern, coffin bone)"
+          },
+          {
+            "name": "Sesamoids",
+            "description": "Small bones at back of fetlock and within the hoof (navicular)"
+          }
+        ],
+        "image_reference": "horse_foreleg_bones.png"
       },
       {
         "name": "Hindlegs",
-        "bone_count": "Multiple bones including femur, tibia, fibula, tarsals, metatarsals, phalanges",
-        "function": "Power generation, locomotion"
+        "bone_count": "20 per leg",
+        "function": "Power generation, locomotion",
+        "major_bones": [
+          {
+            "name": "Pelvis",
+            "description": "Large bone structure connecting spine to hindlimbs",
+            "components": ["Ilium", "Ischium", "Pubis"]
+          },
+          {
+            "name": "Femur",
+            "description": "Thigh bone, largest bone in the body"
+          },
+          {
+            "name": "Patella",
+            "description": "Knee cap, protects stifle joint"
+          },
+          {
+            "name": "Tibia/Fibula",
+            "description": "Lower leg bones, fibula is reduced in horses"
+          },
+          {
+            "name": "Tarsals",
+            "description": "Six small bones forming the hock joint"
+          },
+          {
+            "name": "Metatarsals",
+            "description": "One large cannon bone and two splint bones"
+          },
+          {
+            "name": "Phalanges",
+            "description": "Three bones forming the toe (same as foreleg)"
+          }
+        ],
+        "image_reference": "horse_hindleg_bones.png"
       }
     ],
     "total_bone_count": "Approximately 205 bones",
+    "joints": [
+      {
+        "name": "Ball and Socket Joints",
+        "locations": ["Hip", "Shoulder"],
+        "movement": "Multidirectional movement"
+      },
+      {
+        "name": "Hinge Joints",
+        "locations": ["Elbow", "Fetlock", "Pastern joints"],
+        "movement": "Movement in one plane (flexion/extension)"
+      },
+      {
+        "name": "Plane Joints",
+        "locations": ["Between some carpal and tarsal bones"],
+        "movement": "Limited gliding movement"
+      },
+      {
+        "name": "Complex Joints",
+        "locations": ["Stifle", "Hock", "Knee"],
+        "movement": "Combination of movements"
+      }
+    ],
     "image_reference": "horse_skeleton.png"
   },
   "muscular_system": {
+    "description": "System responsible for movement, posture, and heat production",
     "major_muscle_groups": [
       {
         "name": "Neck Muscles",
         "function": "Move head and neck, important for balance",
-        "key_muscles": ["Splenius", "Brachiocephalicus", "Rhomboideus"]
+        "key_muscles": [
+          {
+            "name": "Splenius",
+            "function": "Raises and extends the head and neck"
+          },
+          {
+            "name": "Brachiocephalicus",
+            "function": "Pulls limb forward or pulls head to the side"
+          },
+          {
+            "name": "Rhomboideus",
+            "function": "Raises shoulder blade, supports neck"
+          },
+          {
+            "name": "Serratus ventralis cervicis",
+            "function": "Suspends trunk between shoulder blades"
+          }
+        ],
+        "image_reference": "neck_muscles.png"
       },
       {
         "name": "Shoulder Muscles",
         "function": "Front leg movement, support weight",
-        "key_muscles": ["Trapezius", "Supraspinatus", "Infraspinatus", "Deltoid"]
+        "key_muscles": [
+          {
+            "name": "Trapezius",
+            "function": "Lifts and draws shoulder blade forward"
+          },
+          {
+            "name": "Supraspinatus",
+            "function": "Extends shoulder joint, stabilizes joint"
+          },
+          {
+            "name": "Infraspinatus",
+            "function": "Flexion and outward rotation of shoulder"
+          },
+          {
+            "name": "Deltoid",
+            "function": "Flexes shoulder, abducts limb"
+          },
+          {
+            "name": "Biceps brachii",
+            "function": "Flexes elbow, extends shoulder"
+          },
+          {
+            "name": "Triceps brachii",
+            "function": "Extends elbow, primary support for body weight"
+          }
+        ],
+        "image_reference": "shoulder_muscles.png"
       },
       {
         "name": "Back Muscles",
         "function": "Support spine, allow movement",
-        "key_muscles": ["Longissimus dorsi", "Latissimus dorsi"]
+        "key_muscles": [
+          {
+            "name": "Longissimus dorsi",
+            "function": "Main extensor of back, largest muscle in the body"
+          },
+          {
+            "name": "Latissimus dorsi",
+            "function": "Pulls front leg backward, assists respiration"
+          },
+          {
+            "name": "Serratus dorsalis",
+            "function": "Assists with respiration"
+          },
+          {
+            "name": "Multifidus",
+            "function": "Stabilizes individual vertebrae"
+          }
+        ],
+        "image_reference": "back_muscles.png"
+      },
+      {
+        "name": "Abdominal Muscles",
+        "function": "Support internal organs, flex spine, assist respiration",
+        "key_muscles": [
+          {
+            "name": "External abdominal oblique",
+            "function": "Compresses abdomen, flexes spine"
+          },
+          {
+            "name": "Internal abdominal oblique",
+            "function": "Compresses abdomen, assists in expiration"
+          },
+          {
+            "name": "Transversus abdominis",
+            "function": "Deepest layer, compresses abdominal contents"
+          },
+          {
+            "name": "Rectus abdominis",
+            "function": "Flexes spine, supports abdominal contents"
+          }
+        ],
+        "image_reference": "abdominal_muscles.png"
       },
       {
         "name": "Hindquarter Muscles",
         "function": "Power generation, propulsion",
-        "key_muscles": ["Gluteals", "Semitendinosus", "Semimembranosus", "Biceps femoris"]
+        "key_muscles": [
+          {
+            "name": "Gluteals",
+            "function": "Extend hip, primary propulsion muscles"
+          },
+          {
+            "name": "Semitendinosus",
+            "function": "Extends hip, flexes stifle, part of 'hamstring' group"
+          },
+          {
+            "name": "Semimembranosus",
+            "function": "Extends hip and stifle, part of 'hamstring' group"
+          },
+          {
+            "name": "Biceps femoris",
+            "function": "Largest muscle of hindquarter, extends hip and hock"
+          },
+          {
+            "name": "Quadriceps femoris",
+            "function": "Extends stifle, includes four divisions (rectus femoris, vastus lateralis, vastus medialis, vastus intermedius)"
+          },
+          {
+            "name": "Gastrocnemius",
+            "function": "Extends hock (Achilles tendon), flexes stifle"
+          }
+        ],
+        "image_reference": "hindquarter_muscles.png"
+      },
+      {
+        "name": "Lower Leg Muscles",
+        "function": "Movement of lower limbs",
+        "key_muscles": [
+          {
+            "name": "Digital extensor",
+            "function": "Extends the pastern and coffin joints"
+          },
+          {
+            "name": "Digital flexor",
+            "function": "Flexes the pastern and coffin joints"
+          },
+          {
+            "name": "Suspensory ligament",
+            "function": "Supports fetlock joint, prevents hyperextension"
+          }
+        ],
+        "notes": "Lower limbs have minimal muscle tissue, mostly tendons and ligaments",
+        "image_reference": "lower_leg_muscles.png"
+      }
+    ],
+    "specialized_structures": [
+      {
+        "name": "Stay Apparatus",
+        "description": "Passive support system allowing horses to stand with minimal muscle exertion",
+        "components": [
+          "Reciprocal apparatus of hindlimb",
+          "Check ligaments",
+          "Suspensory ligaments",
+          "Interlocking knee joint structures"
+        ],
+        "function": "Enables horses to sleep standing up and stand for long periods with minimal fatigue"
+      },
+      {
+        "name": "Suspensory Apparatus",
+        "description": "System supporting the fetlock joint",
+        "components": [
+          "Suspensory ligament",
+          "Sesamoid bones",
+          "Distal sesamoidean ligaments"
+        ],
+        "function": "Prevents excessive fetlock descent under weight, acts as shock absorber"
       }
     ],
     "image_reference": "horse_muscles.png"
@@ -334,7 +808,11 @@
         "light_breeds": "14-17 hands (56-68 inches, 142-173 cm)",
         "ponies": "Under 14.2 hands (under 58 inches, under 147 cm)"
       },
-      "measurement_technique": "Stand horse on level ground, measure vertical distance from ground to highest point of withers"
+      "measurement_technique": "Stand horse on level ground, measure vertical distance from ground to highest point of withers",
+      "world_records": {
+        "tallest": "Big Jake, a Belgian gelding, 20.2 hands (82 inches, 210 cm)",
+        "shortest": "Thumbelina, a miniature horse, 4.25 hands (17 inches, 44.5 cm)"
+      }
     },
     "weight": {
       "description": "Total body mass, usually measured in pounds or kilograms",
@@ -343,7 +821,14 @@
         "light_breeds": "900-1,300 pounds (410-590 kg)",
         "ponies": "400-900 pounds (180-410 kg)"
       },
-      "estimation_formula": "Heart girth (in) × heart girth (in) × body length (in) ÷ 300 = approximate weight in pounds"
+      "estimation_formula": {
+        "standard": "Heart girth (in) × heart girth (in) × body length (in) ÷ 300 = approximate weight in pounds",
+        "metric": "Heart girth (cm) × heart girth (cm) × body length (cm) ÷ 11,877 = approximate weight in kg"
+      },
+      "weight_distribution": {
+        "forelegs": "Approximately 60-65% of body weight",
+        "hindlegs": "Approximately 35-40% of body weight"
+      }
     },
     "proportions": {
       "description": "Ideal proportional relationships between body parts",
@@ -351,61 +836,539 @@
         "Square frame: body length equals height at withers",
         "Head length roughly equal to neck length",
         "Shoulder angle ideally 45-50 degrees from vertical"
+      ],
+      "breed_variations": {
+        "arabians": "Often square-built, compact body",
+        "thoroughbreds": "Generally longer than tall, rectangular frame",
+        "draft_horses": "More compact, broad, with shorter legs relative to body depth"
+      },
+      "balance_points": [
+        "Center of gravity located near girth area, behind elbow",
+        "Lower in young horses, moves forward as neck length and head position change with maturity"
       ]
+    },
+    "angles": {
+      "description": "Important angular relationships in conformation",
+      "key_angles": [
+        {
+          "location": "Shoulder",
+          "ideal": "45-50 degrees from vertical",
+          "significance": "Affects stride length, shock absorption"
+        },
+        {
+          "location": "Hip",
+          "ideal": "Approximately 35 degrees from horizontal",
+          "significance": "Affects power generation, stride length"
+        },
+        {
+          "location": "Hock",
+          "ideal": "Approximately 150 degrees",
+          "significance": "Affects power transmission, susceptibility to strain"
+        },
+        {
+          "location": "Pastern",
+          "ideal": "45-50 degrees from horizontal",
+          "significance": "Affects shock absorption, soundness"
+        }
+      ],
+      "image_reference": "ideal_angles.png"
     }
   },
   "internal_systems": {
     "digestive": {
       "description": "Specialized for processing fibrous plant material",
       "key_features": [
-        "Small stomach (4 gallons)",
-        "Long small intestine (70 feet)",
-        "Large cecum for fermentation",
+        "Small stomach (4 gallons/15 liters capacity)",
+        "Long small intestine (70 feet/21 meters)",
+        "Large cecum for fermentation (7-8 gallons/26-30 liters)",
         "Unable to vomit due to strong cardiac sphincter"
-      ]
+      ],
+      "components": [
+        {
+          "name": "Mouth",
+          "function": "Food prehension, initial mechanical breakdown",
+          "special_features": "Gap between incisors and cheek teeth (bars), highly mobile lips"
+        },
+        {
+          "name": "Esophagus",
+          "function": "Transport food to stomach",
+          "special_features": "Strong one-way movement, horses cannot vomit normally"
+        },
+        {
+          "name": "Stomach",
+          "function": "Initial chemical digestion, acid production",
+          "special_features": "Relatively small for body size, fills continuously"
+        },
+        {
+          "name": "Small Intestine",
+          "function": "Enzymatic digestion, nutrient absorption",
+          "special_features": "Very long (70 feet/21 meters), digestion of proteins, fats, soluble carbohydrates"
+        },
+        {
+          "name": "Cecum",
+          "function": "Microbial fermentation of fiber",
+          "special_features": "Large fermentation vat containing beneficial bacteria and protozoa"
+        },
+        {
+          "name": "Large Colon",
+          "function": "Continued fermentation, water absorption",
+          "special_features": "Complex arrangement with four parts, site of colic problems"
+        },
+        {
+          "name": "Small Colon",
+          "function": "Final water absorption, fecal ball formation",
+          "special_features": "Forms characteristic fecal balls"
+        },
+        {
+          "name": "Rectum",
+          "function": "Fecal storage before elimination",
+          "special_features": "Final segment of digestive tract"
+        }
+      ],
+      "digestive_process": "Continuous grazing animal, stomach empties continuously into small intestine, needs frequent small meals",
+      "image_reference": "digestive_system.png"
     },
     "respiratory": {
       "description": "Designed for efficient oxygen uptake during exercise",
       "key_features": [
         "Obligate nasal breathers (cannot breathe through mouth)",
-        "Large lung capacity (55 liters)",
-        "High respiratory rate (8-16 breaths per minute at rest)"
-      ]
+        "Large lung capacity (55 liters at rest)",
+        "High respiratory rate (8-16 breaths per minute at rest, up to 180 during intense exercise)"
+      ],
+      "components": [
+        {
+          "name": "Nostrils",
+          "function": "Air intake",
+          "special_features": "Large, flaring capability to increase airflow during exercise"
+        },
+        {
+          "name": "Nasal Passages",
+          "function": "Air conduction, warming, filtering",
+          "special_features": "Complex turbinate bones increase surface area"
+        },
+        {
+          "name": "Pharynx",
+          "function": "Air passage to larynx",
+          "special_features": "Shared with digestive tract, soft palate separates mouth"
+        },
+        {
+          "name": "Larynx",
+          "function": "Sound production, airway protection",
+          "special_features": "Contains vocal cords, subject to paralysis in some horses"
+        },
+        {
+          "name": "Trachea",
+          "function": "Air conduction to lungs",
+          "special_features": "Rigid cartilage rings prevent collapse"
+        },
+        {
+          "name": "Bronchi",
+          "function": "Air distribution within lungs",
+          "special_features": "Branch into smaller bronchioles"
+        },
+        {
+          "name": "Lungs",
+          "function": "Gas exchange",
+          "special_features": "Enormous surface area, takes up majority of thoracic cavity"
+        },
+        {
+          "name": "Diaphragm",
+          "function": "Primary muscle of respiration",
+          "special_features": "Dome-shaped, flattens during inhalation"
+        }
+      ],
+      "breathing_mechanism": "Passive inhalation (diaphragm contraction creates negative pressure), active exhalation (abdominal muscle contraction)",
+      "exercise_adaptation": "Respiratory rate increases with exercise, 'synchronization' with stride at gallop",
+      "image_reference": "respiratory_system.png"
     },
     "circulatory": {
       "description": "Powerful system to support athletic performance",
       "key_features": [
-        "Large heart (9-10 pounds)",
+        "Large heart (9-10 pounds/4-4.5 kg)",
         "Low resting heart rate (28-44 beats per minute)",
-        "Can increase to 250 beats per minute during intense exercise"
-      ]
+        "Can increase to 250 beats per minute during intense exercise",
+        "Total blood volume approximately 8-10% of body weight (80-100 liters in 1000kg horse)"
+      ],
+      "components": [
+        {
+          "name": "Heart",
+          "function": "Pump blood throughout body",
+          "special_features": "Four-chambered, extremely efficient in athletic horses",
+          "variations": "Racing breeds often have proportionally larger hearts"
+        },
+        {
+          "name": "Arteries",
+          "function": "Carry blood away from heart",
+          "special_features": "Thick, elastic walls to handle pressure"
+        },
+        {
+          "name": "Veins",
+          "function": "Return blood to heart",
+          "special_features": "Contain valves to prevent backflow, especially important in legs"
+        },
+        {
+          "name": "Capillaries",
+          "function": "Site of gas and nutrient exchange",
+          "special_features": "Extremely numerous in muscle tissue"
+        }
+      ],
+      "spleen_function": "Acts as blood reservoir, can contract during exercise to release additional red blood cells",
+      "exercise_adaptation": "Heart can increase output from 30 liters/min at rest to over 300 liters/min during exercise",
+      "image_reference": "circulatory_system.png"
+    },
+    "nervous": {
+      "description": "Control system for body functions and behavior",
+      "components": [
+        {
+          "name": "Brain",
+          "function": "Information processing center",
+          "special_features": "Relatively small compared to body size, weighs approximately 1.5-2 pounds (650-900g)"
+        },
+        {
+          "name": "Spinal Cord",
+          "function": "Connects brain to body, controls reflexes",
+          "special_features": "Protected by vertebral column, extends from brain to sacral region"
+        },
+        {
+          "name": "Peripheral Nerves",
+          "function": "Transmit signals between central nervous system and body",
+          "special_features": "Complex network throughout body"
+        },
+        {
+          "name": "Autonomic Nervous System",
+          "function": "Controls involuntary functions",
+          "divisions": ["Sympathetic (fight or flight)", "Parasympathetic (rest and digest)"]
+        }
+      ],
+      "sensory_systems": {
+        "vision": "Almost 360° field of view, motion sensitive, dichromatic color vision",
+        "hearing": "Mobile ears can locate sounds independently, sensitive to high frequencies",
+        "touch": "Highly sensitive, especially muzzle, flanks, and legs",
+        "smell": "Well-developed, important for social recognition and food selection",
+        "taste": "Selective grazers, can identify toxic plants"
+      },
+      "image_reference": "nervous_system.png"
+    },
+    "reproductive": {
+      "description": "System for producing offspring",
+      "male": {
+        "components": [
+          {
+            "name": "Testicles",
+            "function": "Sperm and hormone production",
+            "special_features": "Located in scrotum outside body cavity for temperature regulation"
+          },
+          {
+            "name": "Penis",
+            "function": "Sperm delivery",
+            "special_features": "Retracted when not in use, contains erectile tissue"
+          },
+          {
+            "name": "Accessory Glands",
+            "function": "Produce seminal fluid",
+            "includes": ["Prostate", "Seminal vesicles", "Bulbourethral glands"]
+          }
+        ],
+        "hormones": ["Testosterone", "Inhibin", "GnRH"],
+        "reproduction_capability": "From 18-24 months to advanced age (20+ years)",
+        "image_reference": "male_reproductive.png"
+      },
+      "female": {
+        "components": [
+          {
+            "name": "Ovaries",
+            "function": "Egg production, hormone production",
+            "special_features": "Bean-shaped, contain follicles and corpus luteum"
+          },
+          {
+            "name": "Oviducts",
+            "function": "Transport eggs, site of fertilization",
+            "special_features": "Connect ovaries to uterine horns"
+          },
+          {
+            "name": "Uterus",
+            "function": "Houses developing fetus",
+            "special_features": "Y-shaped with two horns and body"
+          },
+          {
+            "name": "Cervix",
+            "function": "Barrier between uterus and vagina",
+            "special_features": "Opens during estrus and birth, tightly closed during pregnancy"
+          },
+          {
+            "name": "Vagina",
+            "function": "Mating and birth canal",
+            "special_features": "Elastic to accommodate foal during birth"
+          }
+        ],
+        "estrous_cycle": "21 days during breeding season (spring/summer), seasonal polyestrous",
+        "gestation": "Approximately 11 months (330-345 days)",
+        "reproduction_capability": "From 18-24 months to mid-late teens",
+        "image_reference": "female_reproductive.png"
+      }
+    },
+    "endocrine": {
+      "description": "Hormone-producing system regulating body functions",
+      "major_glands": [
+        {
+          "name": "Pituitary",
+          "location": "Base of brain",
+          "key_hormones": ["Growth hormone", "ACTH", "TSH", "Reproductive hormones"],
+          "functions": "Master gland controlling many other endocrine glands"
+        },
+        {
+          "name": "Thyroid",
+          "location": "Throat area",
+          "key_hormones": ["Thyroxine (T4)", "Triiodothyronine (T3)"],
+          "functions": "Metabolism regulation, growth, development"
+        },
+        {
+          "name": "Adrenal",
+          "location": "Near kidneys",
+          "key_hormones": ["Cortisol", "Adrenaline", "Aldosterone"],
+          "functions": "Stress response, metabolism, mineral balance"
+        },
+        {
+          "name": "Pancreas",
+          "location": "Near stomach",
+          "key_hormones": ["Insulin", "Glucagon"],
+          "functions": "Blood glucose regulation"
+        },
+        {
+          "name": "Gonads",
+          "location": "Testicles or ovaries",
+          "key_hormones": ["Testosterone", "Estrogen", "Progesterone"],
+          "functions": "Reproduction, secondary sex characteristics"
+        }
+      ],
+      "image_reference": "endocrine_system.png"
+    },
+    "immune": {
+      "description": "Defense system against disease and infection",
+      "components": [
+        {
+          "name": "Lymph Nodes",
+          "function": "Filter lymph fluid, house immune cells",
+          "locations": "Throughout body, especially under jaw, in front of shoulder, in groin"
+        },
+        {
+          "name": "Spleen",
+          "function": "Blood filtration, immune surveillance",
+          "special_features": "Located behind stomach, also serves as blood reservoir"
+        },
+        {
+          "name": "Thymus",
+          "function": "T-cell development",
+          "special_features": "Largest in young horses, shrinks with age"
+        },
+        {
+          "name": "Tonsils",
+          "function": "Defense against respiratory and digestive pathogens",
+          "locations": "Throat area"
+        },
+        {
+          "name": "White Blood Cells",
+          "function": "Cellular defense against pathogens",
+          "types": ["Neutrophils", "Lymphocytes", "Monocytes", "Eosinophils", "Basophils"]
+        }
+      ],
+      "passive_immunity": "Foals receive antibodies through colostrum (first milk)",
+      "image_reference": "immune_system.png"
+    },
+    "integumentary": {
+      "description": "Skin and associated structures",
+      "components": [
+        {
+          "name": "Skin",
+          "function": "Protective barrier, temperature regulation",
+          "layers": ["Epidermis", "Dermis", "Subcutaneous tissue"],
+          "special_features": "Varies in thickness across body, thinnest on face and underside"
+        },
+        {
+          "name": "Hair",
+          "function": "Protection, insulation, sensory",
+          "types": [
+            "Guard hairs (outer coat)",
+            "Undercoat (dense insulating layer in winter)",
+            "Tactile hairs (whiskers, fetlock feathering)"
+          ],
+          "seasonal_changes": "Grows thicker winter coat, sheds in spring"
+        },
+        {
+          "name": "Hooves",
+          "function": "Protection, weight-bearing",
+          "composition": "Modified keratinized epidermis, similar to human fingernails"
+        },
+        {
+          "name": "Chestnuts and Ergots",
+          "function": "Vestigial structures, possibly remnants of scent glands",
+          "locations": "Chestnuts on inside of legs, ergots behind fetlocks"
+        },
+        {
+          "name": "Sweat Glands",
+          "function": "Thermoregulation through evaporative cooling",
+          "special_features": "Distributed throughout skin, produce protein-rich sweat"
+        }
+      ],
+      "image_reference": "integumentary_system.png"
     }
   },
   "development_stages": {
+    "embryonic": {
+      "description": "Development from conception to differentiation of major body systems",
+      "timeframe": "First 40 days of pregnancy",
+      "key_developments": [
+        "Day 1-5: Fertilized egg divides and moves through oviduct to uterus",
+        "Day 6-15: Embryo floats freely in uterus",
+        "Day 16-22: Embryo attaches to uterine wall",
+        "Day 22-40: Formation of primitive organ systems, recognizable as horse embryo"
+      ]
+    },
+    "fetal": {
+      "description": "Development from embryo to birth",
+      "timeframe": "Day 40 to birth (approximately 11 months)",
+      "key_developments": [
+        "Month 2: All organ systems present in primitive form",
+        "Month 3-4: Rapid growth, hardening of bones, growth of fetlocks",
+        "Month 5-7: Growth of hair, development of muscles",
+        "Month 8-11: Continued growth and maturation of all systems, positioning for birth"
+      ],
+      "size_progression": "Growth from few centimeters to approximately 100-120 cm (40-48 inches) at birth"
+    },
     "foal": {
       "age_range": "Birth to weaning (6 months)",
-      "characteristics": "Long legs, proportionally short body, rapid growth"
+      "characteristics": [
+        "Long legs relative to body depth",
+        "Proportionally large head and short neck",
+        "Rapid growth, gaining 2-3 pounds per day initially",
+        "Primary dentition (deciduous teeth)",
+        "Able to stand within 1-2 hours of birth",
+        "Able to run within 24 hours"
+      ],
+      "developmental_milestones": [
+        "Birth-24 hours: Standing, nursing, bonding with mother",
+        "1-4 weeks: Exploring environment, playful behavior, sampling solid food",
+        "1-3 months: Increasing independence, more social play with other foals",
+        "4-6 months: Preparing for weaning, consuming significant solid food"
+      ],
+      "anatomical_notes": "Epiphyseal growth plates very active, susceptible to developmental orthopedic diseases"
     },
     "weanling": {
       "age_range": "6 months to 1 year",
-      "characteristics": "Continued growth, gaining independence"
+      "characteristics": [
+        "More balanced proportions but still growing",
+        "Continued growth of body catching up to legs",
+        "Beginning to lose deciduous teeth",
+        "Becoming more independent socially"
+      ],
+      "growth_rate": "Slows to approximately 1-1.5 pounds per day",
+      "critical_developments": "Continued bone development, important nutritional period for future soundness"
     },
     "yearling": {
       "age_range": "1 to 2 years",
-      "characteristics": "Significant growth, adolescent appearance"
+      "characteristics": [
+        "Significant growth, approaching 90% of adult height",
+        "Adolescent appearance, still developing muscle definition",
+        "Sexual maturation beginning (especially fillies)",
+        "Continued replacement of deciduous teeth with permanent teeth"
+      ],
+      "growth_patterns": "Growth spurts common, often appearing awkward or unbalanced during growth phases"
     },
     "two_year_old": {
       "age_range": "2 to 3 years",
-      "characteristics": "Approaching adult size but still maturing"
+      "characteristics": [
+        "Near adult height but still filling out",
+        "Increasing muscle development",
+        "Most permanent teeth erupted (except canines and last molars)",
+        "Sexual maturity in most individuals"
+      ],
+      "anatomical_notes": "Most growth plates closing, but some important ones (vertebral bodies, femoral head) still active"
     },
     "mature": {
       "age_range": "4 to 15 years",
-      "characteristics": "Full physical development, prime years"
+      "characteristics": [
+        "Full physical development",
+        "Maximum strength and athletic capability",
+        "All permanent teeth present and functional",
+        "Complete closure of growth plates"
+      ],
+      "anatomical_notes": "Dental changes continue throughout life with wear patterns developing"
     },
     "senior": {
       "age_range": "16+ years",
-      "characteristics": "May show signs of aging, changes in body condition"
+      "characteristics": [
+        "May show signs of aging (gray hairs, especially around eyes and muzzle)",
+        "Changes in body condition (more angular appearance, potential weight loss)",
+        "Wear on teeth becoming significant",
+        "Potential joint changes affecting movement"
+      ],
+      "variations": "Aging rate varies greatly with genetics, use, and care throughout life",
+      "anatomical_notes": "Changes in digestive efficiency, dental wear affecting nutrition, potential joint degeneration"
+    }
+  },
+  "functional_adaptations": {
+    "locomotion": {
+      "description": "Specializations for efficient movement",
+      "adaptations": [
+        {
+          "feature": "Single toe (monodactyl)",
+          "advantage": "Increases speed, efficiency of movement, reduces weight at end of limb"
+        },
+        {
+          "feature": "Long limbs",
+          "advantage": "Greater stride length, speed potential"
+        },
+        {
+          "feature": "Stay apparatus",
+          "advantage": "Standing with minimal muscle fatigue, efficient long-distance travel"
+        },
+        {
+          "feature": "Elastic storage in tendons",
+          "advantage": "Energy conservation during movement, spring-like quality"
+        }
+      ]
+    },
+    "grazing": {
+      "description": "Specializations for herbivorous diet",
+      "adaptations": [
+        {
+          "feature": "Prehensile lips",
+          "advantage": "Selective grazing, efficient gathering of grass"
+        },
+        {
+          "feature": "Hypsodont (high-crowned) teeth",
+          "advantage": "Withstand abrasive plant material, continual eruption compensates for wear"
+        },
+        {
+          "feature": "Specialized hindgut fermentation",
+          "advantage": "Able to extract nutrients from fibrous plants unsuitable for other animals"
+        },
+        {
+          "feature": "Mobile ears",
+          "advantage": "Can remain alert while head down grazing"
+        }
+      ]
+    },
+    "environmental": {
+      "description": "Adaptations to survive in natural environments",
+      "adaptations": [
+        {
+          "feature": "Acute senses (vision, hearing, smell)",
+          "advantage": "Early predator detection"
+        },
+        {
+          "feature": "Efficient thermoregulation",
+          "advantage": "Adaptation to various climates through sweating, coat changes"
+        },
+        {
+          "feature": "Social behavior",
+          "advantage": "Herd protection, collective vigilance"
+        },
+        {
+          "feature": "High foot durability",
+          "advantage": "Adapted to various terrains, natural hoof maintenance through movement"
+        }
+      ]
     }
   }
 }
-

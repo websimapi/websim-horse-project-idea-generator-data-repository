@@ -3,347 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horse Data Explorer</title>
+    <title>Horse Project Idea Generator - Data Repository</title>
     <style>
-        :root {
-            --primary-color: #4a6741;
-            --secondary-color: #8e7b5c;
-            --background-color: #f7f4e9;
-            --text-color: #333;
-            --accent-color: #a87b50;
-            --light-accent: #d9c8a9;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
             margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
+            background-color: #f5f5f5;
         }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
-        header img {
-            height: 80px;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-        
-        .search-section {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-        }
-        
-        .question-form {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        #question-input {
-            flex-grow: 1;
-            padding: 1rem;
-            border: 2px solid var(--light-accent);
-            border-radius: 4px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        #question-input:focus {
-            border-color: var(--accent-color);
-            outline: none;
-        }
-        
-        button {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 0.5rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .loader {
-            display: none;
+        h1 {
+            color: #333;
             text-align: center;
-            padding: 2rem;
         }
-        
-        .loader-spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 4px solid var(--accent-color);
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
+        p {
+            margin-bottom: 20px;
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .response-section {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            min-height: 200px;
-        }
-        
-        .processing-step {
-            background-color: var(--light-accent);
-            padding: 1rem;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            display: none;
-        }
-        
-        .processing-step h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        
-        #llm-response {
-            line-height: 1.8;
-        }
-        
-        .metadata {
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-        }
-        
-        .data-source {
-            font-style: italic;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .question-form {
-                flex-direction: column;
-            }
-            
-            button {
-                width: 100%;
-                padding: 1rem;
-            }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="pegasus.png" alt="Horse Explorer Logo">
-            <h1>Horse Data Explorer</h1>
-        </header>
-        
-        <section class="search-section">
-            <h2>Ask a question about horses</h2>
-            <p>Enter your question below to search our comprehensive horse database for answers.</p>
-            <form id="question-form" class="question-form">
-                <input type="text" id="question-input" placeholder="e.g., What are the common colors of Arabian horses?" required>
-                <button type="submit">Ask</button>
-            </form>
-        </section>
-        
-        <div class="loader" id="loader">
-            <div class="loader-spinner"></div>
-            <p>Searching the database for information...</p>
-        </div>
-        
-        <div class="processing-step" id="file-selection-step">
-            <h3>File Selection</h3>
-            <p id="file-selection-text"></p>
-        </div>
-        
-        <div class="processing-step" id="data-analysis-step">
-            <h3>Data Analysis</h3>
-            <p id="data-analysis-text"></p>
-        </div>
-        
-        <section class="response-section" id="response-section">
-            <h2>Your Answer</h2>
-            <div id="llm-response">
-                <p class="initial-message">Ask a question above to get information about horses.</p>
-            </div>
-        </section>
+        <h1>Horse Data Repository</h1>
+        <p>This project contains comprehensive JSON files with information about horses.</p>
+        <p>The following data files are available:</p>
+        <ul>
+            <li><code>horse_breeds.json</code> - Different horse breeds, their origins, and characteristics</li>
+            <li><code>horse_colors.json</code> - Horse coat colors, patterns, and markings</li>
+            <li><code>horse_anatomy.json</code> - Horse body structure, proportions, and measurements</li>
+            <li><code>horse_behavior.json</code> - Horse movements, behaviors, and communication</li>
+            <li><code>horse_mythology.json</code> - Mythical and fictional horses</li>
+            <li><code>horse_visualization.json</code> - Information for visualizing horses in 2D and 3D</li>
+        </ul>
+        <p>A UI for exploring this data will be developed in a future iteration.</p>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Available JSON files
-            const jsonFiles = [
-                "horse_anatomy.json",
-                "horse_behavior.json",
-                "horse_breeds.json",
-                "horse_colors.json",
-                "horse_mythology.json",
-                "horse_visualization.json"
-            ];
-            
-            // Store the content of each file (for this demo, we'll simulate fetching)
-            const jsonContents = {};
-            
-            // Form submission handler
-            document.getElementById('question-form').addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const question = document.getElementById('question-input').value.trim();
-                if (!question) return;
-                
-                // Show loader
-                document.getElementById('loader').style.display = 'block';
-                document.getElementById('llm-response').innerHTML = '';
-                
-                try {
-                    // Step 1: Determine which file to use
-                    const fileSelectionStep = document.getElementById('file-selection-step');
-                    fileSelectionStep.style.display = 'block';
-                    document.getElementById('file-selection-text').textContent = 'Analyzing your question to determine the most relevant data source...';
-                    
-                    const selectedFile = await determineRelevantFile(question, jsonFiles);
-                    document.getElementById('file-selection-text').textContent = `Selected data source: ${selectedFile}`;
-                    
-                    // Step 2: Extract relevant content and answer
-                    const dataAnalysisStep = document.getElementById('data-analysis-step');
-                    dataAnalysisStep.style.display = 'block';
-                    document.getElementById('data-analysis-text').textContent = 'Extracting relevant information from the database...';
-                    
-                    const answer = await generateAnswer(question, selectedFile);
-                    
-                    // Display the response
-                    document.getElementById('llm-response').innerHTML = answer;
-                    
-                    // Add data source metadata
-                    const metadataDiv = document.createElement('div');
-                    metadataDiv.className = 'metadata';
-                    metadataDiv.innerHTML = `<p class="data-source">Information sourced from: ${selectedFile}</p>`;
-                    document.getElementById('llm-response').appendChild(metadataDiv);
-                    
-                } catch (error) {
-                    console.error('Error:', error);
-                    document.getElementById('llm-response').innerHTML = `
-                        <p>I'm sorry, I encountered an error while processing your question. Please try again.</p>
-                        <p class="error-details">${error.message}</p>
-                    `;
-                } finally {
-                    // Hide loader
-                    document.getElementById('loader').style.display = 'none';
-                }
-            });
-            
-            // Function to determine the most relevant file using LLM
-            async function determineRelevantFile(question, files) {
-                try {
-                    // First LLM call to determine which file to use
-                    const response = await websim.chat.completions.create({
-                        messages: [
-                            {
-                                role: "system",
-                                content: `You are a horse information specialist. Your task is to determine which JSON file from our horse database is most relevant to the user's question. Only respond with the filename that is most appropriate - no other text.
-                                
-Available files:
-- horse_anatomy.json: Contains information about horse body structure, skeletal system, muscles, measurements, internal systems, and proportions.
-- horse_behavior.json: Contains information about horse movements, natural behaviors, communication, and cognitive abilities.
-- horse_breeds.json: Contains information about different horse breeds, their origins, characteristics, and uses.
-- horse_colors.json: Contains information about horse coat colors, markings, patterns, and genetic information.
-- horse_mythology.json: Contains information about fictional and mythological horses from various cultures.
-- horse_visualization.json: Contains information about representing horses in 2D, 3D, animation, and design applications.`
-                            },
-                            {
-                                role: "user",
-                                content: question
-                            }
-                        ]
-                    });
-                    
-                    const selectedFile = response.content.trim();
-                    
-                    // Validate that the response is one of our files
-                    if (!files.includes(selectedFile)) {
-                        throw new Error(`Invalid file selection: ${selectedFile}`);
-                    }
-                    
-                    return selectedFile;
-                } catch (error) {
-                    console.error('Error determining relevant file:', error);
-                    throw error;
-                }
-            }
-            
-            // Function to extract relevant content and generate answer using LLM
-            async function generateAnswer(question, selectedFile) {
-                try {
-                    // For a real implementation, we would fetch the content of the selected file
-                    // But for this demo, we'll simulate having the content
-                    
-                    // Second LLM call to generate the answer using the selected file
-                    const response = await websim.chat.completions.create({
-                        messages: [
-                            {
-                                role: "system",
-                                content: `You are a horse information specialist with access to a database of horse information. A user has asked a question about horses, and we've determined that the file "${selectedFile}" is most relevant to their query.
-
-Based on your knowledge of horses and the relevant section of our database, provide a comprehensive answer to the user's question. You can use HTML to format your response nicely, and you can include JavaScript if you want to create interactive elements.
-
-Feel free to organize your answer with headings, lists, and other HTML elements to make it clear and engaging. If appropriate, you can create simple visualizations or interactive components using JavaScript.
-
-If the question can't be answered with the available information, acknowledge this and provide the most helpful response you can based on your general knowledge.`
-                            },
-                            {
-                                role: "user",
-                                content: `Question: ${question}
-
-For this simulation, pretend you have access to the content of ${selectedFile} and are able to extract the relevant information to answer the question.`
-                            }
-                        ]
-                    });
-                    
-                    return response.content;
-                } catch (error) {
-                    console.error('Error generating answer:', error);
-                    throw error;
-                }
-            }
-
-            // In a real implementation, we would fetch the JSON files here
-            // For this demo, we're simulating having access to them
-        });
-    </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
