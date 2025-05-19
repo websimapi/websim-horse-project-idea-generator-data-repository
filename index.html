@@ -3,1252 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equine Encyclopedia - Horse Data Explorer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <title>Horse Data Explorer</title>
     <style>
         :root {
-            --primary: #5a3921;
-            --primary-light: #8c6444;
-            --secondary: #a87b4f;
-            --accent: #d4b483;
-            --light: #f8f4e3;
-            --dark: #2d2926;
-            --success: #4a7c59;
-            --danger: #a63d40;
+            --primary-color: #4a6741;
+            --secondary-color: #8e7b5c;
+            --background-color: #f7f4e9;
+            --text-color: #333;
+            --accent-color: #a87b50;
+            --light-accent: #d9c8a9;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
-            --transition: all 0.3s ease;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
         }
-
-        .app-container {
-            display: flex;
-            min-height: 100vh;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        /* Sidebar Styles */
-        .sidebar {
-            width: 280px;
-            background-color: var(--primary);
-            color: var(--light);
-            padding: 20px 0;
-            transition: var(--transition);
-            position: relative;
-            z-index: 10;
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
             box-shadow: var(--shadow);
-        }
-
-        .sidebar-collapsed {
-            width: 60px;
-        }
-
-        .logo-container {
-            padding: 0 20px 20px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 20px;
+            gap: 1.5rem;
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
+        
+        header img {
+            height: 80px;
         }
-
-        .logo-icon {
-            font-size: 24px;
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
         }
-
-        .logo-text {
-            transition: var(--transition);
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .sidebar-collapsed .logo-text {
-            width: 0;
-            opacity: 0;
-        }
-
-        .nav-category {
-            margin-bottom: 15px;
-            padding: 0 20px;
-        }
-
-        .nav-category-title {
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: var(--accent);
-            margin-bottom: 8px;
-            white-space: nowrap;
-            overflow: hidden;
-            opacity: 1;
-            transition: var(--transition);
-        }
-
-        .sidebar-collapsed .nav-category-title {
-            opacity: 0;
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-radius: var(--radius);
-            margin-bottom: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            color: var(--light);
-        }
-
-        .nav-item:hover, .nav-item.active {
-            background-color: var(--primary-light);
-        }
-
-        .nav-item-icon {
-            font-size: 18px;
-            min-width: 30px;
-            text-align: center;
-        }
-
-        .nav-item-text {
-            white-space: nowrap;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .sidebar-collapsed .nav-item-text {
-            width: 0;
-            opacity: 0;
-        }
-
-        .toggle-sidebar {
-            position: absolute;
-            top: 20px;
-            right: -12px;
-            width: 24px;
-            height: 24px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--light);
-            box-shadow: var(--shadow);
-            z-index: 11;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--light);
-            transition: var(--transition);
-        }
-
-        .top-bar {
-            height: 70px;
+        
+        .search-section {
             background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
             box-shadow: var(--shadow);
+        }
+        
+        .question-form {
             display: flex;
-            align-items: center;
-            padding: 0 30px;
-            justify-content: space-between;
+            gap: 1rem;
         }
-
-        .search-container {
-            position: relative;
-            width: 400px;
+        
+        #question-input {
+            flex-grow: 1;
+            padding: 1rem;
+            border: 2px solid var(--light-accent);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
         }
-
-        .search-input {
-            width: 100%;
-            padding: 10px 20px;
-            padding-left: 40px;
-            border-radius: 20px;
-            border: 1px solid #ddd;
-            font-size: 15px;
-            transition: var(--transition);
-        }
-
-        .search-input:focus {
+        
+        #question-input:focus {
+            border-color: var(--accent-color);
             outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 2px rgba(168, 123, 79, 0.2);
         }
-
-        .search-icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #999;
-        }
-
-        .user-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .action-button {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--light);
-            color: var(--primary);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .action-button:hover {
-            background-color: var(--accent);
-            color: var(--primary-light);
-        }
-
-        .theme-toggle {
-            position: relative;
-        }
-
-        .content-area {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-        }
-
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 20px;
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .card-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background-color: rgba(168, 123, 79, 0.1);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-content {
-            margin-bottom: 15px;
-        }
-
-        .card-footer {
-            font-size: 14px;
-            color: var(--secondary);
-        }
-
-        .main-section {
-            background-color: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .section-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .filter-button {
-            padding: 8px 15px;
-            background-color: var(--light);
+        
+        button {
+            background-color: var(--accent-color);
+            color: white;
             border: none;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            border-radius: 4px;
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
             cursor: pointer;
-            transition: var(--transition);
+            transition: background-color 0.3s;
         }
-
-        .filter-button:hover {
-            background-color: var(--accent);
+        
+        button:hover {
+            background-color: var(--secondary-color);
         }
-
-        .data-container {
-            min-height: 400px;
-            position: relative;
-        }
-
-        .empty-state {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        
+        .loader {
+            display: none;
             text-align: center;
-            color: #999;
+            padding: 2rem;
         }
-
-        .empty-state-icon {
-            font-size: 60px;
-            margin-bottom: 15px;
-        }
-
-        .loading-indicator {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(168, 123, 79, 0.2);
-            border-top-color: var(--primary);
+        
+        .loader-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
+            border-top: 4px solid var(--accent-color);
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
         }
-
+        
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-
-        /* Responsive Adjustments */
+        
+        .response-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            min-height: 200px;
+        }
+        
+        .processing-step {
+            background-color: var(--light-accent);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        
+        .processing-step h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        #llm-response {
+            line-height: 1.8;
+        }
+        
+        .metadata {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .data-source {
+            font-style: italic;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .sidebar {
-                position: fixed;
-                height: 100%;
-                transform: translateX(-100%);
+            .question-form {
+                flex-direction: column;
             }
             
-            .sidebar.active {
-                transform: translateX(0);
+            button {
+                width: 100%;
+                padding: 1rem;
             }
-            
-            .search-container {
-                width: 200px;
-            }
-            
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Specific Category Customizations */
-        .anatomy-theme {
-            --category-color: #7c5295;
-        }
-        
-        .behavior-theme {
-            --category-color: #4a7c59;
-        }
-        
-        .breeds-theme {
-            --category-color: #a63d40;
-        }
-        
-        .colors-theme {
-            --category-color: #4f86c6;
-        }
-        
-        .mythology-theme {
-            --category-color: #d4b483;
-        }
-        
-        .visualization-theme {
-            --category-color: #8c6444;
-        }
-
-        /* Filter drawer */
-        .filter-drawer {
-            position: fixed;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 300px;
-            background-color: white;
-            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-            padding: 20px;
-            transform: translateX(100%);
-            transition: var(--transition);
-        }
-
-        .filter-drawer.active {
-            transform: translateX(0);
-        }
-
-        .filter-drawer-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .filter-drawer-title {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .filter-drawer-close {
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-        .filter-group {
-            margin-bottom: 20px;
-        }
-
-        .filter-group-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .filter-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .filter-checkbox {
-            width: 18px;
-            height: 18px;
-        }
-
-        .filter-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-
-        .filter-button {
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .filter-reset {
-            background-color: var(--light);
-            color: var(--dark);
-        }
-
-        .filter-apply {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Modal */
-        .modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .modal-backdrop.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal {
-            background-color: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
-            transform: translateY(-20px);
-            transition: var(--transition);
-        }
-
-        .modal-backdrop.active .modal {
-            transform: translateY(0);
-        }
-
-        .modal-header {
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-title {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .modal-close {
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-        .modal-body {
-            padding: 20px;
-        }
-
-        .modal-footer {
-            padding: 15px 20px;
-            border-top: 1px solid #eee;
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-        }
-
-        .btn {
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            transition: var(--transition);
-        }
-
-        .btn-secondary {
-            background-color: var(--light);
-            color: var(--dark);
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Detail view components */
-        .detail-view {
-            display: none;
-        }
-
-        .detail-view.active {
-            display: block;
-        }
-
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .breadcrumb-item {
-            color: var(--secondary);
-        }
-
-        .breadcrumb-separator {
-            color: #ccc;
-        }
-
-        .breadcrumb-current {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .detail-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .detail-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .detail-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .media-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .media-item {
-            height: 150px;
-            border-radius: var(--radius);
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .media-item:hover {
-            transform: scale(1.05);
-        }
-
-        .media-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .property-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .property-item {
-            background-color: var(--light);
-            border-radius: var(--radius);
-            padding: 15px;
-        }
-
-        .property-label {
-            font-size: 14px;
-            color: var(--secondary);
-            margin-bottom: 5px;
-        }
-
-        .property-value {
-            font-weight: 600;
-        }
-
-        /* Content tabs */
-        .content-tabs {
-            display: flex;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 20px;
-        }
-
-        .content-tab {
-            padding: 12px 20px;
-            cursor: pointer;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .content-tab:hover {
-            color: var(--primary);
-        }
-
-        .content-tab.active {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .content-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--primary);
-            border-radius: 3px 3px 0 0;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Visualization components */
-        .visualization-container {
-            min-height: 400px;
-            background-color: var(--light);
-            border-radius: var(--radius);
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #pegasus-image {
-            max-width: 500px;
-            max-height: 300px;
-            margin: 20px auto;
-            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar" id="sidebar">
-            <div class="logo-container">
-                <div class="logo-icon"><i class="fas fa-horse"></i></div>
-                <div class="logo-text">Equine Encyclopedia</div>
-            </div>
-            
-            <div class="toggle-sidebar" id="toggle-sidebar">
-                <i class="fas fa-chevron-left" id="sidebar-toggle-icon"></i>
-            </div>
-            
-            <div class="nav-category">
-                <div class="nav-category-title">Data Categories</div>
-                <a href="#" class="nav-item active" data-category="overview">
-                    <div class="nav-item-icon"><i class="fas fa-home"></i></div>
-                    <div class="nav-item-text">Overview</div>
-                </a>
-                <a href="#" class="nav-item" data-category="anatomy">
-                    <div class="nav-item-icon"><i class="fas fa-horse-head"></i></div>
-                    <div class="nav-item-text">Anatomy</div>
-                </a>
-                <a href="#" class="nav-item" data-category="behavior">
-                    <div class="nav-item-icon"><i class="fas fa-running"></i></div>
-                    <div class="nav-item-text">Behavior</div>
-                </a>
-                <a href="#" class="nav-item" data-category="breeds">
-                    <div class="nav-item-icon"><i class="fas fa-award"></i></div>
-                    <div class="nav-item-text">Breeds</div>
-                </a>
-                <a href="#" class="nav-item" data-category="colors">
-                    <div class="nav-item-icon"><i class="fas fa-palette"></i></div>
-                    <div class="nav-item-text">Colors</div>
-                </a>
-                <a href="#" class="nav-item" data-category="mythology">
-                    <div class="nav-item-icon"><i class="fas fa-dragon"></i></div>
-                    <div class="nav-item-text">Mythology</div>
-                </a>
-                <a href="#" class="nav-item" data-category="visualization">
-                    <div class="nav-item-icon"><i class="fas fa-pencil-ruler"></i></div>
-                    <div class="nav-item-text">Visualization</div>
-                </a>
-            </div>
-            
-            <div class="nav-category">
-                <div class="nav-category-title">Tools</div>
-                <a href="#" class="nav-item" data-category="saved">
-                    <div class="nav-item-icon"><i class="fas fa-bookmark"></i></div>
-                    <div class="nav-item-text">Saved Items</div>
-                </a>
-                <a href="#" class="nav-item" data-category="settings">
-                    <div class="nav-item-icon"><i class="fas fa-cog"></i></div>
-                    <div class="nav-item-text">Settings</div>
-                </a>
-                <a href="#" class="nav-item" data-category="about">
-                    <div class="nav-item-icon"><i class="fas fa-info-circle"></i></div>
-                    <div class="nav-item-text">About</div>
-                </a>
-            </div>
-        </nav>
+    <div class="container">
+        <header>
+            <img src="pegasus.png" alt="Horse Explorer Logo">
+            <h1>Horse Data Explorer</h1>
+        </header>
         
-        <!-- Main Content Area -->
-        <main class="main-content" id="main-content">
-            <div class="top-bar">
-                <div class="search-container">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" placeholder="Search horse data...">
-                </div>
-                <div class="user-actions">
-                    <div class="action-button" id="filter-toggle">
-                        <i class="fas fa-filter"></i>
-                    </div>
-                    <div class="action-button theme-toggle" id="theme-toggle">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    <div class="action-button">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Content Area - Will be dynamically updated -->
-            <div class="content-area">
-                <!-- Overview Dashboard -->
-                <div class="dashboard" id="overview-dashboard">
-                    <div class="card" data-category="anatomy">
-                        <div class="card-header">
-                            <h3 class="card-title">Anatomy</h3>
-                            <div class="card-icon"><i class="fas fa-horse-head"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Explore the detailed structure of horses, including skeletal, muscular, and physiological systems.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">Browse anatomy data <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="card" data-category="behavior">
-                        <div class="card-header">
-                            <h3 class="card-title">Behavior</h3>
-                            <div class="card-icon"><i class="fas fa-running"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Learn about natural horse behavior, communication methods, and social interactions.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">Explore behaviors <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="card" data-category="breeds">
-                        <div class="card-header">
-                            <h3 class="card-title">Breeds</h3>
-                            <div class="card-icon"><i class="fas fa-award"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Discover the diverse horse breeds from around the world and their unique characteristics.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">View breed catalog <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="card" data-category="colors">
-                        <div class="card-header">
-                            <h3 class="card-title">Colors</h3>
-                            <div class="card-icon"><i class="fas fa-palette"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Explore the genetics and visual appearance of different horse coat colors and patterns.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">Browse color guide <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="card" data-category="mythology">
-                        <div class="card-header">
-                            <h3 class="card-title">Mythology</h3>
-                            <div class="card-icon"><i class="fas fa-dragon"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Delve into mythical horses from various cultures and legendary equine creatures.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">Explore mythical horses <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="card" data-category="visualization">
-                        <div class="card-header">
-                            <h3 class="card-title">Visualization</h3>
-                            <div class="card-icon"><i class="fas fa-pencil-ruler"></i></div>
-                        </div>
-                        <div class="card-content">
-                            <p>Learn techniques for drawing, modeling, and animating horses in various media.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="card-link">View visualization guides <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Content Section -->
-                <div class="main-section">
-                    <div class="section-header">
-                        <h2 class="section-title">Featured Content</h2>
-                        <div class="section-actions">
-                            <button class="filter-button" id="category-filter">
-                                <i class="fas fa-filter"></i> Filter
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="data-container">
-                        <div class="visualization-container">
-                            <img src="pegasus.png" id="pegasus-image" alt="Majestic Pegasus">
-                        </div>
-                        
-                        <div class="content-tabs">
-                            <div class="content-tab active" data-tab="description">Description</div>
-                            <div class="content-tab" data-tab="mythology">Mythology</div>
-                            <div class="content-tab" data-tab="representations">Representations</div>
-                        </div>
-                        
-                        <div class="tab-content active" id="description-tab">
-                            <h3>Pegasus: The Winged Divine Horse</h3>
-                            <p>Pegasus is one of the most recognized creatures in Greek mythology, known for his majestic white coat and large feathered wings. Born from the blood of Medusa when Perseus beheaded her, Pegasus became a symbol of divine inspiration and poetic imagination.</p>
-                            <p>As a divine stallion, Pegasus served as a faithful companion to heroes and gods alike. His most famous association was with the hero Bellerophon, whom he helped defeat the fearsome Chimera. Pegasus was also known for creating springs by striking his hoof against the ground, most notably the Hippocrene spring on Mount Helicon.</p>
-                            <p>Eventually, Pegasus found his place on Mount Olympus in service to Zeus, carrying his thunderbolts. As recognition of his faithful service, Zeus transformed Pegasus into a constellation, where he remains visible in the night sky to this day.</p>
-                        </div>
-                        
-                        <div class="tab-content" id="mythology-tab">
-                            <h3>Mythological Significance</h3>
-                            <p>In Greek mythology, Pegasus represents the bridge between the earthly and divine realms. His ability to fly symbolizes transcendence and the elevation of the human spirit through inspiration. The springs created by his hoof strikes were said to gift anyone who drank from them with poetic abilities, connecting Pegasus to artistic inspiration.</p>
-                            <p>The relationship between Pegasus and Bellerophon also teaches a moral lesson about hubris. When Bellerophon attempted to ride Pegasus to Mount Olympus, presuming himself worthy of joining the gods, Zeus sent a gadfly to sting Pegasus, causing Bellerophon to fall back to earth while Pegasus continued to the divine realm.</p>
-                            <p>Throughout ancient art and literature, Pegasus appears as a symbol of wisdom, fame, and poetry, inspiring countless generations with his beauty and divine connection.</p>
-                        </div>
-                        
-                        <div class="tab-content" id="representations-tab">
-                            <h3>Artistic Representations Through History</h3>
-                            <p>Pegasus has been depicted in art since ancient Greek times, appearing on pottery, sculptures, and mosaics. Typically portrayed as a pure white horse with large, feathered wings, Pegasus embodied grace and divine beauty.</p>
-                            <p>In Renaissance art, Pegasus enjoyed renewed popularity, often appearing in scenes depicting Perseus and Medusa or Bellerophon and the Chimera. Artists like Rubens, Titian, and Poussin created memorable interpretations of the divine horse.</p>
-                            <p>In modern times, Pegasus has become a widely recognized symbol used in corporate logos, popular media, and as a general representation of freedom and aspiration. From ancient Greek pottery to modern fantasy films, Pegasus continues to captivate the human imagination as a symbol of transcendence and divine connection.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Recently Viewed Section -->
-                <div class="main-section">
-                    <div class="section-header">
-                        <h2 class="section-title">Recently Viewed</h2>
-                        <div class="section-actions">
-                            <button class="filter-button">
-                                <i class="fas fa-redo"></i> Clear
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="data-container">
-                        <div class="empty-state">
-                            <div class="empty-state-icon">
-                                <i class="fas fa-hourglass-empty"></i>
-                            </div>
-                            <h3>No Recent Items</h3>
-                            <p>Items you view will appear here for easy access</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    
-    <!-- Filter Drawer -->
-    <div class="filter-drawer" id="filter-drawer">
-        <div class="filter-drawer-header">
-            <h3 class="filter-drawer-title">Filter Content</h3>
-            <div class="filter-drawer-close" id="filter-drawer-close">
-                <i class="fas fa-times"></i>
-            </div>
+        <section class="search-section">
+            <h2>Ask a question about horses</h2>
+            <p>Enter your question below to search our comprehensive horse database for answers.</p>
+            <form id="question-form" class="question-form">
+                <input type="text" id="question-input" placeholder="e.g., What are the common colors of Arabian horses?" required>
+                <button type="submit">Ask</button>
+            </form>
+        </section>
+        
+        <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+            <p>Searching the database for information...</p>
         </div>
         
-        <div class="filter-group">
-            <h4 class="filter-group-title">Categories</h4>
-            <div class="filter-options">
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-anatomy" class="filter-checkbox" checked>
-                    <label for="filter-anatomy">Anatomy</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-behavior" class="filter-checkbox" checked>
-                    <label for="filter-behavior">Behavior</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-breeds" class="filter-checkbox" checked>
-                    <label for="filter-breeds">Breeds</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-colors" class="filter-checkbox" checked>
-                    <label for="filter-colors">Colors</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-mythology" class="filter-checkbox" checked>
-                    <label for="filter-mythology">Mythology</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-visualization" class="filter-checkbox" checked>
-                    <label for="filter-visualization">Visualization</label>
-                </div>
-            </div>
+        <div class="processing-step" id="file-selection-step">
+            <h3>File Selection</h3>
+            <p id="file-selection-text"></p>
         </div>
         
-        <div class="filter-group">
-            <h4 class="filter-group-title">Content Type</h4>
-            <div class="filter-options">
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-articles" class="filter-checkbox" checked>
-                    <label for="filter-articles">Articles</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-images" class="filter-checkbox" checked>
-                    <label for="filter-images">Images</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-data" class="filter-checkbox" checked>
-                    <label for="filter-data">Data References</label>
-                </div>
-                <div class="filter-option">
-                    <input type="checkbox" id="filter-guides" class="filter-checkbox" checked>
-                    <label for="filter-guides">Guides</label>
-                </div>
-            </div>
+        <div class="processing-step" id="data-analysis-step">
+            <h3>Data Analysis</h3>
+            <p id="data-analysis-text"></p>
         </div>
         
-        <div class="filter-actions">
-            <button class="filter-button filter-reset" id="filter-reset">
-                Reset Filters
-            </button>
-            <button class="filter-button filter-apply" id="filter-apply">
-                Apply Filters
-            </button>
-        </div>
-    </div>
-    
-    <!-- Modal Template -->
-    <div class="modal-backdrop" id="modal-backdrop">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title" id="modal-title">Modal Title</h3>
-                <div class="modal-close" id="modal-close">
-                    <i class="fas fa-times"></i>
-                </div>
+        <section class="response-section" id="response-section">
+            <h2>Your Answer</h2>
+            <div id="llm-response">
+                <p class="initial-message">Ask a question above to get information about horses.</p>
             </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Modal content will be inserted here -->
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
-                <button class="btn btn-primary" id="modal-confirm">Confirm</button>
-            </div>
-        </div>
+        </section>
     </div>
 
     <script>
-        // DOM elements
-        const sidebar = document.getElementById('sidebar');
-        const toggleSidebar = document.getElementById('toggle-sidebar');
-        const sidebarToggleIcon = document.getElementById('sidebar-toggle-icon');
-        const mainContent = document.getElementById('main-content');
-        const navItems = document.querySelectorAll('.nav-item');
-        const cards = document.querySelectorAll('.dashboard .card');
-        const filterToggle = document.getElementById('filter-toggle');
-        const filterDrawer = document.getElementById('filter-drawer');
-        const filterDrawerClose = document.getElementById('filter-drawer-close');
-        const themeToggle = document.getElementById('theme-toggle');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-        const modalClose = document.getElementById('modal-close');
-        const modalCancel = document.getElementById('modal-cancel');
-        const contentTabs = document.querySelectorAll('.content-tab');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const filterReset = document.getElementById('filter-reset');
-        const filterApply = document.getElementById('filter-apply');
-        
-        // Toggle sidebar
-        toggleSidebar.addEventListener('click', () => {
-            sidebar.classList.toggle('sidebar-collapsed');
-            sidebarToggleIcon.classList.toggle('fa-chevron-left');
-            sidebarToggleIcon.classList.toggle('fa-chevron-right');
-        });
-        
-        // Navigation item click
-        navItems.forEach(item => {
-            item.addEventListener('click', (e) => {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Available JSON files
+            const jsonFiles = [
+                "horse_anatomy.json",
+                "horse_behavior.json",
+                "horse_breeds.json",
+                "horse_colors.json",
+                "horse_mythology.json",
+                "horse_visualization.json"
+            ];
+            
+            // Store the content of each file (for this demo, we'll simulate fetching)
+            const jsonContents = {};
+            
+            // Form submission handler
+            document.getElementById('question-form').addEventListener('submit', async (e) => {
                 e.preventDefault();
-                navItems.forEach(navItem => navItem.classList.remove('active'));
-                item.classList.add('active');
                 
-                // Here we would load the specific content based on the category
-                const category = item.getAttribute('data-category');
-                console.log(`Loading category: ${category}`);
+                const question = document.getElementById('question-input').value.trim();
+                if (!question) return;
                 
-                // This would be replaced with actual content loading
-                if (category === 'overview') {
-                    // Show dashboard
+                // Show loader
+                document.getElementById('loader').style.display = 'block';
+                document.getElementById('llm-response').innerHTML = '';
+                
+                try {
+                    // Step 1: Determine which file to use
+                    const fileSelectionStep = document.getElementById('file-selection-step');
+                    fileSelectionStep.style.display = 'block';
+                    document.getElementById('file-selection-text').textContent = 'Analyzing your question to determine the most relevant data source...';
+                    
+                    const selectedFile = await determineRelevantFile(question, jsonFiles);
+                    document.getElementById('file-selection-text').textContent = `Selected data source: ${selectedFile}`;
+                    
+                    // Step 2: Extract relevant content and answer
+                    const dataAnalysisStep = document.getElementById('data-analysis-step');
+                    dataAnalysisStep.style.display = 'block';
+                    document.getElementById('data-analysis-text').textContent = 'Extracting relevant information from the database...';
+                    
+                    const answer = await generateAnswer(question, selectedFile);
+                    
+                    // Display the response
+                    document.getElementById('llm-response').innerHTML = answer;
+                    
+                    // Add data source metadata
+                    const metadataDiv = document.createElement('div');
+                    metadataDiv.className = 'metadata';
+                    metadataDiv.innerHTML = `<p class="data-source">Information sourced from: ${selectedFile}</p>`;
+                    document.getElementById('llm-response').appendChild(metadataDiv);
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    document.getElementById('llm-response').innerHTML = `
+                        <p>I'm sorry, I encountered an error while processing your question. Please try again.</p>
+                        <p class="error-details">${error.message}</p>
+                    `;
+                } finally {
+                    // Hide loader
+                    document.getElementById('loader').style.display = 'none';
                 }
             });
-        });
-        
-        // Dashboard card click
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const category = card.getAttribute('data-category');
-                console.log(`Loading category from card: ${category}`);
-                
-                // Activate the corresponding nav item
-                navItems.forEach(item => {
-                    if (item.getAttribute('data-category') === category) {
-                        item.click();
+            
+            // Function to determine the most relevant file using LLM
+            async function determineRelevantFile(question, files) {
+                try {
+                    // First LLM call to determine which file to use
+                    const response = await websim.chat.completions.create({
+                        messages: [
+                            {
+                                role: "system",
+                                content: `You are a horse information specialist. Your task is to determine which JSON file from our horse database is most relevant to the user's question. Only respond with the filename that is most appropriate - no other text.
+                                
+Available files:
+- horse_anatomy.json: Contains information about horse body structure, skeletal system, muscles, measurements, internal systems, and proportions.
+- horse_behavior.json: Contains information about horse movements, natural behaviors, communication, and cognitive abilities.
+- horse_breeds.json: Contains information about different horse breeds, their origins, characteristics, and uses.
+- horse_colors.json: Contains information about horse coat colors, markings, patterns, and genetic information.
+- horse_mythology.json: Contains information about fictional and mythological horses from various cultures.
+- horse_visualization.json: Contains information about representing horses in 2D, 3D, animation, and design applications.`
+                            },
+                            {
+                                role: "user",
+                                content: question
+                            }
+                        ]
+                    });
+                    
+                    const selectedFile = response.content.trim();
+                    
+                    // Validate that the response is one of our files
+                    if (!files.includes(selectedFile)) {
+                        throw new Error(`Invalid file selection: ${selectedFile}`);
                     }
-                });
-            });
-        });
-        
-        // Filter drawer
-        filterToggle.addEventListener('click', () => {
-            filterDrawer.classList.add('active');
-        });
-        
-        filterDrawerClose.addEventListener('click', () => {
-            filterDrawer.classList.remove('active');
-        });
-        
-        // Theme toggle (dark/light mode)
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            themeToggle.querySelector('i').classList.toggle('fa-moon');
-            themeToggle.querySelector('i').classList.toggle('fa-sun');
-        });
-        
-        // Modal controls
-        function openModal(title, content) {
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-body').innerHTML = content;
-            modalBackdrop.classList.add('active');
-        }
-        
-        function closeModal() {
-            modalBackdrop.classList.remove('active');
-        }
-        
-        modalClose.addEventListener('click', closeModal);
-        modalCancel.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', (e) => {
-            if (e.target === modalBackdrop) {
-                closeModal();
+                    
+                    return selectedFile;
+                } catch (error) {
+                    console.error('Error determining relevant file:', error);
+                    throw error;
+                }
             }
-        });
-        
-        // Content tabs
-        contentTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                contentTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                const tabId = tab.getAttribute('data-tab');
-                tabContents.forEach(content => {
-                    content.classList.remove('active');
-                });
-                document.getElementById(`${tabId}-tab`).classList.add('active');
-            });
-        });
-        
-        // Filter actions
-        filterReset.addEventListener('click', () => {
-            document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
-                checkbox.checked = true;
-            });
-        });
-        
-        filterApply.addEventListener('click', () => {
-            filterDrawer.classList.remove('active');
-            // Here we would apply the selected filters
-            console.log('Applying filters');
             
-            // This would be replaced with actual filter application
-            const selectedCategories = [];
-            document.querySelectorAll('.filter-checkbox:checked').forEach(checkbox => {
-                selectedCategories.push(checkbox.id.replace('filter-', ''));
-            });
-            console.log('Selected categories:', selectedCategories);
-        });
+            // Function to extract relevant content and generate answer using LLM
+            async function generateAnswer(question, selectedFile) {
+                try {
+                    // For a real implementation, we would fetch the content of the selected file
+                    // But for this demo, we'll simulate having the content
+                    
+                    // Second LLM call to generate the answer using the selected file
+                    const response = await websim.chat.completions.create({
+                        messages: [
+                            {
+                                role: "system",
+                                content: `You are a horse information specialist with access to a database of horse information. A user has asked a question about horses, and we've determined that the file "${selectedFile}" is most relevant to their query.
 
-        // Load data functions
-        async function loadHorseData(category) {
-            try {
-                const response = await fetch(`/${category}.json`);
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error(`Error loading ${category} data:`, error);
-                return null;
+Based on your knowledge of horses and the relevant section of our database, provide a comprehensive answer to the user's question. You can use HTML to format your response nicely, and you can include JavaScript if you want to create interactive elements.
+
+Feel free to organize your answer with headings, lists, and other HTML elements to make it clear and engaging. If appropriate, you can create simple visualizations or interactive components using JavaScript.
+
+If the question can't be answered with the available information, acknowledge this and provide the most helpful response you can based on your general knowledge.`
+                            },
+                            {
+                                role: "user",
+                                content: `Question: ${question}
+
+For this simulation, pretend you have access to the content of ${selectedFile} and are able to extract the relevant information to answer the question.`
+                            }
+                        ]
+                    });
+                    
+                    return response.content;
+                } catch (error) {
+                    console.error('Error generating answer:', error);
+                    throw error;
+                }
             }
-        }
-        
-        // Example loading and displaying data
-        function displayData(data, category) {
-            // This function would be customized for each data type
-            console.log(`Displaying ${category} data:`, data);
-            
-            // This would be replaced with actual data rendering
-            // based on the specific JSON structure
-        }
-        
-        // Search functionality
-        const searchInput = document.querySelector('.search-input');
-        
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            console.log(`Searching for: ${searchTerm}`);
-            
-            // This would be replaced with actual search implementation
-            // searching across all data categories
-            if (searchTerm.length >= 3) {
-                // Perform search
-            }
+
+            // In a real implementation, we would fetch the JSON files here
+            // For this demo, we're simulating having access to them
         });
-        
-        // Initialize the app
-        function initApp() {
-            // Load initial data
-            console.log('Initializing application...');
-        }
-        
-        // Start the application
-        initApp();
     </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
