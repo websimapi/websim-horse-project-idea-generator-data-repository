@@ -2,128 +2,697 @@
   "metadata": {
     "description": "Comprehensive information about horse coat colors, patterns, and markings",
     "category": "Equine Information",
-    "version": "1.0"
+    "version": "1.2"
   },
   "base_colors": [
     {
       "name": "Bay",
       "description": "Brown body with black points (mane, tail, lower legs, ear edges)",
-      "genetics": "Genetically a black horse with the agouti gene that restricts black pigment",
-      "variants": ["Light bay", "Blood bay", "Dark bay", "Mahogany bay"],
-      "common_breeds": ["Thoroughbred", "Quarter Horse", "Arabian", "Morgan"],
+      "genetics": {
+        "genetic_basis": "Genetically a black horse (E) with the agouti gene (A) that restricts black pigment to the points",
+        "inheritance": "Agouti (A) is dominant to non-agouti (a). Requires at least one dominant Extension (E) allele",
+        "notation": "E_A_ (where _ indicates either dominant or recessive allele can be present)"
+      },
+      "variants": [
+        {
+          "name": "Light bay",
+          "description": "Yellow-tan to light brown body with black points",
+          "image_reference": "light_bay_horse.png"
+        },
+        {
+          "name": "Blood bay",
+          "description": "Rich, reddish brown body with black points",
+          "image_reference": "blood_bay_horse.png"
+        },
+        {
+          "name": "Dark bay",
+          "description": "Dark brown body with black points, can be mistaken for black",
+          "image_reference": "dark_bay_horse.png"
+        },
+        {
+          "name": "Mahogany bay",
+          "description": "Very dark reddish-brown, nearly brown body with black points",
+          "image_reference": "mahogany_bay_horse.png"
+        },
+        {
+          "name": "Wild bay",
+          "description": "Bay with minimal black on the legs, often only on fetlocks",
+          "genetic_note": "Caused by a different form of the agouti gene (A+)",
+          "image_reference": "wild_bay_horse.png"
+        }
+      ],
+      "common_breeds": ["Thoroughbred", "Quarter Horse", "Arabian", "Morgan", "Standardbred", "Cleveland Bay"],
+      "historical_significance": "One of the most common and historically favored colors for cavalry and working horses",
+      "identification_tips": "Look for the sharp demarcation between the body color and black points. Dark bays require close inspection of the flanks or muzzle in sunlight to distinguish from true black",
       "image_reference": "bay_horse.png"
     },
     {
       "name": "Black",
-      "description": "True black coat with no brown areas",
-      "genetics": "Caused by the recessive black gene",
-      "variants": ["Faded black", "True black", "Coal black"],
-      "common_breeds": ["Friesian", "Percheron", "Morgan", "Andalusian"],
+      "description": "True black coat with no brown areas, may sunbleach to brownish in some horses",
+      "genetics": {
+        "genetic_basis": "Produced by the dominant Extension gene (E) without the Agouti (A) gene that would restrict black pigment",
+        "inheritance": "Requires at least one dominant Extension (E) allele and two recessive agouti (a) alleles",
+        "notation": "E_aa"
+      },
+      "variants": [
+        {
+          "name": "Faded black",
+          "description": "Black that appears brownish due to sun exposure or nutritional factors",
+          "note": "Not a genetic variation but an environmental effect",
+          "image_reference": "faded_black_horse.png"
+        },
+        {
+          "name": "True black",
+          "description": "Deep, non-fading black with no brown tones",
+          "image_reference": "true_black_horse.png"
+        },
+        {
+          "name": "Coal black",
+          "description": "Intense black with bluish highlights, particularly glossy",
+          "image_reference": "coal_black_horse.png"
+        }
+      ],
+      "common_breeds": ["Friesian", "Percheron", "Morgan", "Andalusian", "Mustang", "Tennessee Walking Horse"],
+      "historical_significance": "Traditionally favored for funeral horses, formal occasions, and by some military units",
+      "identification_tips": "True blacks have black skin and dark eyes. Check muzzle, flanks, and around eyes in bright sunlight for any brownish tint that would indicate a very dark bay instead of true black",
+      "care_notes": "More susceptible to heat absorption in hot climates; may sunbleach requiring special grooming products to maintain color",
       "image_reference": "black_horse.png"
     },
     {
       "name": "Chestnut",
-      "description": "Reddish-brown coat with no black points, mane and tail same color as body or flaxen",
-      "genetics": "Absence of the black factor, recessive to black",
-      "variants": ["Sorrel", "Liver chestnut", "Light chestnut", "Flaxen chestnut"],
-      "common_breeds": ["Suffolk Punch", "Haflinger", "Belgian Draft", "Thoroughbred"],
+      "description": "Reddish-brown coat with mane and tail the same color as body or lighter (flaxen), no black points",
+      "genetics": {
+        "genetic_basis": "Caused by the recessive extension gene (e), which prevents black pigment expression",
+        "inheritance": "Requires two recessive extension alleles (e); agouti gene has no visible effect",
+        "notation": "ee (A_ or aa, agouti status irrelevant)"
+      },
+      "variants": [
+        {
+          "name": "Sorrel",
+          "description": "Light, coppery red shade of chestnut, commonly used term in Western breeds",
+          "note": "Often used interchangeably with chestnut in some regions and breeds",
+          "image_reference": "sorrel_horse.png"
+        },
+        {
+          "name": "Liver chestnut",
+          "description": "Dark, purplish or chocolate brown shade of chestnut",
+          "image_reference": "liver_chestnut_horse.png"
+        },
+        {
+          "name": "Light chestnut",
+          "description": "Pale reddish or golden shade of chestnut",
+          "image_reference": "light_chestnut_horse.png"
+        },
+        {
+          "name": "Flaxen chestnut",
+          "description": "Any shade of chestnut with distinctly lighter mane and tail",
+          "genetic_note": "Flaxen trait is separately inherited and not fully understood genetically",
+          "image_reference": "flaxen_chestnut_horse.png"
+        }
+      ],
+      "common_breeds": ["Suffolk Punch", "Haflinger", "Belgian Draft", "Thoroughbred", "Quarter Horse"],
+      "historical_significance": "The most widespread color in some ancient breeding traditions; Suffolk Punch draft horses are exclusively chestnut",
+      "identification_tips": "No black hairs anywhere on the body; even the darkest chestnuts have reddish, not black, manes and tails. Legs are the same color as the body or slightly darker but never true black",
       "image_reference": "chestnut_horse.png"
     },
     {
       "name": "Gray",
-      "description": "Born dark and progressively lightens with age",
-      "genetics": "Dominant gene that causes progressive depigmentation",
-      "variants": ["Steel gray", "Dapple gray", "Fleabitten gray", "White gray"],
-      "common_breeds": ["Lipizzaner", "Andalusian", "Percheron", "Arabian"],
+      "description": "Born dark and progressively lightens with age, often developing dapples during the graying process",
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Gray gene (G) that causes progressive depigmentation of the hair",
+        "inheritance": "Dominant trait - only one copy needed to cause graying; acts on any base color",
+        "notation": "G_ (single dominant gene regardless of other color genes)",
+        "progression": "All gray horses are born a different color (black, bay, chestnut, etc.) and gray with age"
+      },
+      "variants": [
+        {
+          "name": "Steel gray",
+          "description": "Early stage of graying with mixture of colored and white hairs, giving a steely appearance",
+          "age_relation": "Usually younger horses in early graying stages",
+          "image_reference": "steel_gray_horse.png"
+        },
+        {
+          "name": "Dapple gray",
+          "description": "Gray with distinct circular patterns of lighter and darker hairs",
+          "age_relation": "Middle stage of graying process, highly prized pattern",
+          "image_reference": "dapple_gray_horse.png"
+        },
+        {
+          "name": "Fleabitten gray",
+          "description": "Nearly white coat with small, red or black flecks throughout",
+          "genetic_note": "Caused by small areas of resistant pigment cells",
+          "age_relation": "Usually appears in older gray horses after initial graying",
+          "image_reference": "fleabitten_gray_horse.png"
+        },
+        {
+          "name": "White gray",
+          "description": "Final stage where horse appears completely white, though skin remains dark",
+          "age_relation": "Usually older horses in final graying stage",
+          "image_reference": "white_gray_horse.png"
+        },
+        {
+          "name": "Rose gray",
+          "description": "Gray process acting on a chestnut base, giving a pinkish or rosy appearance",
+          "age_relation": "Early to middle stage of graying on chestnut base",
+          "image_reference": "rose_gray_horse.png"
+        }
+      ],
+      "common_breeds": ["Lipizzaner", "Andalusian", "Percheron", "Arabian", "Irish Draught", "Thoroughbred"],
+      "historical_significance": "Traditionally favored for military officers' mounts and parade horses; Lipizzaners are born dark and selected for their ability to turn pure white",
+      "health_considerations": "Gray horses have higher incidence of melanoma, especially under the tail and around the anus, eyes, and genitals",
+      "identification_tips": "Gray horses always have dark skin (except under white markings), dark eyes, and are born a darker color. Check the muzzle - if skin is pink, it's white, not gray",
       "image_reference": "gray_horse.png"
     },
     {
       "name": "Palomino",
       "description": "Golden coat with white or flaxen mane and tail",
-      "genetics": "Chestnut base with one cream dilution gene",
-      "variants": ["Golden palomino", "Chocolate palomino", "Pearl palomino"],
-      "common_breeds": ["Quarter Horse", "Tennessee Walking Horse", "Morgan"],
+      "genetics": {
+        "genetic_basis": "Chestnut base (ee) with one cream dilution gene (CCr)",
+        "inheritance": "Requires two recessive extension alleles (ee) and one cream gene (CCr)",
+        "notation": "ee CCrcr",
+        "note": "Breeding two palominos has 25% chance of cremello, 50% palomino, 25% chestnut"
+      },
+      "variants": [
+        {
+          "name": "Golden palomino",
+          "description": "Ideal golden color similar to a newly minted gold coin",
+          "image_reference": "golden_palomino_horse.png"
+        },
+        {
+          "name": "Light palomino",
+          "description": "Lighter cream to white-gold color, sometimes called isabela in some countries",
+          "image_reference": "light_palomino_horse.png"
+        },
+        {
+          "name": "Chocolate palomino",
+          "description": "Darker, bronze or chocolate shade with flaxen mane and tail",
+          "note": "Sometimes confused with silver dapple on black base",
+          "image_reference": "chocolate_palomino_horse.png"
+        },
+        {
+          "name": "Pearl palomino",
+          "description": "Palomino with pearl gene giving a metallic sheen",
+          "genetic_note": "Pearl is a separate dilution gene with subtle effects",
+          "image_reference": "pearl_palomino_horse.png"
+        }
+      ],
+      "shade_variations": "Palomino can range from light cream (almost approaching cremello) to deep, rich gold",
+      "common_breeds": ["Quarter Horse", "Tennessee Walking Horse", "Morgan", "American Saddlebred", "Welsh Pony"],
+      "historical_significance": "Highly prized in Spanish colonial traditions; popularized in America through film and television with horses like Roy Rogers' Trigger",
+      "registration_requirements": "Some color breed registries require specific shade ranges and minimal dark skin for palomino registration",
+      "identification_tips": "True palominos have dark skin (except under white markings) and dark eyes. Main body color should be distinctly golden, not cream or white",
       "image_reference": "palomino_horse.png"
     },
     {
       "name": "Buckskin",
-      "description": "Tan or gold body with black points",
-      "genetics": "Bay base with one cream dilution gene",
-      "variants": ["Golden buckskin", "Sooty buckskin", "Silvery buckskin"],
-      "common_breeds": ["Quarter Horse", "Mustang", "Morgan"],
+      "description": "Tan or gold body with black points (mane, tail, lower legs)",
+      "genetics": {
+        "genetic_basis": "Bay base (E_A_) with one cream dilution gene (CCr)",
+        "inheritance": "Requires dominant extension (E), dominant agouti (A), and one cream gene (CCr)",
+        "notation": "E_A_ CCrcr"
+      },
+      "variants": [
+        {
+          "name": "Golden buckskin",
+          "description": "Clear golden body color with distinct black points",
+          "image_reference": "golden_buckskin_horse.png"
+        },
+        {
+          "name": "Sooty buckskin",
+          "description": "Buckskin with sooty or smutty overlay darkening portions of the coat",
+          "genetic_note": "Sooty factor is not well understood genetically",
+          "image_reference": "sooty_buckskin_horse.png"
+        },
+        {
+          "name": "Silvery buckskin",
+          "description": "Lighter, silvery-tan shade of buckskin",
+          "image_reference": "silvery_buckskin_horse.png"
+        },
+        {
+          "name": "Buttermilk buckskin",
+          "description": "Pale creamy-yellow buckskin, lighter than typical",
+          "image_reference": "buttermilk_buckskin_horse.png"
+        }
+      ],
+      "common_breeds": ["Quarter Horse", "Mustang", "Morgan", "Norwegian Fjord", "Spanish Mustang"],
+      "historical_significance": "Traditional color of many cavalry mounts and war horses; valued in Western riding traditions",
+      "distinguishing_from_dun": "Often confused with dun, but buckskins lack the primitive markings (dorsal stripe, leg barring) unless they also carry the dun gene",
       "image_reference": "buckskin_horse.png"
     },
     {
       "name": "Dun",
       "description": "Tan body with primitive markings (dorsal stripe, leg barring, shoulder stripe)",
-      "genetics": "Caused by the dun dilution gene",
-      "variants": ["Red dun", "Yellow dun", "Grullo (blue dun)"],
-      "common_breeds": ["Norwegian Fjord", "Mustang", "Quarter Horse"],
+      "genetics": {
+        "genetic_basis": "Caused by the dun dilution gene (D) which dilutes the body color but leaves the primitive markings",
+        "inheritance": "Dominant trait - one copy produces full dun effect",
+        "notation": "D_ (can act on any base color)"
+      },
+      "primitive_markings": [
+        {
+          "name": "Dorsal stripe",
+          "description": "Dark line running down the spine from mane to tail"
+        },
+        {
+          "name": "Leg barring",
+          "description": "Horizontal dark stripes on the legs, particularly visible on the forearms"
+        },
+        {
+          "name": "Shoulder stripe",
+          "description": "Dark transverse stripe across the withers/shoulders, sometimes called a cross"
+        },
+        {
+          "name": "Ear tips",
+          "description": "Dark edging or tips on the ears"
+        },
+        {
+          "name": "Cobwebbing",
+          "description": "Dark lines on the forehead, also called spider marks"
+        }
+      ],
+      "variants": [
+        {
+          "name": "Red dun",
+          "description": "Dun dilution on a chestnut base; produces yellowish or reddish body with red primitive markings",
+          "genetic_notation": "ee D_",
+          "image_reference": "red_dun_horse.png"
+        },
+        {
+          "name": "Yellow dun (classic dun)",
+          "description": "Dun dilution on a bay base; produces tan body with black primitive markings",
+          "genetic_notation": "E_A_ D_",
+          "image_reference": "yellow_dun_horse.png"
+        },
+        {
+          "name": "Grullo/Grulla",
+          "description": "Dun dilution on a black base; produces smoky or mouse-colored body with black primitive markings",
+          "genetic_notation": "E_aa D_",
+          "image_reference": "grullo_horse.png"
+        },
+        {
+          "name": "Dunalino",
+          "description": "Dun and cream dilutions on a chestnut base; palomino with dun markings",
+          "genetic_notation": "ee CCrcr D_",
+          "image_reference": "dunalino_horse.png"
+        },
+        {
+          "name": "Dunskin",
+          "description": "Dun and cream dilutions on a bay base; buckskin with dun markings",
+          "genetic_notation": "E_A_ CCrcr D_",
+          "image_reference": "dunskin_horse.png"
+        }
+      ],
+      "common_breeds": ["Norwegian Fjord", "Mustang", "Quarter Horse", "Highland Pony", "Przewalski's Horse"],
+      "historical_significance": "One of the oldest equine colors; wild horse populations typically display dun coloration with primitive markings for camouflage",
+      "identification_tips": "Always look for the dorsal stripe and other primitive markings; dun dilutes the body color but leaves points and primitive markings dark",
       "image_reference": "dun_horse.png"
     },
     {
       "name": "Roan",
-      "description": "Mixture of white hairs with base color, head and legs typically remain solid",
-      "genetics": "Caused by the roan gene",
-      "variants": ["Blue roan (black base)", "Red roan (chestnut base)", "Bay roan (bay base)"],
-      "common_breeds": ["Belgian Draft", "Quarter Horse", "Welsh Pony"],
+      "description": "Mixture of white hairs evenly intermingled with base color hairs throughout the body, head and legs typically remain solid",
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Roan gene (Rn)",
+        "inheritance": "Simple dominant, though there is evidence of lethality in homozygous form in some lines",
+        "notation": "Rn_ (can appear on any base color)",
+        "note": "True roan is present at birth and doesn't change with age (unlike gray)"
+      },
+      "variants": [
+        {
+          "name": "Blue roan",
+          "description": "Roan pattern on black base coat, giving a blue-gray appearance",
+          "genetic_notation": "E_aa Rn_",
+          "image_reference": "blue_roan_horse.png"
+        },
+        {
+          "name": "Red roan",
+          "description": "Roan pattern on chestnut base coat, giving a strawberry or pinkish appearance",
+          "genetic_notation": "ee Rn_",
+          "image_reference": "red_roan_horse.png"
+        },
+        {
+          "name": "Bay roan",
+          "description": "Roan pattern on bay base coat, bay points remain dark",
+          "genetic_notation": "E_A_ Rn_",
+          "image_reference": "bay_roan_horse.png"
+        },
+        {
+          "name": "Strawberry roan",
+          "description": "Term sometimes used interchangeably with red roan, or for a lighter variant",
+          "image_reference": "strawberry_roan_horse.png"
+        }
+      ],
+      "identifying_characteristics": [
+        "Solid-colored head",
+        "Minimal roaning on lower legs",
+        "White hairs don't increase with age",
+        "More prominent in summer coat, may appear darker in winter coat",
+        "Often shows 'corn marks' (solid spots) from previous injuries where white hairs don't grow"
+      ],
+      "common_breeds": ["Belgian Draft", "Quarter Horse", "Welsh Pony", "Paso Fino", "Percheron"],
+      "distinguishing_from_gray": "Roans keep their pattern throughout life and are born roaned; grays progressively lighten and are born a solid color",
       "image_reference": "roan_horse.png"
     },
     {
       "name": "Cream",
-      "description": "Creamy coat with pink skin and blue eyes",
-      "genetics": "Double cream dilution gene on any base color",
-      "variants": ["Cremello", "Perlino", "Smoky cream"],
-      "common_breeds": ["Quarter Horse", "Icelandic", "Akhal-Teke"],
+      "description": "Creamy coat with pink skin and blue eyes, results from double cream dilution",
+      "genetics": {
+        "genetic_basis": "Caused by two cream dilution genes (CCrCCr) acting on base colors",
+        "inheritance": "Must inherit one cream gene from each parent",
+        "notation": "CCrCCr (on various base colors)"
+      },
+      "variants": [
+        {
+          "name": "Cremello",
+          "description": "Double cream dilution on chestnut base; cream-colored coat with pink skin and blue eyes",
+          "genetic_notation": "ee CCrCCr",
+          "image_reference": "cremello_horse.png"
+        },
+        {
+          "name": "Perlino",
+          "description": "Double cream dilution on bay base; slightly darker cream with reddish points, pink skin, blue eyes",
+          "genetic_notation": "E_A_ CCrCCr",
+          "image_reference": "perlino_horse.png"
+        },
+        {
+          "name": "Smoky cream",
+          "description": "Double cream dilution on black base; smoky cream color with pink skin and blue eyes",
+          "genetic_notation": "E_aa CCrCCr",
+          "image_reference": "smoky_cream_horse.png"
+        }
+      ],
+      "common_breeds": ["Quarter Horse", "Icelandic", "Akhal-Teke", "Andalusian", "Welsh Pony"],
+      "historical_significance": "Often called 'white horses' historically, though they are genetically different from true white",
+      "health_considerations": "Pink skin requires sun protection; blue eyes may be more sensitive to bright light",
+      "identification_tips": "All double dilutes have pink skin and blue or bluish-green eyes, distinguishing them from white horses with dark skin and dark eyes",
       "image_reference": "cream_horse.png"
+    },
+    {
+      "name": "Champagne",
+      "description": "Dilution that lightens coat color and produces golden body tones with mottled skin and amber eyes",
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Champagne gene (CH)",
+        "inheritance": "Dominant trait - one copy produces full champagne effect",
+        "notation": "CH_ (can act on any base color)"
+      },
+      "characteristics": [
+        "Mottled skin, especially around eyes, muzzle and genitals",
+        "Amber or hazel eyes, often changing from blue at birth",
+        "Lightened coat with metallic sheen",
+        "Light-colored hooves"
+      ],
+      "variants": [
+        {
+          "name": "Classic Champagne",
+          "description": "Champagne on chestnut base; gold coat with similar mane and tail",
+          "genetic_notation": "ee CH_",
+          "image_reference": "classic_champagne_horse.png"
+        },
+        {
+          "name": "Amber Champagne",
+          "description": "Champagne on bay base; tan body with chocolate points",
+          "genetic_notation": "E_A_ CH_",
+          "image_reference": "amber_champagne_horse.png"
+        },
+        {
+          "name": "Sable Champagne",
+          "description": "Champagne on black base; chocolate to taupe color",
+          "genetic_notation": "E_aa CH_",
+          "image_reference": "sable_champagne_horse.png"
+        },
+        {
+          "name": "Gold Champagne",
+          "description": "Another term sometimes used for classic champagne",
+          "image_reference": "gold_champagne_horse.png"
+        }
+      ],
+      "common_breeds": ["Tennessee Walking Horse", "Quarter Horse", "Missouri Fox Trotter", "American Saddlebred"],
+      "distinguishing_characteristics": "Mottled skin is the definitive characteristic of champagne; often confused with palomino or buckskin but has different skin and eye color",
+      "foal_characteristics": "Born with pink skin and blue eyes that change to mottled skin and amber eyes with maturity",
+      "image_reference": "champagne_horse.png"
     }
   ],
   "patterns": [
     {
       "name": "Tobiano",
-      "description": "White crossing the topline, legs usually white, head usually solid",
-      "genetics": "Dominant pattern gene",
+      "description": "White pattern that typically crosses the topline between withers and tail, with white legs and sharply defined vertical edges",
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Tobiano gene (TO)",
+        "inheritance": "Simple dominant - one copy produces pattern",
+        "notation": "TO_",
+        "chromosome": "Located on equine chromosome 3"
+      },
       "characteristics": [
-        "Regular, oval-shaped markings",
         "White crossing the back between withers and tail",
-        "Sharp, distinct edges"
+        "Regular, oval-shaped markings with vertical orientation",
+        "Four white legs common",
+        "Head usually dark with normal facial markings",
+        "Sharp, distinct borders between colors",
+        "Tail often bicolored"
       ],
+      "variants": [
+        {
+          "name": "Minimal tobiano",
+          "description": "Minimal white, often just crossing the topline and white on legs",
+          "image_reference": "minimal_tobiano.png"
+        },
+        {
+          "name": "Classic tobiano",
+          "description": "Roughly equal amounts of white and base color",
+          "image_reference": "classic_tobiano.png"
+        },
+        {
+          "name": "Medicine hat",
+          "description": "Mostly white with color just on the ears and poll area, chest and flank shield",
+          "historical_note": "Considered sacred by some Native American tribes",
+          "image_reference": "medicine_hat_tobiano.png"
+        }
+      ],
+      "common_breeds": ["Paint Horse", "Pinto", "Shetland Pony", "Gypsy Vanner", "Spotted Saddle Horse"],
+      "distinguishing_from_overo": "Tobiano consistently has white crossing the topline and has smooth, oval-shaped markings with clean edges",
       "image_reference": "tobiano_pattern.png"
     },
     {
       "name": "Overo",
-      "description": "White does not usually cross the topline, jagged edges to markings",
-      "genetics": "Several different genetic patterns including frame, splash, and sabino",
-      "characteristics": [
-        "Irregular, splashy or jagged markings",
-        "White usually does not cross the back",
-        "Often has white face markings"
+      "description": "A collective term for several genetically distinct white spotting patterns that typically don't cross the topline, with irregular edges and face markings",
+      "subcategories": [
+        {
+          "name": "Frame Overo",
+          "description": "White patterning appears to be 'framed' by color around the edges of the body",
+          "genetics": {
+            "genetic_basis": "Caused by the Lethal White Overo gene (O)",
+            "inheritance": "Heterozygous (O/o) produces pattern, homozygous (O/O) fatal - produces lethal white foal syndrome",
+            "notation": "Oo",
+            "chromosome": "Located on equine chromosome 17"
+          },
+          "characteristics": [
+            "White does not usually cross the topline",
+            "White usually centered on body with colored 'frame' around edges",
+            "At least one and often all four legs are dark",
+            "Bold white head markings common, often blue eyes",
+            "Jagged, horizontally oriented edges to white patches"
+          ],
+          "health_considerations": "Breeding two frame overos has 25% chance of lethal white foal syndrome (OLWS)",
+          "image_reference": "frame_overo.png"
+        },
+        {
+          "name": "Splashed White",
+          "description": "Looks like the horse has been dipped in white paint from below, with white on the legs and face",
+          "genetics": {
+            "genetic_basis": "Several different mutations can cause splashed white patterns",
+            "inheritance": "Dominant with variable expression",
+            "notation": "SW1, SW2, SW3, etc. (multiple variants)",
+            "chromosome": "Located on several different chromosomes depending on variant"
+          },
+          "characteristics": [
+            "White begins at the underside and 'splashes' upward",
+            "Bottom-heavy pattern with legs, belly, and lower body white",
+            "White face, often with blue eyes",
+            "Relatively crisp edges to white areas"
+          ],
+          "image_reference": "splashed_white.png"
+        },
+        {
+          "name": "Sabino",
+          "description": "White spotting with roaned edges, often with white extending up the legs and face",
+          "genetics": {
+            "genetic_basis": "Complex pattern with multiple genetic factors, one identified as Sabino-1 (SB1)",
+            "inheritance": "Sabino-1 is dominant; homozygous produces more white",
+            "notation": "SB1_ (but many sabino-patterned horses don't carry SB1)",
+            "chromosome": "Sabino-1 is on equine chromosome 3"
+          },
+          "characteristics": [
+            "White extending up legs (high stockings or socks)",
+            "White belly spots common",
+            "Roaned or 'lacy' edges at borders of white areas",
+            "White chin spots and blaze common",
+            "Sometimes includes flecks or roaning throughout coat"
+          ],
+          "image_reference": "sabino.png"
+        }
       ],
+      "common_breeds": ["Paint Horse", "Pinto", "Thoroughbred", "Clydesdale", "Arabian"],
+      "distinguishing_from_tobiano": "Overo patterns typically don't cross the topline, have irregular edges, and include bold face white",
       "image_reference": "overo_pattern.png"
     },
     {
       "name": "Appaloosa",
-      "description": "Spotted pattern with several variable characteristics",
-      "genetics": "Complex pattern involving several genes",
-      "variants": ["Leopard", "Blanket", "Snowflake", "Frost", "Varnish roan"],
-      "characteristics": [
-        "Mottled skin",
-        "White sclera around eyes",
-        "Striped hooves",
-        "Sparse mane and tail"
+      "description": "Complex spotting pattern with several distinctive characteristics and variants",
+      "genetics": {
+        "genetic_basis": "Complex pattern involving the Leopard Complex gene (LP) and pattern genes (PATN)",
+        "inheritance": "LP is incomplete dominant; pattern genes modify expression",
+        "notation": "LP_ with various PATN genes",
+        "chromosome": "Leopard Complex is on equine chromosome 1"
+      },
+      "identifying_characteristics": [
+        {
+          "name": "Mottled skin",
+          "description": "Pink and black speckled skin, particularly around muzzle, eyes, genitals"
+        },
+        {
+          "name": "White sclera",
+          "description": "Visible white around the eyes (most horses have dark sclera)"
+        },
+        {
+          "name": "Striped hooves",
+          "description": "Vertical dark and light stripes on hooves, even on solid-colored legs"
+        },
+        {
+          "name": "Sparse mane and tail",
+          "description": "Thinner, shorter hair in mane and tail compared to other breeds"
+        }
       ],
+      "variants": [
+        {
+          "name": "Leopard",
+          "description": "White body with colored spots distributed over entire body",
+          "genetic_note": "Typically LP/LP with PATN genes",
+          "image_reference": "leopard_appaloosa.png"
+        },
+        {
+          "name": "Blanket",
+          "description": "White patch over hips/loin area, often with spots within the white",
+          "variations": [
+            {
+              "name": "Blanket with spots",
+              "description": "White blanket with colored spots within it",
+              "image_reference": "blanket_with_spots.png"
+            },
+            {
+              "name": "Blanket without spots",
+              "description": "Solid white blanket over hips",
+              "image_reference": "blanket_without_spots.png"
+            }
+          ],
+          "image_reference": "blanket_appaloosa.png"
+        },
+        {
+          "name": "Snowflake",
+          "description": "Dark body with white flecks or small spots scattered throughout",
+          "image_reference": "snowflake_appaloosa.png"
+        },
+        {
+          "name": "Frost",
+          "description": "Scattered white hairs intermixed with base color, similar to roan but not uniform",
+          "image_reference": "frost_appaloosa.png"
+        },
+        {
+          "name": "Varnish roan",
+          "description": "Progressive roaning that spreads across body while leaving dark 'varnish marks' on bony prominences",
+          "age_factors": "Often becomes more pronounced with age",
+          "image_reference": "varnish_roan_appaloosa.png"
+        },
+        {
+          "name": "Few spot leopard",
+          "description": "Almost entirely white with minimal colored spots, often just on knees, hocks, and base of ears",
+          "genetic_note": "Typically homozygous LP/LP with specific pattern genes",
+          "image_reference": "few_spot_leopard.png"
+        }
+      ],
+      "common_breeds": ["Appaloosa", "Pony of the Americas", "Knabstrupper", "Noriker", "Colorado Ranger"],
+      "historical_significance": "Developed by the Nez Perce tribe for its camouflage value and distinctive appearance",
+      "age_related_changes": "Many Appaloosa patterns change with age, often showing more white or visible roaning",
       "image_reference": "appaloosa_pattern.png"
     },
     {
       "name": "Brindle",
-      "description": "Vertical stripes of varying colors",
-      "genetics": "Rare pattern, genetic basis not fully understood",
-      "characteristics": [
-        "Vertical striping pattern",
-        "Can appear in various base colors",
-        "Very rare in horses"
+      "description": "Uncommon pattern of vertical or slightly slanted stripes of varying colors",
+      "genetics": {
+        "genetic_basis": "Multiple possible causes, including chimerism, somatic mutation, and the rare dominant Brindle 1 (BR1) gene",
+        "inheritance": "Varies depending on cause; true genetic brindle is dominant",
+        "notation": "BR1_ for genetic brindle; other types have different origins",
+        "rarity": "One of the rarest color patterns in horses"
+      },
+      "variants": [
+        {
+          "name": "True (genetic) brindle",
+          "description": "Heritable pattern of vertical stripes on body",
+          "image_reference": "true_brindle.png"
+        },
+        {
+          "name": "Chimeric brindle",
+          "description": "Stripes caused by two embryos fusing in early development, creating mixed cellular populations",
+          "inheritance": "Not heritable",
+          "image_reference": "chimeric_brindle.png"
+        },
+        {
+          "name": "Somatic mutation brindle",
+          "description": "Stripes caused by mutations occurring during embryonic development",
+          "inheritance": "Not heritable",
+          "image_reference": "somatic_brindle.png"
+        }
+      ],
+      "common_breeds": ["Extremely rare in all breeds", "Slightly more common in Quarter Horses and Mustangs"],
+      "historical_examples": [
+        "Dunbars Gold (Quarter Horse stallion, likely BR1 carrier)",
+        "Reindeer (historical British brindle horse documented in 1800s)"
       ],
       "image_reference": "brindle_pattern.png"
+    },
+    {
+      "name": "Dominant White",
+      "description": "Pattern producing white coat with underlying pink skin, caused by several different mutations",
+      "genetics": {
+        "genetic_basis": "Multiple forms of the dominant white gene (W), numbered W1 through W27+",
+        "inheritance": "Dominant, some variants may be lethal in homozygous form",
+        "notation": "W1_, W2_, etc. (each family has its own mutation)",
+        "chromosome": "Located on equine chromosome 3, KIT gene"
+      },
+      "characteristics": [
+        "Pink skin under white hair (unlike gray horses, which have dark skin)",
+        "Dark eyes (usually)",
+        "Born white and remains white throughout life",
+        "Variable expression - can range from completely white to having colored patches"
+      ],
+      "variants": [
+        {
+          "name": "W1 (Purebred White Arabian)",
+          "description": "Original dominant white variant discovered in Arabians",
+          "image_reference": "w1_dominant_white.png"
+        },
+        {
+          "name": "W2 (Camarillo White)",
+          "description": "Variant found in Camarillo White Horses",
+          "image_reference": "w2_dominant_white.png"
+        },
+        {
+          "name": "W5 (Thoroughbred white)",
+          "description": "White thoroughbred variant stemming from the mare White Beauty",
+          "image_reference": "w5_dominant_white.png"
+        },
+        {
+          "name": "W10 (Standardbred white)",
+          "description": "Variant found in Standardbred pedigrees",
+          "image_reference": "w10_dominant_white.png"
+        },
+        {
+          "name": "W20 (Quarter Horse white)",
+          "description": "White variant found in certain Quarter Horse lines",
+          "image_reference": "w20_dominant_white.png"
+        }
+      ],
+      "progression": "Born white and stays white, unlike gray which is born dark and lightens progressively",
+      "common_breeds": ["Camarillo White Horse", "White Thoroughbreds", "Found in various breeds as separate mutations"],
+      "distinguishing_from_other_white_patterns": "Complete or near-complete white with pink skin from birth, typically dark eyes",
+      "image_reference": "dominant_white_pattern.png"
     }
   ],
   "markings": {
@@ -131,65 +700,298 @@
       {
         "name": "Star",
         "description": "White mark on the forehead",
+        "variations": [
+          {
+            "name": "Small star",
+            "description": "Small, distinct white patch"
+          },
+          {
+            "name": "Irregular star",
+            "description": "Asymmetrical or oddly shaped white mark"
+          },
+          {
+            "name": "Faint star",
+            "description": "Star with scattered white hairs rather than solid white"
+          }
+        ],
         "image_reference": "star_marking.png"
       },
       {
         "name": "Stripe",
         "description": "Narrow white marking running down the face",
+        "variations": [
+          {
+            "name": "Narrow stripe",
+            "description": "Thin, defined line down the face"
+          },
+          {
+            "name": "Broad stripe",
+            "description": "Wider stripe, but not as wide as a blaze"
+          },
+          {
+            "name": "Interrupted stripe",
+            "description": "Stripe that breaks or narrows at some point"
+          }
+        ],
         "image_reference": "stripe_marking.png"
       },
       {
         "name": "Blaze",
         "description": "Wide white marking running down the face",
+        "variations": [
+          {
+            "name": "Full blaze",
+            "description": "Wide marking extending from forehead to muzzle"
+          },
+          {
+            "name": "Irregular blaze",
+            "description": "Blaze with uneven edges or varying width"
+          },
+          {
+            "name": "Tapered blaze",
+            "description": "Blaze that narrows as it extends down the face"
+          }
+        ],
         "image_reference": "blaze_marking.png"
       },
       {
         "name": "Snip",
-        "description": "White mark between the nostrils",
+        "description": "White mark between or on the nostrils",
+        "variations": [
+          {
+            "name": "Small snip",
+            "description": "Small spot between nostrils"
+          },
+          {
+            "name": "Large snip",
+            "description": "Larger white area covering much of muzzle"
+          },
+          {
+            "name": "Connected snip",
+            "description": "Snip that connects to a stripe or blaze"
+          }
+        ],
         "image_reference": "snip_marking.png"
       },
       {
         "name": "Bald Face",
-        "description": "White face that extends beyond the eyes and to the sides",
+        "description": "Extensive white face that extends beyond the eyes and to the sides",
+        "variations": [
+          {
+            "name": "Full bald face",
+            "description": "White covering entire face from forehead to muzzle and extending beyond eyes"
+          },
+          {
+            "name": "Apron face",
+            "description": "Extremely extensive white covering face and jawbones"
+          }
+        ],
         "image_reference": "bald_face_marking.png"
+      },
+      {
+        "name": "Combination markings",
+        "description": "Combinations of the basic face markings",
+        "examples": [
+          {
+            "name": "Star and stripe",
+            "description": "Distinct star connected to a stripe"
+          },
+          {
+            "name": "Star, stripe, and snip",
+            "description": "All three markings, often connected"
+          },
+          {
+            "name": "Interrupted blaze",
+            "description": "Blaze with a break in the middle showing base coat color"
+          }
+        ],
+        "image_reference": "combination_face_markings.png"
       }
     ],
     "leg_markings": [
       {
         "name": "Coronet",
-        "description": "White just above the hoof",
+        "description": "White just above the hoof, extending no more than an inch above the hoof",
+        "variations": [
+          {
+            "name": "Regular coronet",
+            "description": "Even band just above the hoof"
+          },
+          {
+            "name": "Irregular coronet",
+            "description": "Uneven white band around coronary band"
+          },
+          {
+            "name": "Partial coronet",
+            "description": "White marking on only part of the coronary band"
+          }
+        ],
         "image_reference": "coronet_marking.png"
       },
       {
         "name": "Pastern",
-        "description": "White extending from hoof to pastern",
+        "description": "White extending from hoof to pastern joint",
+        "height_reference": "Extends above coronet but stops below fetlock joint",
+        "variations": [
+          {
+            "name": "Low pastern",
+            "description": "White extends just above coronet"
+          },
+          {
+            "name": "High pastern",
+            "description": "White extends to just below fetlock"
+          }
+        ],
         "image_reference": "pastern_marking.png"
       },
       {
         "name": "Sock",
-        "description": "White extending from hoof to ankle",
+        "description": "White extending from hoof to fetlock joint",
+        "height_reference": "Extends up to the fetlock joint but not above it",
+        "variations": [
+          {
+            "name": "Short sock",
+            "description": "White barely reaches fetlock"
+          },
+          {
+            "name": "Full sock",
+            "description": "White completely covers fetlock area"
+          }
+        ],
         "image_reference": "sock_marking.png"
       },
       {
         "name": "Stocking",
-        "description": "White extending from hoof to knee or hock",
+        "description": "White extending from hoof well above fetlock, may reach knee or hock",
+        "height_reference": "Extends above fetlock, potentially to knee/hock or higher",
+        "variations": [
+          {
+            "name": "Half stocking",
+            "description": "White extends midway between fetlock and knee/hock"
+          },
+          {
+            "name": "Full stocking",
+            "description": "White reaches or passes knee/hock"
+          },
+          {
+            "name": "Extended stocking",
+            "description": "White extends above knee/hock onto upper leg"
+          }
+        ],
         "image_reference": "stocking_marking.png"
+      },
+      {
+        "name": "Irregular markings",
+        "description": "Leg markings with irregular edges or patterns",
+        "examples": [
+          {
+            "name": "Ermine marks",
+            "description": "Small black spots within white markings"
+          },
+          {
+            "name": "Bordered markings",
+            "description": "White leg markings with colored border"
+          },
+          {
+            "name": "Lightning marks",
+            "description": "Jagged streaks of white extending up dark leg"
+          }
+        ],
+        "image_reference": "irregular_leg_markings.png"
       }
     ],
     "body_markings": [
       {
         "name": "Dorsal Stripe",
-        "description": "Dark line running along the spine",
+        "description": "Dark line running along the spine from mane to tail",
+        "genetic_association": "Common feature of dun dilution, but can appear faintly in other colors",
+        "width_variations": [
+          {
+            "name": "Pencil line",
+            "description": "Very thin, precise line"
+          },
+          {
+            "name": "Standard",
+            "description": "Typical width of 1/2 to 1 inch"
+          },
+          {
+            "name": "Broad",
+            "description": "Wider than standard, sometimes with indistinct edges"
+          }
+        ],
         "image_reference": "dorsal_stripe.png"
       },
       {
         "name": "Zebra Markings",
-        "description": "Horizontal stripes on legs",
+        "description": "Horizontal stripes on legs, also called leg barring",
+        "genetic_association": "Feature of dun dilution, more visible on front legs",
+        "variations": [
+          {
+            "name": "Bold barring",
+            "description": "Distinct, clearly visible stripes"
+          },
+          {
+            "name": "Faint barring",
+            "description": "Subtle, sometimes barely visible stripes"
+          },
+          {
+            "name": "Partial barring",
+            "description": "Stripes visible on only part of the leg"
+          }
+        ],
         "image_reference": "zebra_markings.png"
       },
       {
+        "name": "Bider Marks",
+        "description": "Dark marks across the withers, perpendicular to dorsal stripe",
+        "genetic_association": "Feature of dun dilution, also called shoulder stripe or cross",
+        "image_reference": "bider_marks.png"
+      },
+      {
+        "name": "Cobwebbing",
+        "description": "Fine, net-like dark markings on the face",
+        "genetic_association": "Feature often seen with dun dilution",
+        "location": "Typically on forehead or frontal area",
+        "image_reference": "cobwebbing.png"
+      },
+      {
+        "name": "Bend Or Spots",
+        "description": "Small, scattered dark spots on base coat, usually on barrel or quarters",
+        "named_after": "Thoroughbred stallion Bend Or who exhibited these spots",
+        "genetic_basis": "Likely somatic mutations affecting pigmentation during development",
+        "inheritance": "Not heritable in the traditional sense",
+        "common_breeds": ["Thoroughbred", "Arabian", "Quarter Horse"],
+        "image_reference": "bend_or_spots.png"
+      },
+      {
         "name": "Whorls",
-        "description": "Circular hair growth patterns",
+        "description": "Circular hair growth patterns where hair grows in different directions",
+        "also_called": "Cowlicks, swirls",
+        "significance": {
+          "identification": "Used as identifying characteristics similar to fingerprints",
+          "behavioral_correlations": "Some research suggests correlation between whorl position and temperament"
+        },
+        "common_locations": [
+          "Forehead (most common)",
+          "Neck",
+          "Chest",
+          "Flank",
+          "Stifle"
+        ],
+        "types": [
+          {
+            "name": "Simple whorl",
+            "description": "Single circular pattern"
+          },
+          {
+            "name": "Double whorl",
+            "description": "Two distinct whorls close together"
+          },
+          {
+            "name": "Feathered whorl",
+            "description": "Elongated, feather-like pattern"
+          }
+        ],
         "image_reference": "whorl_marking.png"
       }
     ]
@@ -198,38 +1000,506 @@
     {
       "name": "Silver Dapple",
       "description": "Dilutes black pigment in mane, tail and body, often with dappling",
-      "genetics": "Silver dapple gene affects black pigment only",
-      "common_breeds": ["Morgan", "Rocky Mountain Horse", "Icelandic Horse"]
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Silver gene (Z)",
+        "inheritance": "Dominant, affects only black pigment (black and bay base colors)",
+        "notation": "Z_",
+        "chromosome": "Located on equine chromosome 6",
+        "effect": "Dilutes black pigment but has no effect on red pigment"
+      },
+      "appearance_on_base_colors": [
+        {
+          "base": "Black",
+          "effect": "Body becomes chocolate to pale silver-gray, mane and tail typically lighter silver-white",
+          "name": "Silver black (also called Silver, Silver Dapple, or Chocolate)",
+          "image_reference": "silver_black.png"
+        },
+        {
+          "base": "Bay",
+          "effect": "Body becomes lighter red-brown, mane and tail silver-white",
+          "name": "Silver bay (also called Red Silver or Chestnut Silver)",
+          "image_reference": "silver_bay.png"
+        },
+        {
+          "base": "Chestnut",
+          "effect": "No visible effect as there is no black pigment to dilute",
+          "name": "Visually chestnut (but may carry and pass on silver gene)",
+          "image_reference": "silver_carrier_chestnut.png"
+        }
+      ],
+      "health_considerations": "Associated with Multiple Congenital Ocular Anomalies (MCOA) syndrome, particularly in homozygous form",
+      "common_breeds": ["Morgan", "Rocky Mountain Horse", "Icelandic Horse", "Shetland Pony", "Miniature Horse"],
+      "distinguishing_characteristics": "Lighter mane and tail than body (opposite of flaxen chestnut); typically shows dappling on body",
+      "image_reference": "silver_dapple_horse.png"
     },
     {
       "name": "Champagne",
       "description": "Dilutes both red and black pigment, creates metallic sheen and mottled skin",
-      "genetics": "Champagne gene, dominant",
-      "common_breeds": ["Tennessee Walking Horse", "Quarter Horse"]
+      "genetics": {
+        "genetic_basis": "Caused by the dominant Champagne gene (CH)",
+        "inheritance": "Dominant - one copy produces full champagne effect",
+        "notation": "CH_",
+        "chromosome": "Located on equine chromosome 14"
+      },
+      "characteristics": [
+        "Mottled skin, especially visible around eyes, muzzle, and genitals",
+        "Amber or hazel eyes (blue at birth)",
+        "Metallic sheen to coat",
+        "Dilutes both red and black pigments",
+        "Pink skin that often develops 'freckles' with sun exposure"
+      ],
+      "variants": [
+        {
+          "base": "Chestnut",
+          "effect": "Gold body with gold or slightly lighter mane and tail",
+          "name": "Gold Champagne",
+          "genetic_notation": "ee CH_",
+          "image_reference": "gold_champagne.png"
+        },
+        {
+          "base": "Bay",
+          "effect": "Gold body with chocolate points",
+          "name": "Amber Champagne",
+          "genetic_notation": "E_A_ CH_",
+          "image_reference": "amber_champagne.png"
+        },
+        {
+          "base": "Black",
+          "effect": "Chocolate to taupe-colored body and points",
+          "name": "Classic Champagne (or Sable)",
+          "genetic_notation": "E_aa CH_",
+          "image_reference": "classic_champagne.png"
+        }
+      ],
+      "combinations": [
+        {
+          "combination": "Champagne + Cream",
+          "description": "Very diluted coat with characteristic champagne skin and eyes",
+          "names": "Various depending on base color (e.g., Gold Ivory, Amber Cream, etc.)"
+        },
+        {
+          "combination": "Champagne + Dun",
+          "description": "Diluted coat with primitive markings and champagne characteristics",
+          "names": "Various depending on base color (e.g., Gold Dun, Amber Dun, etc.)"
+        }
+      ],
+      "common_breeds": ["Tennessee Walking Horse", "American Cream Draft", "Quarter Horse", "Missouri Fox Trotter"],
+      "distinguishing_from_similar_colors": "Often confused with palomino or buckskin, but mottled skin and amber eyes are distinctive champagne traits",
+      "image_reference": "champagne_horse.png"
     },
     {
       "name": "Pearl",
       "description": "Subtle dilution that enhances red pigment, double effect when paired with cream gene",
-      "genetics": "Pearl gene, recessive",
-      "common_breeds": ["Iberian breeds", "Quarter Horse"]
+      "genetics": {
+        "genetic_basis": "Caused by the Pearl gene (prl), a mutation in the MATP gene",
+        "inheritance": "Recessive - one copy has subtle effect, two copies produce visible dilution",
+        "notation": "prlprl for homozygous expression",
+        "chromosome": "Located on equine chromosome 21"
+      },
+      "appearance": [
+        {
+          "genotype": "Single pearl (prlprl+)",
+          "on_chestnut": "Subtle brightening of coat color, skin slightly lighter",
+          "on_bay_black": "Little to no visible effect",
+          "image_reference": "single_pearl_horse.png"
+        },
+        {
+          "genotype": "Double pearl (prlprl)",
+          "on_chestnut": "Similar to cremello but with darker skin, amber eyes instead of blue",
+          "on_bay": "Pale coat with slightly darker points, skin not as pink as double cream",
+          "on_black": "Uniformly diluted coat, similar to smoky cream but with amber eyes",
+          "image_reference": "double_pearl_horse.png"
+        },
+        {
+          "genotype": "Pearl + Cream (prlprl+ CCrcr)",
+          "description": "Called 'pseudo-double dilute' - similar to double cream dilutes but with amber/green eyes",
+          "image_reference": "pearl_cream_horse.png"
+        }
+      ],
+      "common_breeds": ["Lusitano", "Andalusian", "Quarter Horse", "Paint Horse", "Peruvian Paso"],
+      "historical_context": "Long present in Iberian breeds but only identified genetically in the 21st century",
+      "distinguishing_characteristics": "Subtle shell-like iridescence to coat, often with amber or green-tinted eyes",
+      "image_reference": "pearl_horse.png"
+    },
+    {
+      "name": "Mushroom",
+      "description": "New dilution identified in 2013, creates lilac-like color with chocolate and diluted tones",
+      "genetics": {
+        "genetic_basis": "Recessive mutation in the MFSD12 gene",
+        "inheritance": "Recessive - two copies needed for expression",
+        "notation": "mn/mn",
+        "discovery": "First identified and characterized in 2013"
+      },
+      "appearance": [
+        {
+          "base": "Bay",
+          "effect": "Lilac-brown body with darker points",
+          "image_reference": "mushroom_bay.png"
+        },
+        {
+          "base": "Black",
+          "effect": "Uniform lilac-taupe color",
+          "image_reference": "mushroom_black.png"
+        },
+        {
+          "base": "Chestnut",
+          "effect": "Pale golden taupe with pinkish tones",
+          "image_reference": "mushroom_chestnut.png"
+        }
+      ],
+      "common_breeds": ["Quarter Horse", "Miniature Horse"],
+      "rarity": "Extremely rare, still being documented and studied",
+      "distinguishing_characteristics": "Unique lavender-taupe tint to coat unlike other dilutions",
+      "image_reference": "mushroom_dilution.png"
+    },
+    {
+      "name": "Pangare (Mealy)",
+      "description": "Light coloration on soft areas like muzzle, eyes, flanks, belly, and inner legs",
+      "genetics": {
+        "genetic_basis": "Not fully understood, likely polygenic",
+        "inheritance": "Unclear, appears to be dominant with variable expression",
+        "distribution": "More common in primitive breeds"
+      },
+      "appearance": [
+        {
+          "base": "Bay",
+          "effect": "Lighter tan around soft areas, particularly visible on muzzle and flanks",
+          "image_reference": "pangare_bay.png"
+        },
+        {
+          "base": "Black",
+          "effect": "Lighter brownish areas around muzzle and soft areas",
+          "image_reference": "pangare_black.png"
+        },
+        {
+          "base": "Chestnut",
+          "effect": "Very light, almost cream colored soft areas",
+          "image_reference": "pangare_chestnut.png"
+        }
+      ],
+      "common_breeds": ["Exmoor Pony", "Przewalski's Horse", "Fjord", "Belgian", "Suffolk Punch"],
+      "historical_significance": "Characteristic of primitive horse types and ancient breeds",
+      "intensity_variations": "Ranges from subtle to very pronounced lightening of soft areas",
+      "image_reference": "pangare_horse.png"
     }
   ],
   "color_combinations": [
     {
       "name": "Bay Tobiano",
       "description": "Bay base coat with tobiano pattern",
+      "genetics": {
+        "notation": "E_A_ TO_",
+        "inheritance": "Requires dominant extension (E), dominant agouti (A), and dominant Tobiano (TO)"
+      },
+      "variations": [
+        {
+          "description": "Light bay with minimal tobiano",
+          "image_reference": "light_bay_minimal_tobiano.png"
+        },
+        {
+          "description": "Dark bay with extensive tobiano",
+          "image_reference": "dark_bay_extensive_tobiano.png"
+        }
+      ],
+      "common_breeds": ["Paint Horse", "Gypsy Vanner", "Saddlebred", "Shetland Pony"],
       "image_reference": "bay_tobiano.png"
     },
     {
       "name": "Palomino with Flaxen",
       "description": "Golden coat with very light, almost white mane and tail",
+      "genetics": {
+        "notation": "ee CCrcr + flaxen genes",
+        "inheritance": "Palomino (chestnut with cream gene) plus flaxen factors"
+      },
+      "distinguishing_from_regular_palomino": "Flaxen palominos have a more pronounced difference between body and mane/tail color",
+      "common_breeds": ["Morgan", "Quarter Horse", "Tennessee Walking Horse", "Welsh Pony"],
       "image_reference": "palomino_flaxen.png"
     },
     {
       "name": "Blue Roan Appaloosa",
       "description": "Blue roan base with appaloosa spotting pattern",
+      "genetics": {
+        "notation": "E_aa Rn_ LP_",
+        "inheritance": "Requires black base (E_aa), dominant roan (Rn), and leopard complex (LP)"
+      },
+      "characteristics": "Unique combination of roaning throughout body with appaloosa characteristics (mottled skin, spotted blanket, etc.)",
+      "common_breeds": ["Appaloosa", "Colorado Ranger", "Pony of the Americas"],
       "image_reference": "blue_roan_appaloosa.png"
+    },
+    {
+      "name": "Buckskin Tobiano",
+      "description": "Buckskin base coat with tobiano pattern",
+      "genetics": {
+        "notation": "E_A_ CCrcr TO_",
+        "inheritance": "Buckskin (bay with cream) plus tobiano"
+      },
+      "variations": [
+        {
+          "description": "Golden buckskin with minimal tobiano",
+          "image_reference": "golden_buckskin_minimal_tobiano.png"
+        },
+        {
+          "description": "Light buckskin with extensive tobiano",
+          "image_reference": "light_buckskin_extensive_tobiano.png"
+        }
+      ],
+      "common_breeds": ["Paint Horse", "Pinto", "Quarter Horse"],
+      "image_reference": "buckskin_tobiano.png"
+    },
+    {
+      "name": "Silver Bay Dapple",
+      "description": "Bay with silver dilution causing chocolate body and silvery mane and tail",
+      "genetics": {
+        "notation": "E_A_ Z_",
+        "inheritance": "Bay base with silver dilution gene"
+      },
+      "dappling_characteristics": "Silver often causes pronounced dappling in the coat",
+      "common_breeds": ["Morgan", "Rocky Mountain Horse", "Mountain Pleasure Horse"],
+      "health_concerns": "May be associated with Multiple Congenital Ocular Anomalies (MCOA)",
+      "image_reference": "silver_bay_dapple.png"
+    },
+    {
+      "name": "Black Splash White",
+      "description": "Black base coat with splash white pattern",
+      "genetics": {
+        "notation": "E_aa SW_",
+        "inheritance": "Black base with any splash white gene variant"
+      },
+      "characteristics": "Black with distinct white patches typically on the lower parts of the body and face",
+      "common_breeds": ["Paint Horse", "Quarter Horse", "Miniature Horse"],
+      "image_reference": "black_splash_white.png"
+    },
+    {
+      "name": "Cremello Tobiano",
+      "description": "Cremello base (double cream dilution of chestnut) with tobiano pattern",
+      "genetics": {
+        "notation": "ee CCrCCr TO_",
+        "inheritance": "Cremello base with tobiano gene"
+      },
+      "appearance": "Very light cream colored with pink skin, blue eyes, and patches of slightly darker cream or white",
+      "pattern_visibility": "Often subtle due to minimal contrast, most visible when wet or in certain lighting",
+      "common_breeds": ["Paint Horse", "Quarter Horse", "Pinto breeds"],
+      "image_reference": "cremello_tobiano.png"
+    },
+    {
+      "name": "Grullo Appaloosa",
+      "description": "Grullo base (dun on black) with appaloosa patterns",
+      "genetics": {
+        "notation": "E_aa D_ LP_",
+        "inheritance": "Black base with dun dilution and leopard complex"
+      },
+      "distinguishing_characteristics": "Mouse-colored body with primitive dun markings and appaloosa characteristics (blanket, leopard spots, etc.)",
+      "common_breeds": ["Appaloosa", "Spanish Mustang", "Pony of the Americas"],
+      "image_reference": "grullo_appaloosa.png"
+    }
+  ],
+  "color_age_progression": [
+    {
+      "color": "Gray",
+      "progression": [
+        {
+          "stage": "Birth coat",
+          "description": "Born any base color (black, bay, chestnut, etc.)"
+        },
+        {
+          "stage": "Early graying",
+          "description": "White hairs begin appearing around eyes and muzzle, often within first year",
+          "timeframe": "Usually begins before 2 years of age"
+        },
+        {
+          "stage": "Progressive graying",
+          "description": "Increasing mixture of white and colored hairs, often creating dappled appearance",
+          "timeframe": "2-6 years typically"
+        },
+        {
+          "stage": "Late graying",
+          "description": "Mostly white with some colored hairs remaining",
+          "timeframe": "6-10 years typically"
+        },
+        {
+          "stage": "Complete graying",
+          "description": "Completely or almost completely white, sometimes with fleabitten specks",
+          "timeframe": "8-15 years typically, though some horses never become completely white"
+        }
+      ],
+      "variations": [
+        {
+          "name": "Slow graying",
+          "description": "Some gray horses gray very slowly, retaining much original color into their teens"
+        },
+        {
+          "name": "Fast graying",
+          "description": "Some gray rapidly, appearing almost white by age 4-5"
+        }
+      ],
+      "image_reference": "gray_progression.png"
+    },
+    {
+      "color": "Roan",
+      "progression": [
+        {
+          "stage": "Birth coat",
+          "description": "Born with some roaning visible, but not full adult pattern"
+        },
+        {
+          "stage": "First shed",
+          "description": "Roaning becomes more pronounced after first foal shed",
+          "timeframe": "3-6 months"
+        },
+        {
+          "stage": "Mature coat",
+          "description": "Full roan pattern established",
+          "timeframe": "By 1-2 years"
+        },
+        {
+          "stage": "Seasonal variations",
+          "description": "Roaning often more prominent in summer coat, less visible in winter coat"
+        }
+      ],
+      "image_reference": "roan_progression.png"
+    },
+    {
+      "color": "Appaloosa patterns",
+      "progression": [
+        {
+          "stage": "Birth coat",
+          "description": "May be born with minimal pattern or different pattern than adult coat"
+        },
+        {
+          "stage": "Pattern development",
+          "description": "Patterns like varnish roan, blanket, or leopard spots often develop or change with age",
+          "timeframe": "Progressive changes through first few years"
+        },
+        {
+          "stage": "Progressive roaning",
+          "description": "Appaloosa roaning (especially varnish roan) often increases with age",
+          "timeframe": "Continues throughout life"
+        },
+        {
+          "stage": "Characteristic development",
+          "description": "Mottled skin, striped hooves, white sclera become more pronounced with maturity"
+        }
+      ],
+      "variations": [
+        {
+          "name": "Few Spot progression",
+          "description": "Some spotted foals eventually develop into few spot leopards with minimal spots"
+        },
+        {
+          "name": "Snowflake progression",
+          "description": "White flecks often increase in number and size with age"
+        }
+      ],
+      "image_reference": "appaloosa_progression.png"
+    },
+    {
+      "color": "Bay foal traits",
+      "progression": [
+        {
+          "stage": "Birth coat",
+          "description": "Often born mousy-gray or reddish without clear black points"
+        },
+        {
+          "stage": "Point development",
+          "description": "Black points (legs, mane, tail) develop and darken",
+          "timeframe": "First few months"
+        },
+        {
+          "stage": "Mature coat",
+          "description": "Full bay coloration with clear black points established",
+          "timeframe": "Usually by 1 year"
+        }
+      ],
+      "image_reference": "bay_foal_progression.png"
+    }
+  ],
+  "regional_color_terminology": [
+    {
+      "region": "North America",
+      "terms": [
+        {
+          "term": "Sorrel",
+          "standard_equivalent": "Light to medium chestnut",
+          "context": "Common term in Western riding and stock breeds"
+        },
+        {
+          "term": "Blood bay",
+          "standard_equivalent": "Bright reddish bay",
+          "context": "Used in many American breed registries"
+        }
+      ]
+    },
+    {
+      "region": "United Kingdom",
+      "terms": [
+        {
+          "term": "Skewbald",
+          "standard_equivalent": "Pinto/parti-colored horse that is not black and white",
+          "context": "Traditional British terminology"
+        },
+        {
+          "term": "Piebald",
+          "standard_equivalent": "Black and white pinto/parti-colored",
+          "context": "Traditional British terminology"
+        }
+      ]
+    },
+    {
+      "region": "Australia",
+      "terms": [
+        {
+          "term": "Taffy",
+          "standard_equivalent": "Palomino",
+          "context": "Traditional Australian term, less common today"
+        }
+      ]
+    },
+    {
+      "region": "Spain/Latin America",
+      "terms": [
+        {
+          "term": "Tordillo",
+          "standard_equivalent": "Gray",
+          "context": "Spanish terminology"
+        },
+        {
+          "term": "Zaino",
+          "standard_equivalent": "Bay",
+          "context": "Spanish terminology"
+        },
+        {
+          "term": "Isabela",
+          "standard_equivalent": "Palomino",
+          "context": "Spanish terminology"
+        }
+      ]
+    }
+  ],
+  "historical_color_preferences": [
+    {
+      "era_culture": "Medieval European",
+      "preferred_colors": ["White/Gray", "Bay", "Black"],
+      "significance": "White horses reserved for royalty and nobility, black popular for knights"
+    },
+    {
+      "era_culture": "Native American Plains tribes",
+      "preferred_colors": ["Pinto patterns", "Appaloosa patterns", "Buckskin", "Dun"],
+      "significance": "Patterned horses valued for ceremonial use and as war horses"
+    },
+    {
+      "era_culture": "Arabian Bedouin",
+      "preferred_colors": ["Bay", "Gray", "Chestnut"],
+      "significance": "Bay most prized for hardiness, solid colors preferred"
+    },
+    {
+      "era_culture": "19th century European cavalry",
+      "preferred_colors": ["Specific colors for different regiments", "Chestnuts and bays common"],
+      "significance": "Color uniformity within units for identification in battle"
+    },
+    {
+      "era_culture": "Medieval Japan",
+      "preferred_colors": ["Dapple gray", "Liver chestnut", "Roan"],
+      "significance": "Certain colors believed to bring good fortune in battle"
     }
   ]
 }
-
